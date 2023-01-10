@@ -107,6 +107,7 @@ run the `npm install` command in your console.
 
 To run the linters before committing any changes to your code, execute the following commands:
 
+`lighthouse <url>`
 `npx hint .`
 `npx stylelint "**/*.scss"` <--_NOTE: this repo is set up to use with SCSS. If you would like to use CSS, you must replace `"**/*.scss"` with `"**/*.{css,scss}"` in **line 48** of the `.stylelintrc.json` file, and run the linter with:_
 
