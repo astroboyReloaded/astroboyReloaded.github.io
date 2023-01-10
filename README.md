@@ -63,7 +63,9 @@
 
 - **Linters**: [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/), [Webhint](https://webhint.io/), and [Stylelint](https://stylelint.io/.)
 - **A `.github/workflows/linters.yml`** file to run linters on GitHub Pull Request.
-- **A** `.gitignore` file including `node_modules/`.
+- **A** `.gitignore` file, including `node_modules/`.
+
+- [Sass](https://sass-lang.com/).
 
 <!-- LIVE DEMO -->
 
