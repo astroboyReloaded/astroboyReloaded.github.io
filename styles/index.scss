@@ -1,5 +1,93 @@
 @use 'standards';
 
-.title {
-  color: $titleColor;
+/* +++++++++++++++++ Header +++++++++++++++++++++++ */
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: fit-content;
+  justify-content: space-between;
+
+  /***************** nav-bar ****************/
+
+  nav {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+
+    .logo {
+      position: relative;
+      width: 111px;
+      height: 74px;
+      background: url('/images/deco/mobile/nav-logo.svg');
+      z-index: 1;
+    }
+
+    /* Display Menu Button */
+
+    .menu-btn-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 24px;
+      margin: 27px 18px;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    .menu-btn,
+    .menu-btn::before,
+    .menu-btn::after {
+      display: block;
+      background: standards.$blue;
+      position: absolute;
+      height: 3px;
+      width: 24px;
+      border-radius: 2px;
+    }
+
+    .menu-btn::before {
+      content: '';
+      margin-top: -9px;
+    }
+
+    .menu-btn::after {
+      content: '';
+      margin-top: 9px;
+    }
+  }
+
+  /****** Headline ********/
+
+  .headline-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+
+    .headline-title {
+      font-size: 450%;
+      font-weight: 400;
+      line-height: 100%;
+      margin: 18px 0 0 0;
+    }
+
+    .headline-paragraph {
+      color: standards.$blue;
+      margin: 27px 0;
+    }
+  }
+
+  .shapes-design-container {
+    margin: 15px 0;
+    width: 100%;
+    height: 53.333vw;
+    background:
+      url('/images/deco/mobile/image_geometry-headline-mobile.svg')
+      no-repeat;
+    background-size: contain;
+  }
 }
