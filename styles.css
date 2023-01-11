@@ -1,4 +1,4 @@
-/* colors*/
+/* colors */
 /* Reset */
 *,
 *::before,
@@ -32,20 +32,20 @@ body .playfair {
 body .poppins {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 21px;
 }
 body .btnB {
   text-decoration: none;
   margin: 0;
-  padding: 1rem 18px;
+  padding: 1.2rem 18px;
   border-style: none;
   color: #fff;
   background: #1a2236;
   border: 2px solid #fff;
   text-align: center;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   align-items: center;
   cursor: pointer;
 }
