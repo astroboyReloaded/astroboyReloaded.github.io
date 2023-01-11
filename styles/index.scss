@@ -32,6 +32,7 @@ header {
       height: 100%;
       width: 24px;
       margin: 27px 18px;
+      cursor: pointer;
     }
 
     #menu-toggle {
@@ -85,8 +86,7 @@ header {
     margin: 15px 0;
     width: 100%;
     height: 53.333vw;
-    background:
-      url('/images/deco/mobile/image_geometry-headline-mobile.svg')
+    background: url('/images/deco/mobile/image_geometry-headline-mobile.svg')
       no-repeat;
     background-size: contain;
   }

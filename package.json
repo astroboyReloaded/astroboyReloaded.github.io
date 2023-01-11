@@ -1,7 +1,7 @@
 {
   "name": "Portfolio_mobile-first",
   "version": "1.0.0",
-  "description": "Professional Web Developer Portfolio for AstroboyReloaded",
+  "description": "Professional Web Developer Portfolio, by Alex Muñoz",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
