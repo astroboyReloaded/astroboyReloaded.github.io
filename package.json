@@ -1,22 +1,22 @@
 {
-  "name": "hello-microverse",
+  "name": "Portfolio_mobile-first",
   "version": "1.0.0",
-  "description": "A Microverse exercise to set up a new project",
+  "description": "Professional Web Developer Portfolio, by Alex Muñoz",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/astroboyReloaded/Hello-Microverse.git"
+    "url": "git+https://github.com/astroboyReloaded/Portfolio_mobile-first.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/astroboyReloaded/Hello-Microverse/issues"
+    "url": "https://github.com/astroboyReloaded/Portfolio_mobile-first/issues"
   },
-  "homepage": "https://github.com/astroboyReloaded/Hello-Microverse#readme",
+  "homepage": "https://github.com/astroboyReloaded/Portfolio_mobile-first#readme",
   "devDependencies": {
     "hint": "^7.1.3",
     "stylelint": "^13.13.1",
