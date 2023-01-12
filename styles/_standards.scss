@@ -1,13 +1,13 @@
 // _standards.scss
 
-/* colors */
+// colors //
 
 $blue: #1a2236;
 $white: #fff;
 $gray: #7d7c84;
 $focusBorder: #98dede;
 
-/* Reset */
+// Reset //
 *,
 *::before,
 *::after {
@@ -30,7 +30,7 @@ body {
   margin: auto;
   overflow-x: hidden;
 
-  /* Section Title font-styles */
+  // Section Title font-styles //
 
   .playfair {
     font-family: 'Playfair Display', serif;
@@ -38,7 +38,7 @@ body {
     margin: 18px 0 27px 18px;
   }
 
-  /* Paragraph font-styles */
+  // Paragraph font-styles //
   .poppins {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
