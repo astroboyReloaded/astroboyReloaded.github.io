@@ -46,7 +46,9 @@ body {
     line-height: 21px;
   }
 
-  .btnB {
+  // Buttons //
+
+  .btnBlue {
     text-decoration: none;
     margin: 0;
     padding: 1.2rem 18px;
@@ -61,20 +63,20 @@ body {
     cursor: pointer;
   }
 
-  .btnB:focus {
+  .btnBlue:focus {
     outline: none;
     border: 2px solid $focusBorder;
     color: $blue;
     background-color: $white;
   }
 
-  .btnB:hover {
+  .btnBlue:hover {
     color: $blue;
     background-color: $white;
     border: 2px solid $gray;
   }
 
-  .btnB:active {
+  .btnBlue:active {
     background-color: $white;
     border-color: $blue;
     color: $blue;
