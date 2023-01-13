@@ -71,6 +71,7 @@ body {
 }
 
 /********************** Header ***********************/
+
 header {
   display: flex;
   flex-direction: column;
@@ -95,6 +96,7 @@ nav {
 }
 
 /**** Display Menu Button ****/
+
 .menu-btn-container {
   display: flex;
   flex-direction: column;
@@ -129,7 +131,8 @@ nav {
   margin-top: 9px;
 }
 
-/******************Headline *****************/
+/****************** Headline *****************/
+
 .headline-container {
   width: 100%;
   display: flex;
@@ -153,14 +156,15 @@ nav {
   margin: 15px 0;
   width: 100%;
   height: 53.333vw;
-  background: url('images/deco/mobile/image_geometry-headline-mobile.svg')
+  background:
+    url('images/deco/mobile/image_geometry-headline-mobile.svg')
     no-repeat;
   background-size: contain;
 }
 
 /*************** Projects Section *********************/
 
-#projects {
+#works {
   display: grid;
   width: 100%;
 }
@@ -208,14 +212,145 @@ nav {
   width: fit-content;
   display: flex;
   justify-content: left;
-  padding-inline: 21px;
 }
 
 .arrow {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url('/images/icons/arrow.svg') 0 50% no-repeat;
+  background: url('images/icons/arrow.svg') 0 50% no-repeat;
   background-size: contain;
   margin-left: 9px;
+}
+
+.seeProjBtn:hover .arrow {
+  background: url('images/icons/arrow-black.svg') 0 50% no-repeat;
+  background-size: contain;
+}
+
+/*********************** About ***********************/
+
+#about {
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+}
+
+#about p {
+  margin-bottom: 27px;
+}
+
+.getCV {
+  display: flex;
+  justify-content: center;
+}
+
+.download {
+  display: inline-block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: url('images/icons/download-icon-1.svg') 80% 50% no-repeat;
+  margin-left: 1rem;
+}
+
+.getCV:hover .download {
+  background: url('images/icons/download-icon.svg') 80% 50% no-repeat;
+}
+
+.tech-cards-container {
+  display: grid;
+  list-style: none;
+  margin-top: 27px;
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  list-style: none;
+  color: #fff;
+  margin-block: 9px;
+  height: 300px;
+}
+
+.tech-card h2 {
+  margin-bottom: 2rem;
+}
+
+.tech {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  font-weight: 600;
+}
+
+.langs {
+  background: #1c528a url('images/deco/about/lang.svg') 100% 100% no-repeat;
+}
+
+.frames {
+  background:
+    #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
+    no-repeat;
+}
+
+.skills {
+  background: #febf52 url('images/deco/about/skills.svg') 100% 100% no-repeat;
+}
+
+/*********************** Footer *******************************/
+
+footer {
+  background: #1a2236;
+  display: flex;
+  flex-direction: column;
+}
+
+.open {
+  text-decoration: none;
+  color: #98dede;
+  margin: 2rem 1rem;
+  width: fit-content;
+  padding-right: 45px;
+  background:
+    url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
+    no-repeat;
+}
+
+.social-container {
+  display: flex;
+  margin: 0 1rem 1rem 1rem;
+  justify-content: space-between;
+}
+
+.social {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.stack {
+  background: url('images/icons/stackoverflow.svg') no-repeat;
+}
+
+.gith {
+  background: url('images/icons/github-icon.svg') no-repeat;
+}
+
+.twit {
+  background: url('images/icons/twitter.svg') no-repeat;
+}
+
+.link {
+  background: url('images/icons/linkedin.svg') no-repeat;
+}
+
+.m {
+  background: url('images/icons/M-icon.svg') no-repeat;
+}
+
+.pNL {
+  background: url('images/icons/pnl-icon.svg') no-repeat;
 }
