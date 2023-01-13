@@ -56,6 +56,10 @@
 - **Mobile First.**
 - **Header Section**
 - **Headline Section**
+- **Projects Section**
+- **About Section**
+- **Footer Section / Social Networks**
+- **Hover state for all buttons**
 
 <!-- LIVE DEMO -->
 
@@ -100,11 +104,10 @@
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Work Section**
-- **About Section**
-- **Contact Form**
+- **Contact Form + validation**
 - **Desktop Version**
-- **Footer > Social Networks**
+- **Transitions**
+- **Mobile menu display implementation with JavaScript**
 - **Real Projects**.
 - **My CV**.
 
