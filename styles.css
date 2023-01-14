@@ -169,7 +169,7 @@ nav {
   width: 100%;
 }
 
-.project-container {
+.project {
   display: flex;
   flex-direction: column;
 }
