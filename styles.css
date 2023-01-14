@@ -156,7 +156,8 @@ nav {
   margin: 15px 0;
   width: 100%;
   height: 53.333vw;
-  background: url('images/deco/mobile/image_geometry-headline-mobile.svg')
+  background:
+    url('images/deco/mobile/image_geometry-headline-mobile.svg')
     no-repeat;
   background-size: contain;
 }
@@ -170,6 +171,7 @@ nav {
 
 .project {
   display: flex;
+  flex-direction: column;
 }
 
 .project-image {
@@ -288,7 +290,8 @@ nav {
 }
 
 .frames {
-  background: #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
+  background:
+    #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
     no-repeat;
 }
 
@@ -310,7 +313,8 @@ footer {
   margin: 2rem 1rem;
   width: fit-content;
   padding-right: 45px;
-  background: url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
+  background:
+    url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
     no-repeat;
 }
 
