@@ -59,6 +59,10 @@ ul {
   color: #1a2236;
 }
 
+.btnBlue:visited {
+  border-color: #7d7c84;
+}
+
 /*********** Reset ***********/
 *,
 *::before,
@@ -377,6 +381,7 @@ textarea:focus {
 .submit {
   width: 100%;
   margin-block: 18px;
+  cursor: pointer;
 }
 
 /*********************** Footer *******************************/
