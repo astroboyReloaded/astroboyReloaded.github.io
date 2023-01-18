@@ -122,7 +122,7 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> If you like my work on this project, please leave a comment letting me know what you think!
+> If you like my work on this project, please give me a star on this repo. I would also love to read your comment letting me know what you think!
 
 <!-- ACKNOWLEDGEMENTS -->
 
