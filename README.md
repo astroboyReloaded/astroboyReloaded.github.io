@@ -67,7 +67,6 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 - [Live Demo Link](https://portfolio-setup-and-mobile-first.netlify.app/)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Prerequisites
 
@@ -79,7 +78,7 @@
 
 ### Install
 
-- `npm init -y`
+- `npm init -y` (or `npm init` to fill up fields manually)
 
 - `npm install`
 
@@ -89,7 +88,6 @@
 - Run `npx hint .` to get an HTML review.
 - Run `npx stylelint "**/*.{css,scss}"` to get a CSS review.
 - Run `lighthouse <URL>` to get a performance review .
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
 
@@ -100,6 +98,7 @@
 - GitHub: [astroboyReloaded](https://github.com/astroboyReloaded)
 - Twitter: [@astroboyReload](https://twitter.com/astroboyReload)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/astroboyreloaded/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
