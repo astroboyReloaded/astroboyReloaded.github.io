@@ -2,11 +2,17 @@
 
 /************ fonts **********/
 
+html {
+  font-size: 14px;
+}
+
 /* section title: */
 .playfair {
   font-family: 'Playfair Display', serif;
-  font-size: 3rem;
+  font-size: 3.36rem;
+  font-weight: 400;
   margin: 18px 0 27px 18px;
+  color: #1a2236;
 }
 
 /* paragraphs: */
@@ -14,6 +20,13 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 1rem;
+  color: #1a2236;
+}
+
+/*********** lists ***********/
+
+ul {
+  list-style: none;
 }
 
 /********** buttons **********/
@@ -44,6 +57,10 @@
   background-color: #fff;
   border-color: #1a2236;
   color: #1a2236;
+}
+
+.btnBlue:visited {
+  border-color: #7d7c84;
 }
 
 /*********** Reset ***********/
@@ -133,7 +150,7 @@ nav {
 
 /****************** Headline *****************/
 
-.headline-container {
+#headline {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -236,6 +253,10 @@ nav {
   padding: 18px;
 }
 
+#about h1 {
+  margin-left: 0;
+}
+
 #about p {
   margin-bottom: 27px;
 }
@@ -268,7 +289,6 @@ nav {
   display: flex;
   flex-direction: column;
   padding: 3rem;
-  list-style: none;
   color: #fff;
   margin-block: 9px;
   height: 300px;
@@ -297,6 +317,71 @@ nav {
 
 .skills {
   background: #febf52 url('images/deco/about/skills.svg') 100% 100% no-repeat;
+}
+
+/******************** Contact Form ******************************/
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #f9f9fa url('images/deco/mobile/nav-logo.svg') no-repeat;
+  padding-block: 75px 36px;
+}
+
+.form-p {
+  margin-left: 18px;
+}
+
+form {
+  margin: 18px;
+}
+
+.input-container {
+  position: relative;
+  background: #fff;
+  margin-block: 9px;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.input-container label {
+  position: absolute;
+  top: 9px;
+  left: 18px;
+  color: #7d7c84;
+  display: flex;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.input-container input {
+  background: #fff;
+  width: 100%;
+  border: 1px solid #dfdfe0;
+  padding: 30px 18px 9px 18px;
+  border-radius: 4px;
+  color: #1a2236;
+  font-size: 1rem;
+}
+
+textarea {
+  width: 100%;
+  min-height: 111px;
+  border-radius: 4px;
+  border: 1px solid #dfdfe0;
+  padding: 18px;
+}
+
+.input-container input:focus,
+textarea:focus {
+  border: 1px solid #1a2236;
+}
+
+.submit {
+  width: 100%;
+  margin-block: 18px;
+  cursor: pointer;
 }
 
 /*********************** Footer *******************************/

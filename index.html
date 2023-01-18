@@ -22,6 +22,7 @@
     />
     <title>AstroboyReloaded | Portfolio</title>
   </head>
+
   <body>
     <header>
       <nav>
@@ -37,7 +38,7 @@
         </label>
       </nav>
       <!---------------------- headline ------------------------>
-      <section class="headline-container">
+      <section id="headline">
         <h1 class="headline-title playfair">Alex Muñoz</h1>
         <p class="poppins">
           &nbspHey, there! I am a software developer! I can help you build a
@@ -208,7 +209,42 @@
           </li>
         </ul>
       </section>
-      <section></section>
+      <section id="contact">
+        <h1 class="playfair">Get Started</h1>
+        <p class="form-p poppins">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna.
+        </p>
+        <form action="https://formspree.io/f/myyazjoo" method="post">
+          <ul class="poppins">
+            <li class="input-container">
+              <label for="name">Your name</label>
+              <input
+                type="text"
+                id="name"
+                name="user_name"
+                maxlength="30"
+                required
+              />
+            </li>
+            <li class="input-container">
+              <label for="email">Your email</label>
+              <input name="user_email" id="email" type="email" required />
+            </li>
+          </ul>
+          <textarea
+            name="msg"
+            id="msg"
+            class="poppins"
+            placeholder="Enter your message here..."
+            maxlength="500"
+            required
+          ></textarea>
+          <button type="submit" class="btnBlue submit">
+            Start collaboration
+          </button>
+        </form>
+      </section>
       <footer>
         <a href="#" class="open poppins">Get my Resume</a>
         <div class="social-container">
