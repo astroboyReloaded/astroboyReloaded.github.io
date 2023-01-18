@@ -60,7 +60,7 @@
 - **About Section**
 - **Contact form + basic validation**
 - **Footer Section / Social Networks**
-- **Hover state for all buttons**
+- **Style for different states to all buttons**
 
 <!-- LIVE DEMO -->
 
