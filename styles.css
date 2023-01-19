@@ -92,16 +92,8 @@ body {
 
 header {
   display: flex;
-  flex-direction: column;
   width: 100%;
   height: fit-content;
-  justify-content: space-between;
-}
-
-/*********Nav Bar **********/
-
-nav {
-  display: flex;
   justify-content: space-between;
 }
 
@@ -109,7 +101,14 @@ nav {
   width: 111px;
   height: 74px;
   background: url('images/deco/mobile/nav-logo.svg');
-  z-index: 1;
+}
+
+/*********Nav Bar **********/
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  display: none;
 }
 
 nav ul {
@@ -119,7 +118,6 @@ nav ul {
   top: 74px;
   width: 100%;
   align-items: center;
-  display: none;
 }
 
 .nav-link {
@@ -458,13 +456,18 @@ footer {
   .btnBlue {
     padding-inline: 36px;
   }
+
+  header {
+    justify-content: center;
+    border-bottom: 1px solid #e5e5e5;
+  }
   /****** Nav Bar ******/
   .show-hide {
     display: none;
   }
 
   nav {
-    border-bottom: 1px solid #e5e5e5;
+    display: block;
   }
 
   nav ul {
@@ -493,8 +496,8 @@ footer {
 
   .headline-container {
     flex-direction: column;
-    width: 45vw;
-    padding-inline: 63px 45px;
+    width: 45.6vw;
+    padding-inline: 3vw 6vw;
     align-items: flex-start;
     justify-content: center;
     background: url('images/deco/desktop/eight_dots.svg') right bottom no-repeat;
@@ -502,11 +505,12 @@ footer {
   }
 
   .headline-title {
-    font-size: 6rem;
+    font-size: 9vw;
     margin-bottom: 18px;
   }
 
   .headline-container a {
+    font-size: 2.1vw;
     width: fit-content;
   }
 
@@ -583,7 +587,7 @@ footer {
   .p5,
   .p6 {
     grid-area: p5p6;
-    width: 32.1vw;
+    width: 32.2vw;
   }
 
   .p5 {
@@ -611,7 +615,7 @@ footer {
   .right {
     grid-area: rght;
     position: relative;
-    width: 43.8vw;
+    width: 43.9vw;
     background: url('images/deco/desktop/work-right-deco.svg') bottom left
       no-repeat;
     background-size: contain;
@@ -627,7 +631,7 @@ footer {
     background-size: 14.65vw 8.61vw, 6.04vw;
   }
 
-  /********* Thumbnail ********/
+  /*** Thumbnail ***/
 
   .project-description {
     display: none;
