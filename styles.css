@@ -247,20 +247,21 @@ nav ul {
   width: fit-content;
   display: flex;
   justify-content: left;
+  text-align: center;
 }
 
 .arrow {
   display: inline-block;
-  width: 30px;
-  height: 30px;
-  background: url('images/icons/arrow.svg') 0 50% no-repeat;
-  background-size: contain;
+  width: 24px;
+  height: 24px;
   margin-left: 9px;
+  background: url('images/icons/arrow.svg') 90% 50% no-repeat;
+  background-size: 24px;
 }
 
 .seeProjBtn:hover .arrow {
-  background: url('images/icons/arrow-black.svg') 0 50% no-repeat;
-  background-size: contain;
+  background: url('images/icons/arrow-black.svg') 90% 50% no-repeat;
+  background-size: 24px;
 }
 
 /*********************** About ***********************/
@@ -454,13 +455,14 @@ footer {
 
 @media screen and (min-width: 768px) {
   .btnBlue {
-    padding-inline: 36px;
+    padding-inline: 9%;
   }
 
   header {
     justify-content: center;
     border-bottom: 1px solid #e5e5e5;
   }
+
   /****** Nav Bar ******/
   .show-hide {
     display: none;
@@ -510,7 +512,7 @@ footer {
   }
 
   .headline-container a {
-    font-size: 2.1vw;
+    font-size: 1.2rem;
     width: fit-content;
   }
 
@@ -570,6 +572,7 @@ footer {
     grid-area: p2;
     top: 4.65vw;
     width: 32.4vw;
+    height: 18.99vw;
     z-index: 1;
   }
   .p3 {
@@ -587,7 +590,8 @@ footer {
   .p5,
   .p6 {
     grid-area: p5p6;
-    width: 32.2vw;
+    width: 32.13vw;
+    height: 18.99vw;
   }
 
   .p5 {
@@ -634,6 +638,50 @@ footer {
   /*** Thumbnail ***/
 
   .project-description {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    max-height: 100%;
     display: none;
+  }
+
+  .project:hover .project-description {
+    display: flex;
+    z-index: 3;
+  }
+
+  .project-title {
+    font-size: 1.44rem;
+    font-weight: 600;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .tech-container {
+    margin-block: 9px;
+  }
+
+  .tech-item {
+    white-space: nowrap;
+  }
+
+  .tech-item:nth-of-type(3) {
+    overflow: hidden;
+    text-overflow: '+'; /* <-- Can you tell me why this is not working?*/
+  }
+
+  .seeProjBtn {
+    width: 159px;
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  .arrow {
+    background-size: 18px;
+  }
+
+  .seeProjBtn:hover .arrow {
+    background-size: 18px;
   }
 }
