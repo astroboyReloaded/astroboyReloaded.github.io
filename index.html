@@ -28,36 +28,51 @@
       <nav>
         <div
           href="#"
-          class="logo"
+          class="logo show-hide"
           role="img"
           aria-label="Logo: Right Triangle and rhombus"
         ></div>
+        <ul class="poppins">
+          <li class="nav-item">
+            <a class="nav-link" href="#headline">Hello</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#works">Portfolio</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
         <label class="menu-btn-container">
           <input id="menu-toggle" type="checkbox" />
-          <div class="menu-btn"></div>
+          <div class="menu-btn show-hide"></div>
         </label>
       </nav>
       <!---------------------- headline ------------------------>
       <section id="headline">
-        <h1 class="headline-title playfair">Alex Muñoz</h1>
-        <p class="poppins">
-          &nbspHey, there! I am a software developer! I can help you build a
-          product, feature or website. Take a look at my work. If you like what
-          you see and have a project you would like coded, don’t hesitate to
-          contact me.
-        </p>
-        <a href="#" class="btnBlue poppins">Start collaboration </a>
+        <article class="headline-container">
+          <h1 class="headline-title playfair">Alex Muñoz</h1>
+          <p class="poppins">
+            &nbspHey, there! I am a software developer! I can help you build a
+            product, feature or website. Take a look at my work. If you like
+            what you see and have a project you would like coded, don’t hesitate
+            to contact me.
+          </p>
+          <a href="#contact" class="btnBlue poppins">Start collaboration </a>
+        </article>
+        <div
+          class="headline-deco"
+          role="img"
+          aria-label="Decoration: Geometric shapes mosaic"
+        ></div>
       </section>
-      <div
-        class="shapes-design-container"
-        role="img"
-        aria-label="Decoration: Geometric shapes mosaic"
-      ></div>
     </header>
+    <!---------- Projects ---------------->
     <main>
       <section id="works">
         <h1 class="playfair">Projects</h1>
-        <article class="project">
+        <article class="project p1">
           <img
             class="project-image"
             src="images/projects/Project1.jpg"
@@ -75,7 +90,7 @@
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p2">
           <img
             class="project-image"
             src="images/projects/Project2.jpg"
@@ -93,7 +108,7 @@
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p3">
           <img
             class="project-image"
             src="images/projects/Project3.jpg"
@@ -111,7 +126,7 @@
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p4">
           <img
             class="project-image"
             src="images/projects/Project4.jpg"
@@ -129,7 +144,7 @@
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p5">
           <img
             class="project-image"
             src="images/projects/Project5.jpg"
@@ -147,7 +162,7 @@
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p6">
           <img
             class="project-image"
             src="images/projects/Project6.jpg"
@@ -165,7 +180,11 @@
             ></a>
           </div>
         </article>
+        <div class="project center deco"></div>
+        <div class="project left deco"></div>
+        <div class="project right deco"></div>
       </section>
+      <!------------------- About ----------------->
       <section id="about">
         <h1 class="playfair">About</h1>
         <p class="poppins">
@@ -209,6 +228,7 @@
           </li>
         </ul>
       </section>
+      <!----------------- Contact ---------------->
       <section id="contact">
         <h1 class="playfair">Get Started</h1>
         <p class="form-p poppins">
@@ -240,9 +260,7 @@
             maxlength="500"
             required
           ></textarea>
-          <button type="submit" class="btnBlue submit">
-            Start collaboration
-          </button>
+          <button type="submit" class="btnBlue">Start collaboration</button>
         </form>
       </section>
       <footer>
