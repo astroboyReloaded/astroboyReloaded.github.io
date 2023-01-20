@@ -811,4 +811,21 @@ footer {
     height: 12vw;
     margin-bottom: 18px;
   }
+
+  /*********** Footer *****************/
+
+  footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .open {
+    font-size: 1.2rem;
+  }
+
+  .social-container {
+    width: 45%;
+    margin: 1rem;
+    align-items: center;
+  }
 }
