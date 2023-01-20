@@ -684,4 +684,70 @@ footer {
   .seeProjBtn:hover .arrow {
     background-size: 18px;
   }
+
+  /********* About *************/
+
+  #about {
+    flex-direction: row-reverse;
+    padding: 6vw;
+    justify-content: space-between;
+    /* height: 100vh; */
+  }
+
+  #about > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-left: 3vw;
+  }
+
+  #about h1 {
+    margin: 1.2vw 0;
+    font-size: 6.3vw;
+  }
+
+  #about p {
+    font-size: 1rem;
+  }
+
+  .getCV {
+    width: fit-content;
+    font-size: 1rem;
+    padding: 9px 27px;
+  }
+
+  .download {
+    width: 1.2rem;
+    height: 1.2rem;
+    background-size: contain;
+  }
+
+  .tech-cards-container {
+    flex: 1.2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    margin: 0;
+    padding-inline: 3vw;
+  }
+
+  .tech-card {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 15%;
+    font-size: 1.2vw;
+    background-size: 30%;
+  }
+
+  .tech-card h2 {
+    margin-bottom: 1rem;
+  }
+
+  .about-deco {
+    padding: 0;
+    background: url('images/deco/desktop/about-deco.svg') bottom right no-repeat;
+    background-size: 70%;
+  }
 }
