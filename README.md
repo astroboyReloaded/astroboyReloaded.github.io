@@ -61,6 +61,7 @@
 - **Contact form + basic validation**
 - **Footer Section / Social Networks**
 - **Style for different states to all buttons**
+- **Desktop version**
 
 <!-- LIVE DEMO -->
 
@@ -104,7 +105,6 @@
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Desktop Version**
 - **Transitions**
 - **Mobile menu display implementation with JavaScript**
 - **Render `.works`'s content dinamically with JavaScript**
