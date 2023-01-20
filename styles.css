@@ -347,7 +347,7 @@ nav ul {
   padding-block: 93px 36px;
 }
 
-.form-p {
+#contact p {
   margin-left: 18px;
 }
 
@@ -381,6 +381,10 @@ form {
   border-radius: 4px;
   color: #1a2236;
   font-size: 1rem;
+}
+
+.msgLbl {
+  display: none;
 }
 
 textarea {
@@ -456,6 +460,7 @@ footer {
 @media screen and (min-width: 768px) {
   .btnBlue {
     padding-inline: 9%;
+    width: fit-content;
   }
 
   header {
@@ -672,9 +677,9 @@ footer {
   }
 
   .seeProjBtn {
-    width: 159px;
+    width: 171px;
     font-size: 1rem;
-    padding: 6px;
+    padding: 6px 6px 6px 15px;
   }
 
   .arrow {
@@ -749,5 +754,61 @@ footer {
     padding: 0;
     background: url('images/deco/desktop/about-deco.svg') bottom right no-repeat;
     background-size: 70%;
+  }
+
+  /********* Contact ****************/
+
+  #contact {
+    background: url('images/deco/desktop/form-deco-1.svg') top left no-repeat,
+      url('images/deco/desktop/form-deco-2.svg') bottom right no-repeat, #f9f9fa;
+    background-size: 18.26vw, 24.3vw;
+    padding: 9vw 30vw;
+  }
+
+  #contact h1 {
+    font-size: 7.2vw;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  form ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .input-container {
+    background: none;
+    width: 48%;
+  }
+
+  .input-container label {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin-block: 3px;
+  }
+
+  .input-container input {
+    width: 100%;
+    padding: 15px 9px;
+  }
+
+  .msgLbl {
+    display: flex;
+    align-self: flex-start;
+    color: #7d7c84;
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-block: 6px;
+  }
+
+  textarea {
+    height: 12vw;
+    margin-bottom: 18px;
   }
 }
