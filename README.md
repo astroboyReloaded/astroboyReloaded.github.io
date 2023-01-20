@@ -62,6 +62,7 @@
 - **Footer Section / Social Networks**
 - **Style for different states to all buttons**
 - **Desktop version**
+- **Transitions to all clickable elements**
 
 <!-- LIVE DEMO -->
 
@@ -105,7 +106,6 @@
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Transitions**
 - **Mobile menu display implementation with JavaScript**
 - **Render `.works`'s content dinamically with JavaScript**
 - **Real Projects**.
