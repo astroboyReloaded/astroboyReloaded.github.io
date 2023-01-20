@@ -25,20 +25,34 @@
 
   <body>
     <header>
+      <div
+        href="#"
+        class="logo show-hide"
+        role="img"
+        aria-label="Logo: Right Triangle and rhombus"
+      ></div>
       <nav>
-        <div
-          href="#"
-          class="logo"
-          role="img"
-          aria-label="Logo: Right Triangle and rhombus"
-        ></div>
-        <label class="menu-btn-container">
-          <input id="menu-toggle" type="checkbox" />
-          <div class="menu-btn"></div>
-        </label>
+        <ul class="poppins">
+          <li class="nav-item">
+            <a class="nav-link" href="#headline">Hello</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#works">Portfolio</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </nav>
-      <!---------------------- headline ------------------------>
-      <section id="headline">
+      <label class="menu-btn-container">
+        <input id="menu-toggle" type="checkbox" />
+        <div class="menu-btn show-hide"></div>
+      </label>
+    </header>
+    <!---------------------- headline ------------------------>
+    <section id="headline">
+      <article class="headline-container">
         <h1 class="headline-title playfair">Alex Muñoz</h1>
         <p class="poppins">
           &nbspHey, there! I am a software developer! I can help you build a
@@ -46,18 +60,19 @@
           you see and have a project you would like coded, don’t hesitate to
           contact me.
         </p>
-        <a href="#" class="btnBlue poppins">Start collaboration </a>
-      </section>
+        <a href="#contact" class="btnBlue poppins">Start collaboration </a>
+      </article>
       <div
-        class="shapes-design-container"
+        class="headline-deco"
         role="img"
         aria-label="Decoration: Geometric shapes mosaic"
       ></div>
-    </header>
+    </section>
+    <!---------- Projects ---------------->
     <main>
       <section id="works">
         <h1 class="playfair">Projects</h1>
-        <article class="project">
+        <article class="project p1">
           <img
             class="project-image"
             src="images/projects/Project1.jpg"
@@ -75,7 +90,7 @@
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p2">
           <img
             class="project-image"
             src="images/projects/Project2.jpg"
@@ -86,14 +101,14 @@
             <ul class="tech-container">
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
-              <li class="tech-item">JavaScript</li>
+              <li class="tech-item js">JavaScript</li>
             </ul>
             <a href="#" class="btnBlue seeProjBtn"
               >See this project<i class="arrow"></i
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p3">
           <img
             class="project-image"
             src="images/projects/Project3.jpg"
@@ -111,7 +126,7 @@
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p4">
           <img
             class="project-image"
             src="images/projects/Project4.jpg"
@@ -122,14 +137,14 @@
             <ul class="tech-container">
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
-              <li class="tech-item">JavaScript</li>
+              <li class="tech-item js">JavaScript</li>
             </ul>
             <a href="#" class="btnBlue seeProjBtn"
               >See this project<i class="arrow"></i
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p5">
           <img
             class="project-image"
             src="images/projects/Project5.jpg"
@@ -140,14 +155,14 @@
             <ul class="tech-container">
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
-              <li class="tech-item">JavaScript</li>
+              <li class="tech-item js">JavaScript</li>
             </ul>
             <a href="#" class="btnBlue seeProjBtn"
               >See this project<i class="arrow"></i
             ></a>
           </div>
         </article>
-        <article class="project">
+        <article class="project p6">
           <img
             class="project-image"
             src="images/projects/Project6.jpg"
@@ -158,25 +173,31 @@
             <ul class="tech-container">
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
-              <li class="tech-item">JavaScript</li>
+              <li class="tech-item js">JavaScript</li>
             </ul>
             <a href="#" class="btnBlue seeProjBtn"
               >See this project<i class="arrow"></i
             ></a>
           </div>
         </article>
+        <div class="project center deco"></div>
+        <div class="project left deco"></div>
+        <div class="project right deco"></div>
       </section>
+      <!------------------- About ----------------->
       <section id="about">
-        <h1 class="playfair">About</h1>
-        <p class="poppins">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ea eiusmod
-        </p>
-        <a href="#" class="btnBlue getCV poppins" download
-          >Get my CV<i class="download"></i
-        ></a>
+        <div>
+          <h1 class="playfair">About</h1>
+          <p class="poppins">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ea eiusmod
+          </p>
+          <a href="#" class="btnBlue getCV poppins" download
+            >Get my CV<i class="download"></i
+          ></a>
+        </div>
         <ul class="tech-cards-container poppins">
           <li class="tech-card langs">
             <h2>Languages</h2>
@@ -207,13 +228,17 @@
               <li>• Terminal</li>
             </ul>
           </li>
+          <div class="about-deco tech-card"></div>
         </ul>
       </section>
+      <!----------------- Contact ---------------->
       <section id="contact">
         <h1 class="playfair">Get Started</h1>
-        <p class="form-p poppins">
+        <p class="poppins">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna.
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
         </p>
         <form action="https://formspree.io/f/myyazjoo" method="post">
           <ul class="poppins">
@@ -232,6 +257,7 @@
               <input name="user_email" id="email" type="email" required />
             </li>
           </ul>
+          <label for="msg" class="msgLbl poppins">Message</label>
           <textarea
             name="msg"
             id="msg"
@@ -240,9 +266,7 @@
             maxlength="500"
             required
           ></textarea>
-          <button type="submit" class="btnBlue submit">
-            Start collaboration
-          </button>
+          <button type="submit" class="btnBlue">Start collaboration</button>
         </form>
       </section>
       <footer>
