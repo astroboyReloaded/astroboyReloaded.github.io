@@ -41,6 +41,7 @@ ul {
   padding: 15px;
   border: 2px solid #fff;
   cursor: pointer;
+  transition: all 300ms ease-in-out;
 }
 
 .btnBlue:focus {
@@ -95,6 +96,8 @@ header {
   width: 100%;
   height: fit-content;
   justify-content: space-between;
+  background: #fff;
+  z-index: 5;
 }
 
 .logo {
@@ -150,6 +153,7 @@ nav ul {
   height: 3px;
   width: 24px;
   border-radius: 2px;
+  transition: all 300ms ease-in-out;
 }
 
 .menu-btn::before {
@@ -160,6 +164,20 @@ nav ul {
 .menu-btn::after {
   content: '';
   margin-top: 9px;
+}
+
+#menu-toggle:checked + .menu-btn::before {
+  margin-top: 0px;
+  transform: rotate(45deg);
+}
+
+#menu-toggle:checked + .menu-btn {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .menu-btn::after {
+  margin-top: 0px;
+  transform: rotate(-45deg);
 }
 
 /****************** Headline *****************/
@@ -191,8 +209,7 @@ nav ul {
   margin: 27px 0 0 -18px;
   width: 100vw;
   height: 53.333vw;
-  background:
-    url('images/deco/mobile/image_geometry-headline-mobile.svg')
+  background: url('images/deco/mobile/image_geometry-headline-mobile.svg')
     no-repeat;
   background-size: contain;
 }
@@ -257,6 +274,7 @@ nav ul {
   margin-left: 9px;
   background: url('images/icons/arrow.svg') 90% 50% no-repeat;
   background-size: 24px;
+  transition: background 300ms ease-in-out;
 }
 
 .seeProjBtn:hover .arrow {
@@ -292,6 +310,7 @@ nav ul {
   height: 30px;
   background: url('images/icons/download-icon-1.svg') 80% 50% no-repeat;
   margin-left: 1rem;
+  transition: background 300ms ease-in-out;
 }
 
 .getCV:hover .download {
@@ -329,8 +348,7 @@ nav ul {
 }
 
 .frames {
-  background:
-    #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
+  background: #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
     no-repeat;
 }
 
@@ -415,8 +433,7 @@ footer {
   margin: 2rem 1rem;
   width: fit-content;
   padding-right: 45px;
-  background:
-    url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
+  background: url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
     no-repeat;
 }
 
@@ -431,6 +448,11 @@ footer {
   width: 30px;
   height: 30px;
   cursor: pointer;
+  transition: transform 300ms ease-in-out;
+}
+
+.social:hover {
+  transform: scale(1.2);
 }
 
 .stack {
@@ -484,13 +506,30 @@ footer {
     display: flex;
     flex-direction: row;
     top: 0;
-    height: 70px;
+    height: 75px;
     justify-content: center;
     align-items: center;
   }
 
   .nav-item {
+    position: relative;
     margin-inline: 18px;
+  }
+
+  .nav-link::after {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    content: '';
+    display: inline-block;
+    width: 0;
+    height: 2px;
+    background-color: #1a2236;
+    transition: width 300ms ease-in-out;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
   }
 
   /****** Headline *****/
@@ -628,8 +667,7 @@ footer {
     grid-area: rght;
     position: relative;
     width: 43.9vw;
-    background:
-      url('images/deco/desktop/work-right-deco.svg') bottom left
+    background: url('images/deco/desktop/work-right-deco.svg') bottom left
       no-repeat;
     background-size: contain;
   }
@@ -639,8 +677,7 @@ footer {
     top: -0.12vw;
     width: 54.86vw;
     z-index: 1;
-    background:
-      url('images/deco/desktop/work-left-deco.svg') top left no-repeat,
+    background: url('images/deco/desktop/work-left-deco.svg') top left no-repeat,
       url('images/deco/desktop/single_drop.svg') top right no-repeat;
     background-size: 14.65vw 8.61vw, 6.04vw;
   }
@@ -751,6 +788,9 @@ footer {
   }
 
   .about-deco {
+    width: 100%;
+    height: 100%;
+    margin: 0;
     padding: 0;
     background: url('images/deco/desktop/about-deco.svg') bottom right no-repeat;
     background-size: 70%;
@@ -759,10 +799,8 @@ footer {
   /********* Contact ****************/
 
   #contact {
-    background:
-      url('images/deco/desktop/form-deco-1.svg') top left no-repeat,
-      url('images/deco/desktop/form-deco-2.svg') bottom right no-repeat,
-      #f9f9fa;
+    background: url('images/deco/desktop/form-deco-1.svg') top left no-repeat,
+      url('images/deco/desktop/form-deco-2.svg') bottom right no-repeat, #f9f9fa;
     background-size: 18.26vw, 24.3vw;
     padding: 9vw 30vw;
   }
