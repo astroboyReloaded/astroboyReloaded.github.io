@@ -107,7 +107,6 @@ header {
   height: fit-content;
   justify-content: space-between;
   background: var(--white);
-  z-index: 5;
 }
 
 .logo {
