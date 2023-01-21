@@ -45,7 +45,7 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://docs.github.com/es/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site">GitHub Pages</a></li>
+    <li><a href="https://www.netlify.com/">Netlify</a></li>
   </ul>
 </details>
 
