@@ -29,7 +29,7 @@
 # 📖 Alex Muñoz's Web Developer Portfolio <a name="about-project"></a>
 
 > This project aims to create a fully implemented professional portfolio to host my best work as a web developer. The portfolio itself is now in a mobile version develpment stage.
-> <br> For future implementations, please go to the [Future Features](#future-features) section. [Click here to see the Live Demo](https://portfolio-setup-and-mobile-first.netlify.app/).
+> <br> For future implementations, please go to the [Future Features](#future-features) section. [Click here to see the Live Demo](https://astroboyreloaded.github.io/).
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -45,7 +45,7 @@
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://www.netlify.com/">Netlify</a></li>
+    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
   </ul>
 </details>
 
@@ -63,12 +63,13 @@
 - **Style for different states to all buttons**
 - **Desktop version**
 - **Transitions to all clickable elements**
+- **Deployed to GitHub Pages**
 
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://portfolio-setup-and-mobile-first.netlify.app/)
+- [Live Demo Link](https://astroboyreloaded.github.io/)
 
 ### Prerequisites
 
