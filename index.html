@@ -32,150 +32,213 @@
       <nav>
         <ul class="poppins">
           <li class="nav-item">
-            <a class="nav-link" href="#headline">Hello</a>
+            <a class="nav-link" href="#headline" tabindex="2">Hello</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#works">Portfolio</a>
+            <a class="nav-link" href="#works" tabindex="3">Portfolio</a>
           </li>
-          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
+            <a class="nav-link" href="#about" tabindex="4">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact" tabindex="5">Contact</a>
           </li>
         </ul>
       </nav>
-      <label class="menu-btn-container">
+      <label
+        class="menu-btn-container show-hide"
+        for="menu-toggle"
+        tabindex="1"
+        aria-label="Show Navigation Menu"
+      >
         <input id="menu-toggle" type="checkbox" />
-        <div class="menu-btn show-hide"></div>
+        <div class="menu-btn"></div>
       </label>
     </header>
     <!---------------------- headline ------------------------>
-    <section id="headline">
+    <section id="headline" tabindex="6">
       <article class="headline-container">
-        <h1 class="headline-title playfair">Alex Muñoz</h1>
-        <p class="poppins">
+        <h1 class="headline-title playfair" aria-label="Alex Muñoz.">
+          Alex Muñoz
+        </h1>
+        <p
+          class="poppins"
+          aria-label="Hey there! I am a software developer! I can help you build a
+          product feature or website. Take a look at my work. If you like what
+          you see and have a project you would like coded don’t hesitate to
+          contact me. Press tab and enter to"
+        >
           &nbspHey, there! I am a software developer! I can help you build a
           product, feature or website. Take a look at my work. If you like what
           you see and have a project you would like coded, don’t hesitate to
           contact me.
         </p>
-        <a href="#contact" class="btnBlue poppins">Start collaboration </a>
+        <a href="#contact" class="btnBlue poppins" tabindex="7"
+          >Start collaboration
+        </a>
       </article>
-      <div
-        class="headline-deco"
-        role="img"
-        aria-label="Decoration: Geometric shapes mosaic"
-      ></div>
+      <div class="headline-deco" role="img"></div>
     </section>
     <!---------- Projects ---------------->
     <main>
       <section id="works">
-        <h1 class="playfair">Projects</h1>
-        <article class="project p1">
+        <h1 class="playfair" tabindex="8" aria-label="My projects:">
+          Projects
+        </h1>
+        <article class="project p1" tabindex="9">
           <img
             class="project-image"
             src="images/projects/Project1.jpg"
-            alt="Temporary project image"
+            alt="Temporary project image."
           />
           <div class="project-description poppins">
-            <h1 class="project-title">Project name goes here</h1>
-            <ul class="tech-container">
+            <h1 class="project-title" aria-label="Project name.">
+              Project name goes here
+            </h1>
+            <ul
+              class="tech-container"
+              aria-label="Technologies: HTML and CSS, Ruby on Rails, JavaScript."
+            >
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
               <li class="tech-item">JavaScript</li>
             </ul>
-            <a href="#" class="btnBlue seeProjBtn"
-              >See this project<i class="arrow"></i
-            ></a>
+            <button
+              class="btnBlue seeProjBtn"
+              aria-label="Press enter now to see this project."
+            >
+              See this project
+            </button>
           </div>
         </article>
-        <article class="project p2">
+        <article class="project p2" tabindex="10">
           <img
             class="project-image"
             src="images/projects/Project2.jpg"
-            alt="Temporary project image"
+            alt="Temporary project image."
           />
           <div class="project-description poppins">
-            <h1 class="project-title">Project name goes here</h1>
-            <ul class="tech-container">
+            <h1 class="project-title" aria-label="Project name.">
+              Project name goes here
+            </h1>
+            <ul
+              class="tech-container"
+              aria-label="Technologies: HTML and CSS, Ruby on Rails, JavaScript."
+            >
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
               <li class="tech-item js">JavaScript</li>
             </ul>
-            <a href="#" class="btnBlue seeProjBtn"
-              >See this project<i class="arrow"></i
-            ></a>
+            <button
+              class="btnBlue seeProjBtn"
+              aria-label="Press enter now to see this project."
+            >
+              See this project
+            </button>
           </div>
         </article>
-        <article class="project p3">
+        <article class="project p3" tabindex="11">
           <img
             class="project-image"
             src="images/projects/Project3.jpg"
-            alt="Temporary project image"
+            alt="Temporary project image."
           />
           <div class="project-description poppins">
-            <h1 class="project-title">Project name goes here</h1>
-            <ul class="tech-container">
+            <h1 class="project-title" aria-label="Project name.">
+              Project name goes here
+            </h1>
+            <ul
+              class="tech-container"
+              aria-label="Technologies: HTML and CSS, Ruby on Rails, JavaScript."
+            >
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
               <li class="tech-item">JavaScript</li>
             </ul>
-            <a href="#" class="btnBlue seeProjBtn"
-              >See this project<i class="arrow"></i
-            ></a>
+            <button
+              class="btnBlue seeProjBtn"
+              aria-label="Press enter now to see this project."
+            >
+              See this project
+            </button>
           </div>
         </article>
-        <article class="project p4">
+        <article class="project p4" tabindex="12">
           <img
             class="project-image"
             src="images/projects/Project4.jpg"
-            alt="Temporary project image"
+            alt="Temporary project image."
           />
           <div class="project-description poppins">
-            <h1 class="project-title">Project name goes here</h1>
-            <ul class="tech-container">
+            <h1 class="project-title" aria-label="Project name.">
+              Project name goes here
+            </h1>
+            <ul
+              class="tech-container"
+              aria-label="Technologies: HTML and CSS, Ruby on Rails, JavaScript."
+            >
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
               <li class="tech-item js">JavaScript</li>
             </ul>
-            <a href="#" class="btnBlue seeProjBtn"
-              >See this project<i class="arrow"></i
-            ></a>
+            <button
+              class="btnBlue seeProjBtn"
+              aria-label="Press enter now to see this project."
+            >
+              See this project
+            </button>
           </div>
         </article>
-        <article class="project p5">
+        <article class="project p5" tabindex="13">
           <img
             class="project-image"
             src="images/projects/Project5.jpg"
-            alt="Temporary project image"
+            alt="Temporary project image."
           />
           <div class="project-description poppins">
-            <h1 class="project-title">Project name goes here</h1>
-            <ul class="tech-container">
+            <h1 class="project-title" aria-label="Project name.">
+              Project name goes here
+            </h1>
+            <ul
+              class="tech-container"
+              aria-label="Technologies: HTML and CSS, Ruby on Rails, JavaScript."
+            >
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
               <li class="tech-item js">JavaScript</li>
             </ul>
-            <a href="#" class="btnBlue seeProjBtn"
-              >See this project<i class="arrow"></i
-            ></a>
+            <button
+              class="btnBlue seeProjBtn"
+              aria-label="Press enter now to see this project."
+            >
+              See this project
+            </button>
           </div>
         </article>
-        <article class="project p6">
+        <article class="project p6" tabindex="14">
           <img
             class="project-image"
             src="images/projects/Project6.jpg"
-            alt="Temporary project image"
+            alt="Temporary project image."
           />
           <div class="project-description poppins">
-            <h1 class="project-title">Project name goes here</h1>
-            <ul class="tech-container">
+            <h1 class="project-title" aria-label="Project name.">
+              Project name goes here
+            </h1>
+            <ul
+              class="tech-container"
+              aria-label="Technologies: HTML and CSS, Ruby on Rails, JavaScript."
+            >
               <li class="tech-item">HTML/CSS</li>
               <li class="tech-item">Ruby on Rails</li>
               <li class="tech-item js">JavaScript</li>
             </ul>
-            <a href="#" class="btnBlue seeProjBtn"
-              >See this project<i class="arrow"></i
-            ></a>
+            <button
+              class="btnBlue seeProjBtn"
+              aria-label="Press enter now to see this project."
+            >
+              See this project
+            </button>
           </div>
         </article>
         <div class="project center deco"></div>
@@ -183,21 +246,29 @@
         <div class="project right deco"></div>
       </section>
       <!------------------- About ----------------->
-      <section id="about">
+      <section id="about" tabindex="15">
         <div>
-          <h1 class="playfair">About</h1>
+          <h1 class="playfair" aria-label="About me.">About</h1>
           <p class="poppins">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ea eiusmod
+            aliquip ea eiusmod.
           </p>
-          <a href="#" class="btnBlue getCV poppins" download
+          <a
+            href="#"
+            class="btnBlue getCV poppins"
+            download
+            tabindex="16"
+            aria-label="Enter here to get my CV."
             >Get my CV<i class="download"></i
           ></a>
         </div>
         <ul class="tech-cards-container poppins">
-          <li class="tech-card langs">
+          <li
+            class="tech-card langs"
+            aria-label="Languages: JavaScript (ES5/ES6), Ruby, HTML, CSS."
+          >
             <h2>Languages</h2>
             <ul class="tech">
               <li>• JavaScript (ES5/ES6)</li>
@@ -206,7 +277,10 @@
               <li>• CSS</li>
             </ul>
           </li>
-          <li class="tech-card frames">
+          <li
+            class="tech-card frames"
+            aria-label="Frameworks: Bootstrap, Ruby on rails, RSpec, Capibara, Selenium."
+          >
             <h2>Frameworks</h2>
             <ul class="tech">
               <li>• Bootstrap</li>
@@ -216,7 +290,10 @@
               <li>• Selenium</li>
             </ul>
           </li>
-          <li class="tech-card skills">
+          <li
+            class="tech-card skills"
+            aria-label="Skills: Codekit, Codepen, GitHub, GitLAb, Terminal."
+          >
             <h2>Skills</h2>
             <ul class="tech">
               <li>• Codekit</li>
@@ -230,8 +307,8 @@
         </ul>
       </section>
       <!----------------- Contact ---------------->
-      <section id="contact">
-        <h1 class="playfair">Get Started</h1>
+      <section id="contact" tabindex="17">
+        <h1 class="playfair" aria-label="Lets get started.">Get Started</h1>
         <p class="poppins">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -241,21 +318,34 @@
         <form action="https://formspree.io/f/myyazjoo" method="post">
           <ul class="poppins">
             <li class="input-container">
-              <label for="name">Your name</label>
+              <label for="name" aria-label="Please enter your"
+                >Your name*</label
+              >
               <input
                 type="text"
                 id="name"
                 name="user_name"
                 maxlength="30"
                 required
+                aria-label="name."
               />
             </li>
             <li class="input-container">
-              <label for="email">Your email</label>
-              <input name="user_email" id="email" type="email" required />
+              <label for="email" aria-label="Please enter your"
+                >Your email*</label
+              >
+              <input
+                name="user_email"
+                id="email"
+                type="email"
+                required
+                aria-label="email."
+              />
             </li>
           </ul>
-          <label for="msg" class="msgLbl poppins">Message</label>
+          <label for="msg" class="msgLbl poppins" aria-label="Please describe"
+            >Message*</label
+          >
           <textarea
             name="msg"
             id="msg"
@@ -263,20 +353,55 @@
             placeholder="Enter your message here..."
             maxlength="500"
             required
+            aria-label="your project in less than 500 characters."
           ></textarea>
-          <button type="submit" class="btnBlue">Start collaboration</button>
+          <button type="submit" class="btnBlue" aria-label="Send message">
+            Start collaboration
+          </button>
         </form>
       </section>
       <footer>
         <a href="#" class="open poppins">Get my Resume</a>
-        <div class="social-container">
-          <i class="social stack"></i>
-          <i class="social gith"></i>
-          <i class="social twit"></i>
-          <i class="social link"></i>
-          <i class="social m"></i>
-          <i class="social pNL"></i>
-        </div>
+        <ul class="social-container">
+          <li>
+            <a class="social-link" href="#"
+              ><i class="social-icon"
+                ><img
+                  src="./images/icons/stackoverflow.svg"
+                  alt="Stack Overflow" /></i
+            ></a>
+          </li>
+          <li>
+            <a class="social-link" href="#"
+              ><i class="social-icon"
+                ><img src="./images/icons/github-icon.svg" alt="GitHub" /></i
+            ></a>
+          </li>
+          <li>
+            <a class="social-link" href="#"
+              ><i class="social-icon"
+                ><img src="./images/icons/twitter.svg" alt="Twitter" /></i
+            ></a>
+          </li>
+          <li>
+            <a class="social-link" href="#"
+              ><i class="social-icon"
+                ><img src="./images/icons/linkedin.svg" alt="Linkedin" /></i
+            ></a>
+          </li>
+          <li>
+            <a class="social-link" href="#"
+              ><i class="social-icon m"
+                ><img src="./images/icons/M-icon.svg" alt="M" /></i
+            ></a>
+          </li>
+          <li>
+            <a class="social-link" href="#"
+              ><i class="social-icon"
+                ><img src="./images/icons/pnl-icon.svg" alt="PNL" /></i
+            ></a>
+          </li>
+        </ul>
       </footer>
     </main>
   </body>

@@ -88,7 +88,6 @@ ul {
 
 *:focus {
   outline: none;
-  border: 2px solid var(--border);
 }
 
 body {
@@ -97,6 +96,10 @@ body {
   width: 100%;
   max-width: 1440px;
   overflow-x: hidden;
+}
+
+section:focus {
+  border: 2px solid var(--border);
 }
 
 /********************** Header ***********************/
@@ -144,7 +147,7 @@ nav ul {
   flex-direction: column;
   height: 100%;
   width: 60px;
-  margin: 36px 9px;
+  padding: 36px 9px;
   align-items: center;
   cursor: pointer;
 }
@@ -218,7 +221,8 @@ nav ul {
   margin: 27px 0 0 -18px;
   width: 100vw;
   height: 53.333vw;
-  background: url('images/deco/mobile/image_geometry-headline-mobile.svg')
+  background:
+    url('images/deco/mobile/image_geometry-headline-mobile.svg')
     no-repeat;
   background-size: contain;
 }
@@ -230,12 +234,20 @@ nav ul {
   width: 100%;
 }
 
+#works h1:focus {
+  border: 2px solid var(--border);
+}
+
 .project {
   display: flex;
   flex-direction: column;
 }
 
-.project-image {
+.project:focus {
+  border: 2px solid var(--border);
+}
+
+.project .project-image {
   width: 100%;
 }
 
@@ -267,27 +279,21 @@ nav ul {
   color: var(--blue);
   font-weight: 400;
   font-size: 0.9rem;
+  text-align: center;
 }
 
 .seeProjBtn {
   width: fit-content;
-  display: flex;
-  justify-content: left;
-  text-align: center;
-}
-
-.arrow {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  margin-left: 9px;
+  text-align: start;
+  padding-right: 50px;
   background: url('images/icons/arrow.svg') 90% 50% no-repeat;
   background-size: 24px;
-  transition: background 300ms ease-in-out;
 }
 
-.seeProjBtn:hover .arrow {
-  background: url('images/icons/arrow-black.svg') 90% 50% no-repeat;
+.seeProjBtn:hover {
+  color: var(--blue);
+  border: 2px solid var(--gray);
+  background: url('images/icons/arrow-black.svg') 90% 50% no-repeat var(--white);
   background-size: 24px;
 }
 
@@ -299,7 +305,7 @@ nav ul {
   padding: 18px;
 }
 
-#about h1 {
+.about-title {
   margin: 18px 0;
 }
 
@@ -357,7 +363,8 @@ nav ul {
 }
 
 .frames {
-  background: #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
+  background:
+    #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
     no-repeat;
 }
 
@@ -442,8 +449,14 @@ footer {
   margin: 2rem 1rem;
   width: fit-content;
   padding-right: 45px;
-  background: url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
+  background:
+    url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
     no-repeat;
+  transition: transform 300ms ease-in-out;
+}
+
+.open:focus {
+  transform: scale(1.2);
 }
 
 .social-container {
@@ -452,7 +465,7 @@ footer {
   justify-content: space-between;
 }
 
-.social {
+.social-icon {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -460,32 +473,13 @@ footer {
   transition: transform 300ms ease-in-out;
 }
 
-.social:hover {
-  transform: scale(1.2);
-}
-
-.stack {
-  background: url('images/icons/stackoverflow.svg') no-repeat;
-}
-
-.gith {
-  background: url('images/icons/github-icon.svg') no-repeat;
-}
-
-.twit {
-  background: url('images/icons/twitter.svg') no-repeat;
-}
-
-.link {
-  background: url('images/icons/linkedin.svg') no-repeat;
+.social-icon:hover,
+.social-link:focus .social-icon {
+  transform: scale(1.5);
 }
 
 .m {
-  background: url('images/icons/M-icon.svg') no-repeat;
-}
-
-.pNL {
-  background: url('images/icons/pnl-icon.svg') no-repeat;
+  margin-top: 6px;
 }
 
 /******************************** Desktop ******************************************/
@@ -508,6 +502,7 @@ footer {
 
   nav {
     display: block;
+    margin-right: 99px;
   }
 
   nav ul {
@@ -525,6 +520,10 @@ footer {
     margin-inline: 18px;
   }
 
+  .nav-link {
+    border: 2px solid var(--white);
+  }
+
   .nav-link::after {
     position: absolute;
     top: 30px;
@@ -537,7 +536,8 @@ footer {
     transition: width 300ms ease-in-out;
   }
 
-  .nav-link:hover::after {
+  .nav-link:hover::after,
+  .nav-link:focus::after {
     width: 100%;
   }
 
@@ -676,7 +676,8 @@ footer {
     grid-area: rght;
     position: relative;
     width: 43.9vw;
-    background: url('images/deco/desktop/work-right-deco.svg') bottom left
+    background:
+      url('images/deco/desktop/work-right-deco.svg') bottom left
       no-repeat;
     background-size: contain;
   }
@@ -686,7 +687,8 @@ footer {
     top: -0.12vw;
     width: 54.86vw;
     z-index: 1;
-    background: url('images/deco/desktop/work-left-deco.svg') top left no-repeat,
+    background:
+      url('images/deco/desktop/work-left-deco.svg') top left no-repeat,
       url('images/deco/desktop/single_drop.svg') top right no-repeat;
     background-size: 14.65vw 8.61vw, 6.04vw;
   }
@@ -701,7 +703,8 @@ footer {
     display: none;
   }
 
-  .project:hover .project-description {
+  .project:hover .project-description,
+  .project:focus .project-description {
     display: flex;
     z-index: 3;
   }
@@ -730,15 +733,7 @@ footer {
   .seeProjBtn {
     width: 171px;
     font-size: 1rem;
-    padding: 6px 6px 6px 15px;
-  }
-
-  .arrow {
-    background-size: 18px;
-  }
-
-  .seeProjBtn:hover .arrow {
-    background-size: 18px;
+    padding: 9px 6px 9px 15px;
   }
 
   /********* About *************/
@@ -806,8 +801,10 @@ footer {
   /********* Contact ****************/
 
   #contact {
-    background: url('images/deco/desktop/form-deco-1.svg') top left no-repeat,
-      url('images/deco/desktop/form-deco-2.svg') bottom right no-repeat, #f9f9fa;
+    background:
+      url('images/deco/desktop/form-deco-1.svg') top left no-repeat,
+      url('images/deco/desktop/form-deco-2.svg') bottom right no-repeat,
+      #f9f9fa;
     background-size: 18.26vw, 24.3vw;
     padding: 9vw 30vw;
   }
