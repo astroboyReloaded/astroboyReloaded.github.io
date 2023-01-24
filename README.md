@@ -64,6 +64,7 @@
 - **Desktop version**
 - **Transitions to all clickable elements**
 - **Deployed to GitHub Pages**
+- **Accessibility and Screen Reader adapted**
 
 <!-- LIVE DEMO -->
 
