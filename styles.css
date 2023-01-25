@@ -408,6 +408,10 @@ form {
   font-weight: 400;
 }
 
+abbr {
+  text-decoration: none;
+}
+
 .input-container input {
   background: var(--white);
   width: 100%;
