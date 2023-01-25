@@ -248,7 +248,7 @@
       <!------------------- About ----------------->
       <section id="about" tabindex="15">
         <div>
-          <h1 class="playfair" aria-label="About me.">About</h1>
+          <h1 class="playfair about-title" aria-label="About me.">About</h1>
           <p class="poppins">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -319,7 +319,7 @@
           <ul class="poppins">
             <li class="input-container">
               <label for="name" aria-label="Please enter your"
-                >Your name*</label
+                >Your name<abbr title="Required">*</abbr></label
               >
               <input
                 type="text"
@@ -332,7 +332,7 @@
             </li>
             <li class="input-container">
               <label for="email" aria-label="Please enter your"
-                >Your email*</label
+                >Your email<abbr title="Required">*</abbr></label
               >
               <input
                 name="user_email"
@@ -344,7 +344,7 @@
             </li>
           </ul>
           <label for="msg" class="msgLbl poppins" aria-label="Please describe"
-            >Message*</label
+            >Message<abbr title="Required">*</abbr></label
           >
           <textarea
             name="msg"
