@@ -78,13 +78,31 @@
 
 ### Setup
 
-- If you wish to work from this project by editing it's code, you may add linters to ensure adhering to best practices.
+- If you wish to work from this project by editing it's code,
 
 ### Install
 
-- `npm init -y` (or `npm init` to fill up fields manually)
+You may add linters to ensure adhering to best practices.
 
-- `npm install`
+1.- Create a package.json:
+
+```sh
+npm init -y
+```
+
+or:
+
+```sh
+npm init
+```
+
+to fill up fields manually.
+
+2.- Install all dependencies (linters):
+
+```sh
+npm install
+```
 
 ### Usage
 
