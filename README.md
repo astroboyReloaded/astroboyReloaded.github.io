@@ -78,20 +78,62 @@
 
 ### Setup
 
-- If you wish to work from this project by editing it's code, you may add linters to ensure adhering to best practices.
+- If you wish to work from this project by editing it's code:
+
+```sh
+git clone https://github.com/astroboyReloaded/astroboyReloaded.github.io.git
+```
 
 ### Install
 
-- `npm init -y` (or `npm init` to fill up fields manually)
+You may add linters to ensure adhering to best practices.
 
-- `npm install`
+1.- Create a package.json:
+
+```sh
+npm init -y
+```
+
+or:
+
+```sh
+npm init
+```
+
+to fill up fields manually.
+
+2.- Install all dependencies (linters):
+
+```sh
+npm install
+```
 
 ### Usage
 
 - May use as a base or reference to develop your own portfolio.
-- Run `npx hint .` to get an HTML review.
-- Run `npx stylelint "**/*.{css,scss}"` to get a CSS review.
-- Run `lighthouse <URL>` to get a performance review .
+- Run
+
+```sh
+npx hint .
+```
+
+to get an HTML review.
+
+- Run
+
+```sh
+npx stylelint "**/*.{css,scss}"
+```
+
+to get a CSS review.
+
+- Run
+
+```sh
+lighthouse <URL>
+```
+
+to get a performance review .
 
 <!-- AUTHORS -->
 
