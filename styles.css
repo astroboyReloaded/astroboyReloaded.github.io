@@ -731,7 +731,7 @@ footer {
 
   .tech-item:nth-of-type(3) {
     overflow: hidden;
-    text-overflow: '+'; /* <-- Can you tell me why this is not working? */
+    text-overflow: ellipsis;
   }
 
   .seeProjBtn {

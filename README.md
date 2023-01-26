@@ -28,7 +28,8 @@
 
 # 📖 Alex Muñoz's Web Developer Portfolio <a name="about-project"></a>
 
- This project aims to create a fully implemented professional portfolio to host my best work as a web developer. The portfolio itself is now in a mobile version develpment stage.
+This project aims to create a fully implemented professional portfolio to host my best work as a web developer. The portfolio itself is now in a mobile version develpment stage.
+
 > <br> For future implementations, please go to the [Future Features](#future-features) section. [Click here to see the Live Demo](https://astroboyreloaded.github.io/).
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -160,14 +161,14 @@ to get a performance review .
 
 ## 🤝 Contributing <a name="contributing"></a>
 
- Please let me know if you find any issues in this repo's code!
+Please let me know if you find any issues in this repo's code!
 Feel free to check the [issues page](../../issues/).
 
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
- If you like my work on this project, please give me a star on this repo. I would also love to read your comment letting me know what you think!
+If you like my work on this project, please give me a star on this repo. I would also love to read your comment letting me know what you think!
 
 <!-- ACKNOWLEDGEMENTS -->
 
