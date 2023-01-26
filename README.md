@@ -160,7 +160,7 @@ to get a performance review .
 
 ## 🤝 Contributing <a name="contributing"></a>
 
- Please let me know if you find any isues in this repo's code!
+ Please let me know if you find any issues in this repo's code!
 Feel free to check the [issues page](../../issues/).
 
 <!-- SUPPORT -->
