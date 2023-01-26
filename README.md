@@ -107,9 +107,29 @@ npm install
 ### Usage
 
 - May use as a base or reference to develop your own portfolio.
-- Run `npx hint .` to get an HTML review.
-- Run `npx stylelint "**/*.{css,scss}"` to get a CSS review.
-- Run `lighthouse <URL>` to get a performance review .
+- Run
+
+```sh
+npx hint .
+```
+
+to get an HTML review.
+
+- Run
+
+```sh
+npx stylelint "**/*.{css,scss}"
+```
+
+to get a CSS review.
+
+- Run
+
+```sh
+lighthouse <URL>
+```
+
+to get a performance review .
 
 <!-- AUTHORS -->
 
