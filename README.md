@@ -174,7 +174,7 @@ Feel free to check the [issues page](../../issues/).
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 > Thanks to [Microverse](https://www.microverse.org/) for giving me a path to follow in this learning journey!
-> Thanks to my mates, who walk by and share they experiences and knowledge with me during this journey. You make this experience even more valuable!
+> Thanks to my mates, who walk by and share they experiences and knowledge with me during this journey: you make this experience even more valuable!
 > Thanks to [GitHub](https://github.com/) for being so awesome!
 
 <!-- LICENSE -->
