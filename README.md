@@ -152,6 +152,7 @@ to get a performance review .
 
 - **Mobile menu display implementation with JavaScript**
 - **Render `.works`'s content dinamically with JavaScript**
+- **Form validation with JavaScript**
 - **Real Projects**.
 - **My CV**.
 
