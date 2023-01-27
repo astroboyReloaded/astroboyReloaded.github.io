@@ -221,7 +221,8 @@ nav ul {
   margin: 27px 0 0 -18px;
   width: 100vw;
   height: 53.333vw;
-  background: url('images/deco/mobile/image_geometry-headline-mobile.svg')
+  background:
+    url('images/deco/mobile/image_geometry-headline-mobile.svg')
     no-repeat;
   background-size: contain;
 }
@@ -362,7 +363,8 @@ nav ul {
 }
 
 .frames {
-  background: #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
+  background:
+    #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
     no-repeat;
 }
 
@@ -452,7 +454,8 @@ footer {
   margin: 2rem 1rem;
   width: fit-content;
   padding-right: 45px;
-  background: url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
+  background:
+    url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
     no-repeat;
   transition: transform 300ms ease-in-out;
 }
@@ -678,7 +681,8 @@ footer {
     grid-area: rght;
     position: relative;
     width: 43.9vw;
-    background: url('images/deco/desktop/work-right-deco.svg') bottom left
+    background:
+      url('images/deco/desktop/work-right-deco.svg') bottom left
       no-repeat;
     background-size: contain;
   }
@@ -688,7 +692,8 @@ footer {
     top: -0.12vw;
     width: 54.86vw;
     z-index: 1;
-    background: url('images/deco/desktop/work-left-deco.svg') top left no-repeat,
+    background:
+      url('images/deco/desktop/work-left-deco.svg') top left no-repeat,
       url('images/deco/desktop/single_drop.svg') top right no-repeat;
     background-size: 14.65vw 8.61vw, 6.04vw;
   }
@@ -806,8 +811,10 @@ footer {
   /********* Contact ****************/
 
   #contact {
-    background: url('images/deco/desktop/form-deco-1.svg') top left no-repeat,
-      url('images/deco/desktop/form-deco-2.svg') bottom right no-repeat, #f9f9fa;
+    background:
+      url('images/deco/desktop/form-deco-1.svg') top left no-repeat,
+      url('images/deco/desktop/form-deco-2.svg') bottom right no-repeat,
+      #f9f9fa;
     background-size: 18.26vw, 24.3vw;
     padding: 9vw 30vw;
   }
