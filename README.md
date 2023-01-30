@@ -133,6 +133,8 @@ to get a CSS review.
 ```sh
 lighthouse <URL>
 ```
+to get a performance review.
+
 - Run 
 
 ```sh
