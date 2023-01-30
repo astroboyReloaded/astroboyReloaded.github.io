@@ -41,6 +41,7 @@ This project aims to create a fully implemented professional portfolio to host m
   <ul>
     <li><a href="https://https://html5.org//">HTML 5</a></li>
     <li><a href="https://www.w3.org/Style/CSS/Overview.en.html">CSS 3</a></li>
+    <li><a href="https://www.javascript.com/">JavaScript</a></li>
   </ul>
 </details>
 <details>
@@ -54,6 +55,7 @@ This project aims to create a fully implemented professional portfolio to host m
 
 ### Key Features <a name="key-features"></a>
 
+- **Ensure meeting industry standards and best practices with linters**
 - **Mobile First.**
 - **Header Section**
 - **Headline Section**
@@ -75,7 +77,7 @@ This project aims to create a fully implemented professional portfolio to host m
 
 ### Prerequisites
 
-- [HTML](https://www.w3.org/html/) & [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [HTML](https://www.w3.org/html/) + [CSS](https://www.w3.org/Style/CSS/Overview.en.html) [JavaScript](https://www.javascript.com/)
 
 ### Setup
 
