@@ -133,8 +133,14 @@ to get a CSS review.
 ```sh
 lighthouse <URL>
 ```
+to get a performance review.
 
-to get a performance review .
+- Run 
+
+```sh
+npx eslint .
+```
+to get a JavaScript review.
 
 <!-- AUTHORS -->
 
