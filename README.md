@@ -77,7 +77,7 @@ This project aims to create a fully implemented professional portfolio to host m
 
 ### Prerequisites
 
-- [HTML](https://www.w3.org/html/) + [CSS](https://www.w3.org/Style/CSS/Overview.en.html) [JavaScript](https://www.javascript.com/)
+- [HTML](https://www.w3.org/html/) + [CSS](https://www.w3.org/Style/CSS/Overview.en.html) + [JavaScript](https://www.javascript.com/)
 
 ### Setup
 
