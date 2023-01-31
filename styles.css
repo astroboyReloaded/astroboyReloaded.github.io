@@ -18,7 +18,7 @@ html {
 
 /* section title: */
 .playfair {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 3.36rem;
   font-weight: 400;
   margin: 0 0 27px 18px;
@@ -27,7 +27,7 @@ html {
 
 /* paragraphs: */
 .poppins {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 1rem;
   color: var(--blue);
@@ -115,23 +115,45 @@ header {
 .logo {
   width: 111px;
   height: 74px;
-  background: url('images/deco/mobile/nav-logo.svg');
+  background: url("images/deco/mobile/nav-logo.svg");
+}
+
+.menu-logo {
+  background: url('images/deco/mobile/menu-top.svg');
 }
 
 /********* Nav Bar **********/
 
 nav {
   justify-content: space-between;
+  display: block;
+  position: absolute;
+  top: 74px;
+  width: 100vw;
+  height: calc(100vh - 74px);
+  background:
+    url('images/deco/mobile/four-dots.svg') 80% 0 no-repeat,
+    url('images/deco/mobile/four-dots.svg') 20% calc(93% - 25vw) no-repeat,
+    url('images/deco/mobile/menu-btm.svg') 100% 100% no-repeat,
+    #fff;
+  background-size: auto, auto, 100vw;
+}
+
+.display {
   display: none;
 }
 
 nav ul {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   top: 74px;
   width: 100%;
   align-items: center;
+}
+
+.nav-item {
+  padding-block: 9px;
 }
 
 .nav-link {
@@ -169,12 +191,12 @@ nav ul {
 }
 
 .menu-btn::before {
-  content: '';
+  content: "";
   margin-top: -9px;
 }
 
 .menu-btn::after {
-  content: '';
+  content: "";
   margin-top: 9px;
 }
 
@@ -190,6 +212,10 @@ nav ul {
 #menu-toggle:checked + .menu-btn::after {
   margin-top: 0;
   transform: rotate(-45deg);
+}
+
+.menu-btn-container #menu-toggle:checked + .logo {
+  background: url('images/deco/mobile/menu-top.svg') no-repeat;
 }
 
 /****************** Headline *****************/
@@ -222,7 +248,7 @@ nav ul {
   width: 100vw;
   height: 53.333vw;
   background:
-    url('images/deco/mobile/image_geometry-headline-mobile.svg')
+    url("images/deco/mobile/image_geometry-headline-mobile.svg")
     no-repeat;
   background-size: contain;
 }
@@ -286,14 +312,14 @@ nav ul {
   width: fit-content;
   text-align: start;
   padding-right: 50px;
-  background: url('images/icons/arrow.svg') 90% 50% no-repeat;
+  background: url("images/icons/arrow.svg") 90% 50% no-repeat;
   background-size: 24px;
 }
 
 .seeProjBtn:hover {
   color: var(--blue);
   border: 2px solid var(--gray);
-  background: url('images/icons/arrow-black.svg') 90% 50% no-repeat var(--white);
+  background: url("images/icons/arrow-black.svg") 90% 50% no-repeat var(--white);
   background-size: 24px;
 }
 
@@ -323,13 +349,13 @@ nav ul {
   position: relative;
   width: 30px;
   height: 30px;
-  background: url('images/icons/download-icon-1.svg') 80% 50% no-repeat;
+  background: url("images/icons/download-icon-1.svg") 80% 50% no-repeat;
   margin-left: 1rem;
   transition: background 300ms ease-in-out;
 }
 
 .getCV:hover .download {
-  background: url('images/icons/download-icon.svg') 80% 50% no-repeat;
+  background: url("images/icons/download-icon.svg") 80% 50% no-repeat;
 }
 
 .tech-cards-container {
@@ -359,17 +385,17 @@ nav ul {
 }
 
 .langs {
-  background: #1c528a url('images/deco/about/lang.svg') 100% 100% no-repeat;
+  background: #1c528a url("images/deco/about/lang.svg") 100% 100% no-repeat;
 }
 
 .frames {
   background:
-    #e2505c url('images/deco/about/Frameworks.svg') 100% 100%
+    #e2505c url("images/deco/about/Frameworks.svg") 100% 100%
     no-repeat;
 }
 
 .skills {
-  background: #febf52 url('images/deco/about/skills.svg') 100% 100% no-repeat;
+  background: #febf52 url("images/deco/about/skills.svg") 100% 100% no-repeat;
 }
 
 /******************** Contact Form ******************************/
@@ -378,7 +404,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   width: 100%;
-  background: #f9f9fa url('images/deco/mobile/nav-logo.svg') no-repeat;
+  background: #f9f9fa url("images/deco/mobile/nav-logo.svg") no-repeat;
   padding-block: 93px 36px;
 }
 
@@ -455,7 +481,7 @@ footer {
   width: fit-content;
   padding-right: 45px;
   background:
-    url('images/icons/open-in-new-window-icon-LightBlue.svg') 100% 50%
+    url("images/icons/open-in-new-window-icon-LightBlue.svg") 100% 50%
     no-repeat;
   transition: transform 300ms ease-in-out;
 }
@@ -506,8 +532,16 @@ footer {
   }
 
   nav {
+    position: static;
     display: block;
     margin-right: 99px;
+    top: 0;
+    height: auto;
+    background: #fff;
+  }
+
+  .display {
+    display: block;
   }
 
   nav ul {
@@ -533,7 +567,7 @@ footer {
     position: absolute;
     top: 30px;
     left: 0;
-    content: '';
+    content: "";
     display: inline-block;
     width: 0;
     height: 2px;
@@ -562,7 +596,7 @@ footer {
     padding-inline: 3vw 6vw;
     align-items: flex-start;
     justify-content: center;
-    background: url('images/deco/desktop/eight_dots.svg') right bottom no-repeat;
+    background: url("images/deco/desktop/eight_dots.svg") right bottom no-repeat;
     background-size: calc(52vw / 4);
   }
 
@@ -582,7 +616,7 @@ footer {
     width: 52vw;
     height: calc(52vw * 1.249);
     margin: 0;
-    background: url('images/deco/desktop/image-geometry_1.svg') no-repeat;
+    background: url("images/deco/desktop/image-geometry_1.svg") no-repeat;
     background-size: cover;
   }
 
@@ -591,10 +625,10 @@ footer {
   #works {
     position: relative;
     grid-template-areas:
-      'title p1 p1 p1'
-      'p2 cntr cntr p5p6'
-      'p3 p3  rght rght'
-      'lft lft p4 p4';
+      "title p1 p1 p1"
+      "p2 cntr cntr p5p6"
+      "p3 p3  rght rght"
+      "lft lft p4 p4";
     width: 100%;
     margin-top: 9vw;
   }
@@ -613,7 +647,7 @@ footer {
     height: 36vw;
     margin: 0;
     padding-bottom: 9vw;
-    background: url('images/deco/desktop/eight_dots.svg') bottom right no-repeat;
+    background: url("images/deco/desktop/eight_dots.svg") bottom right no-repeat;
     background-size: 12.1527vw;
   }
 
@@ -673,7 +707,7 @@ footer {
     top: 0.24vw;
     height: 23.5vw;
     z-index: 1;
-    background: url('images/deco/desktop/work-center-deco.svg') no-repeat;
+    background: url("images/deco/desktop/work-center-deco.svg") no-repeat;
     background-size: 34.2vw;
   }
 
@@ -682,7 +716,7 @@ footer {
     position: relative;
     width: 43.9vw;
     background:
-      url('images/deco/desktop/work-right-deco.svg') bottom left
+      url("images/deco/desktop/work-right-deco.svg") bottom left
       no-repeat;
     background-size: contain;
   }
@@ -693,8 +727,8 @@ footer {
     width: 54.86vw;
     z-index: 1;
     background:
-      url('images/deco/desktop/work-left-deco.svg') top left no-repeat,
-      url('images/deco/desktop/single_drop.svg') top right no-repeat;
+      url("images/deco/desktop/work-left-deco.svg") top left no-repeat,
+      url("images/deco/desktop/single_drop.svg") top right no-repeat;
     background-size: 14.65vw 8.61vw, 6.04vw;
   }
 
@@ -804,7 +838,7 @@ footer {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: url('images/deco/desktop/about-deco.svg') bottom right no-repeat;
+    background: url("images/deco/desktop/about-deco.svg") bottom right no-repeat;
     background-size: 70%;
   }
 
@@ -812,8 +846,8 @@ footer {
 
   #contact {
     background:
-      url('images/deco/desktop/form-deco-1.svg') top left no-repeat,
-      url('images/deco/desktop/form-deco-2.svg') bottom right no-repeat,
+      url("images/deco/desktop/form-deco-1.svg") top left no-repeat,
+      url("images/deco/desktop/form-deco-2.svg") bottom right no-repeat,
       #f9f9fa;
     background-size: 18.26vw, 24.3vw;
     padding: 9vw 30vw;
