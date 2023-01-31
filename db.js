@@ -1,5 +1,5 @@
 // Projects Database
-const projects = [
+const data = [
   {
     gridArea: 'p1',
     tabIndex: '9',
@@ -79,4 +79,4 @@ const projects = [
     sourceLink: '#',
   },
 ];
-export default { projects };
+export default { data };
