@@ -1,7 +1,20 @@
-const menuBtn = document.getElementById("menuBtn");
-const menuItems = document.getElementById("nav");
-menuBtn.addEventListener("click", () => {
-  menuItems.classList.toggle("menu-items");
-});
+const menuBtn = document.getElementById('menu-toggle');
+const nav = document.querySelector('nav');
+const logo = document.querySelector('.logo');
+const navLink = document.getElementsByClassName('nav-link');
 
-menuItems.style.color = "red";
+const toggle = () => {
+  nav.classList.toggle('display');
+  logo.classList.toggle('menu-logo');
+};
+
+menuBtn.onclick = () => {
+  toggle();
+};
+
+Array.from(navLink).forEach((element) => {
+  element.onclick = () => {
+    toggle();
+    menuBtn.checked = false;
+  };
+});
