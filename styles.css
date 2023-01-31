@@ -118,31 +118,42 @@ header {
   background: url("images/deco/mobile/nav-logo.svg");
 }
 
+.menu-logo {
+  background: url('images/deco/mobile/menu-top.svg');
+}
+
 /********* Nav Bar **********/
 
 nav {
   justify-content: space-between;
   display: block;
   position: absolute;
-  left: 50%;
+  top: 74px;
+  width: 100vw;
+  height: calc(100vh - 74px);
+  background:
+    url('images/deco/mobile/four-dots.svg') 80% 0 no-repeat,
+    url('images/deco/mobile/four-dots.svg') 20% calc(93% - 25vw) no-repeat,
+    url('images/deco/mobile/menu-btm.svg') 100% 100% no-repeat,
+    #fff;
+  background-size: auto, auto, 100vw;
 }
 
-nav .menu-items {
-  display: block;
-  border: 5px solid red;
-}
-
-#navs {
-  color: red;
+.display {
+  display: none;
 }
 
 nav ul {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   top: 74px;
   width: 100%;
   align-items: center;
+}
+
+.nav-item {
+  padding-block: 9px;
 }
 
 .nav-link {
@@ -203,6 +214,10 @@ nav ul {
   transform: rotate(-45deg);
 }
 
+.menu-btn-container #menu-toggle:checked + .logo {
+  background: url('images/deco/mobile/menu-top.svg') no-repeat;
+}
+
 /****************** Headline *****************/
 
 #headline {
@@ -232,7 +247,8 @@ nav ul {
   margin: 27px 0 0 -18px;
   width: 100vw;
   height: 53.333vw;
-  background: url("images/deco/mobile/image_geometry-headline-mobile.svg")
+  background:
+    url("images/deco/mobile/image_geometry-headline-mobile.svg")
     no-repeat;
   background-size: contain;
 }
@@ -373,7 +389,8 @@ nav ul {
 }
 
 .frames {
-  background: #e2505c url("images/deco/about/Frameworks.svg") 100% 100%
+  background:
+    #e2505c url("images/deco/about/Frameworks.svg") 100% 100%
     no-repeat;
 }
 
@@ -463,7 +480,8 @@ footer {
   margin: 2rem 1rem;
   width: fit-content;
   padding-right: 45px;
-  background: url("images/icons/open-in-new-window-icon-LightBlue.svg") 100% 50%
+  background:
+    url("images/icons/open-in-new-window-icon-LightBlue.svg") 100% 50%
     no-repeat;
   transition: transform 300ms ease-in-out;
 }
@@ -514,8 +532,16 @@ footer {
   }
 
   nav {
+    position: static;
     display: block;
     margin-right: 99px;
+    top: 0;
+    height: auto;
+    background: #fff;
+  }
+
+  .display {
+    display: block;
   }
 
   nav ul {
@@ -689,7 +715,8 @@ footer {
     grid-area: rght;
     position: relative;
     width: 43.9vw;
-    background: url("images/deco/desktop/work-right-deco.svg") bottom left
+    background:
+      url("images/deco/desktop/work-right-deco.svg") bottom left
       no-repeat;
     background-size: contain;
   }
@@ -699,7 +726,8 @@ footer {
     top: -0.12vw;
     width: 54.86vw;
     z-index: 1;
-    background: url("images/deco/desktop/work-left-deco.svg") top left no-repeat,
+    background:
+      url("images/deco/desktop/work-left-deco.svg") top left no-repeat,
       url("images/deco/desktop/single_drop.svg") top right no-repeat;
     background-size: 14.65vw 8.61vw, 6.04vw;
   }
@@ -817,8 +845,10 @@ footer {
   /********* Contact ****************/
 
   #contact {
-    background: url("images/deco/desktop/form-deco-1.svg") top left no-repeat,
-      url("images/deco/desktop/form-deco-2.svg") bottom right no-repeat, #f9f9fa;
+    background:
+      url("images/deco/desktop/form-deco-1.svg") top left no-repeat,
+      url("images/deco/desktop/form-deco-2.svg") bottom right no-repeat,
+      #f9f9fa;
     background-size: 18.26vw, 24.3vw;
     padding: 9vw 30vw;
   }
