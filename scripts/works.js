@@ -9,23 +9,23 @@ document.getElementById('works').innerHTML = `
   Projects
 </h1>
 ${projectData.map((project) => `
-<article class="project p6" tabindex="14">
+<article class="project ${project.gridArea}" tabindex="${project.tabIndex}">
 <img
   class="project-image"
-  src="images/projects/Project6.jpg"
-  alt="Temporary project image."
+  src="${project.imageURL}"
+  alt="${project.imageAlt}"
 />
 <div class="project-description poppins">
-  <h1 class="project-title" aria-label="Project name.">
-    Project name goes here
+  <h1 class="project-title" aria-label="${project.title}.">
+    ${project.title}
   </h1>
   <ul
     class="tech-container"
-    aria-label="Technologies: HTML and CSS, Ruby on Rails, JavaScript."
+    aria-label="Technologies:${project.tech.map((t, i) => (t[i] === t.lengtht - 1 ? t : ` ${t}`))}."
   >
-    <li class="tech-item">HTML/CSS</li>
-    <li class="tech-item">Ruby on Rails</li>
-    <li class="tech-item js">JavaScript</li>
+    <li class="tech-item">${project.tech[0]}</li>
+    <li class="tech-item">${project.tech[1]}</li>
+    <li class="tech-item js">${project.tech[2]}</li>
   </ul>
   <button
     class="btnBlue seeProjBtn"
