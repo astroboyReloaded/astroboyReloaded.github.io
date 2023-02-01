@@ -297,6 +297,89 @@ nav ul {
   background-size: 24px;
 }
 
+/**************** PopUp Window ****************/
+
+.popUp {
+  position: fixed;
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9;
+  overflow-y: scroll;
+}
+
+.pWMain {
+  padding: 18px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.pW-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.closeWindow {
+  border: none;
+  background: #fff;
+  font-size: 150%;
+  width: fit-content;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.pWTitle {
+  width: fit-content;
+  font-size: 6vw;
+  font-weight: 600;
+  margin-block: 3%;
+  line-height: 100%;
+}
+
+.pWTech {
+  background-color: #fff;
+  border: 1px solid #1a2236;
+}
+
+.pWDescription {
+  color: #1a2236;
+  font-size: 1.2rem;
+  margin-block: 18px;
+}
+
+.pW-btnsContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.pWBtn {
+  position: relative;
+  display: flex;
+  width: 90%;
+  align-self: center;
+  justify-content: center;
+  text-decoration: none;
+  background: #fff;
+  color: #1a2236;
+  border: 1px solid #1a2236;
+  padding: 9px 15px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.live {
+  background: url('images/icons/open-in-new-window-icon-DarkBlue.svg') 93% 50% no-repeat;
+}
+
+.source {
+  background: url('images/icons/GitHub-Dark.svg') 93% 50% no-repeat;
+}
+
+.prev-next-cont {
+  display: none;
+}
+
 /*********************** About ***********************/
 
 #about {
@@ -744,6 +827,87 @@ footer {
     width: 171px;
     font-size: 1rem;
     padding: 9px 6px 9px 15px;
+  }
+
+  /************* PpoUp Window *****************/
+
+  .popUp {
+    background: #1a2236;
+    padding: 4.5%;
+  }
+
+  .pWMain {
+    padding: 4.5%;
+  }
+
+  .pW-header {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .closeWindow {
+    font-size: 2.4rem;
+  }
+
+  .pWTitle {
+    width: fit-content;
+    font-size: 3rem;
+    margin-block: 3px;
+  }
+
+  .pWTech {
+    font-size: 1.2rem;
+    margin-block: 12px;
+  }
+
+  .pWDescription {
+    align-self: center;
+    width: 70%;
+    color: #1a2236;
+  }
+
+  .pW-btnsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 70%;
+  }
+
+  .pWBtn {
+    width: 21vw;
+    margin: 9px;
+    justify-content: left;
+  }
+
+  .prev-next-cont {
+    display: block;
+    margin: 0;
+    width: 70%;
+    align-self: center;
+  }
+
+  .project-window-nav-ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 18px;
+  }
+
+  .project-nav {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  .prevProj {
+    padding-left: 30px;
+    background: url('images/icons/arrow-prev.svg') 0 50% no-repeat;
+    background-size: 18px;
+  }
+
+  .nextProj {
+    padding-right: 30px;
+    background: url('images/icons/arrow-black.svg') 100% 50% no-repeat;
+    background-size: 18px;
   }
 
   /********* About *************/
