@@ -852,7 +852,7 @@ footer {
   .pWTitle {
     width: fit-content;
     font-size: 3rem;
-    margin-block: 3px;
+    margin-block: 0 3px;
   }
 
   .pWTech {
