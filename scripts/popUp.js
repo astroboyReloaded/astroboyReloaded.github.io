@@ -27,10 +27,10 @@ project.forEach((p, i) => p.addEventListener('click', () => {
   </div>
   <nav class="prev-next-cont">
       <ul class="project-window-nav-ul">
-        <li><a class="project-nav prevProj poppins">
+        <li><a id="prev" class="project-nav prevProj poppins">
         Previous project
         </a></li>
-        <li><a class="project-nav nextProj poppins">
+        <li><a id="next" class="project-nav nextProj poppins">
         Next project
         </a></li>
       </ul>
