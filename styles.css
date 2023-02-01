@@ -921,7 +921,8 @@ footer {
     justify-content: left;
   }
 
-  .live:hover {
+  .live:hover,
+  .live:focus {
     color: var(--white);
     background: url('images/icons/open-in-new-window-icon-LightBlue.svg') 93% 50% no-repeat var(--blue);
     border-color: var(--blue);
@@ -931,7 +932,8 @@ footer {
     border: 1px solid var(--gray);
   }
 
-  .source:hover {
+  .source:hover,
+  .source:focus {
     color: var(--white);
     background: url('images/icons/github-icon.svg') 93% 50% no-repeat var(--blue);
     border-color: var(--blue);

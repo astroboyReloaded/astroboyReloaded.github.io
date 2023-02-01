@@ -21,7 +21,7 @@ ${projectData.map((project) => `
   </h1>
   <ul
     class="tech-container"
-    aria-label="Technologies:${project.tech.map((t, i) => (t[i] === t.lengtht - 1 ? t : ` ${t}`))}."
+    aria-label="Technologies:${project.tech.map((t, i) => (t[i] === t.length - 1 ? t : ` ${t}`))}."
   >
     <li class="tech-item">${project.tech[0]}</li>
     <li class="tech-item">${project.tech[1]}</li>
