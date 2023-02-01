@@ -921,6 +921,11 @@ footer {
     justify-content: left;
   }
 
+  .live,
+  .source {
+    transition: all 300ms ease-in-out;
+  }
+
   .live:hover,
   .live:focus {
     color: var(--white);
