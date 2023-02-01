@@ -310,7 +310,7 @@ nav ul {
 
 .pWMain {
   padding: 18px;
-  background: #fff;
+  background: var(--white);
   display: flex;
   flex-direction: column;
 }
@@ -322,7 +322,7 @@ nav ul {
 
 .closeWindow {
   border: none;
-  background: #fff;
+  background: var(--white);
   font-size: 150%;
   width: fit-content;
   cursor: pointer;
@@ -338,12 +338,12 @@ nav ul {
 }
 
 .pWTech {
-  background-color: #fff;
-  border: 1px solid #1a2236;
+  background-color: var(--white);
+  border: 1px solid var(--blue);
 }
 
 .pWDescription {
-  color: #1a2236;
+  color: var(--blue);
   font-size: 1.2rem;
   margin-block: 18px;
 }
@@ -360,9 +360,9 @@ nav ul {
   align-self: center;
   justify-content: center;
   text-decoration: none;
-  background: #fff;
-  color: #1a2236;
-  border: 1px solid #1a2236;
+  background: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--blue);
   padding: 9px 15px;
   margin-bottom: 18px;
   font-weight: 600;
@@ -372,8 +372,16 @@ nav ul {
   background: url('images/icons/open-in-new-window-icon-DarkBlue.svg') 93% 50% no-repeat;
 }
 
+.live:visited {
+  border: 1px solid var(--gray);
+}
+
 .source {
   background: url('images/icons/GitHub-Dark.svg') 93% 50% no-repeat;
+}
+
+.source:visited {
+  border: 1px solid var(--gray);
 }
 
 .prev-next-cont {
@@ -879,6 +887,26 @@ footer {
     justify-content: left;
   }
 
+  .live:hover {
+    color: var(--white);
+    background: url('images/icons/open-in-new-window-icon-LightBlue.svg') 93% 50% no-repeat var(--blue);
+    border-color: var(--blue);
+  }
+
+  .live:active {
+    border: 1px solid var(--gray);
+  }
+
+  .source:hover {
+    color: var(--white);
+    background: url('images/icons/github-icon.svg') 93% 50% no-repeat var(--blue);
+    border-color: var(--blue);
+  }
+
+  .source:active {
+    border: 1px solid var(--gray);
+  }
+
   .prev-next-cont {
     display: block;
     margin: 0;
@@ -909,6 +937,8 @@ footer {
     background: url('images/icons/arrow-black.svg') 100% 50% no-repeat;
     background-size: 18px;
   }
+
+
 
   /********* About *************/
 
