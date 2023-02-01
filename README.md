@@ -68,6 +68,9 @@ This project aims to create a fully implemented professional portfolio to host m
 - **Transitions to all clickable elements**
 - **Deployed to GitHub Pages**
 - **Accessibility and Screen Reader adapted**
+- **Mobile menu display implementation with JavaScript**
+- **Render `.works`'s content dinamically with JavaScript**
+- **PopUp window created dinamically with Javascript for each project**
 
 <!-- LIVE DEMO -->
 
@@ -159,8 +162,6 @@ to get a JavaScript review.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Mobile menu display implementation with JavaScript**
-- **Render `.works`'s content dinamically with JavaScript**
 - **Form validation with JavaScript**
 - **Real Projects**.
 - **My CV**.
