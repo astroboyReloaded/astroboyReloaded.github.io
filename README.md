@@ -71,6 +71,7 @@ This project aims to create a fully implemented professional portfolio to host m
 - **Mobile menu display implementation with JavaScript**
 - **Render `.works`'s content dinamically with JavaScript**
 - **PopUp window created dinamically with Javascript for each project**
+- - **Form validation with JavaScript**
 
 <!-- LIVE DEMO -->
 
@@ -162,7 +163,7 @@ to get a JavaScript review.
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Form validation with JavaScript**
+- **Local storage for form imputs content when not submited**
 - **Real Projects**.
 - **My CV**.
 
