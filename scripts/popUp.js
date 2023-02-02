@@ -41,16 +41,16 @@ function createProjectWindow(data) {
 }
 function popUp(data, index) {
   document.body.appendChild(projectWindow).innerHTML = createProjectWindow(data[index]);
-  
+
   const closePopUp = document.querySelector('.closeWindow');
-  
+
   closePopUp.addEventListener('click', () => {
     document.body.removeChild(projectWindow);
     project[index].focus();
   });
-  
+
   document.getElementById('main').focus();
-  
+
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
 
