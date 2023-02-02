@@ -23,12 +23,8 @@
     <script src="/scripts/menu.js" defer></script>
     <script src="scripts/works.js" type="module"></script>
     <script src="scripts/popUp.js" type="module"></script>
-<<<<<<< HEAD
     <script src="scripts/form-validation.js" defer></script>
-=======
-    <script src="scripts/form-valiation.js" defer></script>
-
->>>>>>> fd2c54abad296a6a664127ddf130cc27c9423a6d
+    <script src="scripts/localStorage.js" defer></script>
     <title>AstroboyReloaded | Portfolio</title>
   </head>
   <body>
@@ -170,10 +166,12 @@
               <input
                 type="text"
                 id="name"
+                class="formInput"
                 name="user_name"
                 maxlength="30"
                 required
                 aria-label="name."
+                tabindex="18"
               />
             </li>
             <li class="input-container">
@@ -183,9 +181,11 @@
               <input
                 name="user_email"
                 id="email"
+                class="formInput"
                 type="email"
                 required
                 aria-label="email."
+                tabindex="19"
               />
             </li>
           </ul>
@@ -195,11 +195,12 @@
           <textarea
             name="msg"
             id="msg"
-            class="poppins"
+            class="formInput poppins"
             placeholder="Enter your message here..."
             maxlength="500"
             required
             aria-label="your project in less than 500 characters."
+            tabindex="20"
           ></textarea>
           <button type="submit" class="btnBlue" aria-label="Send message">
             Start collaboration
@@ -208,13 +209,14 @@
         </form>
       </section>
       <footer>
-        <a href="#" class="open poppins">Get my Resume</a>
+        <a href="#" class="open poppins" tabindex="21">Get my Resume</a>
         <ul class="social-container">
           <li>
             <a
               class="social-link"
               href="https://stackoverflow.com/users/18165300/alex-munoz"
               target="_blank"
+              tabindex="22"
             >
               <i class="social-icon">
                 <img
@@ -229,6 +231,7 @@
               class="social-link"
               href="https://github.com/astroboyReloaded"
               target="_blank"
+              tabindex="23"
             >
               <i class="social-icon">
                 <img src="./images/icons/github-icon.svg" alt="GitHub" />
@@ -240,6 +243,7 @@
               class="social-link"
               href="https://twitter.com/astroboyReload"
               target="_blank"
+              tabindex="24"
             >
               <i class="social-icon">
                 <img src="./images/icons/twitter.svg" alt="Twitter" />
@@ -251,6 +255,7 @@
               class="social-link"
               href="https://www.linkedin.com/in/astroboyreloaded/"
               target="_blank"
+              tabindex="25"
             >
               <i class="social-icon">
                 <img src="./images/icons/linkedin.svg" alt="Linkedin" />
@@ -258,14 +263,24 @@
             </a>
           </li>
           <li>
-            <a class="social-link" href="#">
+            <a
+              class="social-link"
+              href="#"
+              target="_blank"
+              tabindex="26"
+            >
               <i class="social-icon m">
                 <img src="./images/icons/M-icon.svg" alt="M" />
               </i>
             </a>
           </li>
           <li>
-            <a class="social-link" href="#">
+            <a
+              class="social-link"
+              href="#"
+              target="_blank"
+              tabindex="27"
+            >
               <i class="social-icon">
                 <img src="./images/icons/pnl-icon.svg" alt="PNL" />
               </i>
