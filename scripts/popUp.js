@@ -27,7 +27,7 @@ function createProjectWindow(data) {
     </div>
     <nav class="prev-next-cont">
       <ul class="project-window-nav-ul">
-        <li><a type="button" id="prev" class="project-nav prevProj poppins">
+        <li><a id="prev" class="project-nav prevProj poppins">
         Previous project
         </a></li>
         <li><a id="next" class="project-nav nextProj poppins">
