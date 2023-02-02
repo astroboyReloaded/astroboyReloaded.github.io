@@ -492,6 +492,7 @@ nav ul {
 /******************** Contact Form ******************************/
 
 #contact {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -504,6 +505,9 @@ nav ul {
 }
 
 form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   margin: 18px;
 }
 
@@ -555,6 +559,14 @@ textarea {
 .input-container input:focus,
 textarea:focus {
   border: 1px solid var(--blue);
+}
+
+#errorMsg {
+  position: absolute;
+  bottom: -30px;
+  color: #e2505c;
+  font-size: 1.2rem;
+  align-self: center;
 }
 
 /*********************** Footer *******************************/
