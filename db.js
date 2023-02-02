@@ -2,7 +2,7 @@
 const data = [
   {
     gridArea: 'p1',
-    tabIndex: '9',
+    tabIndex: '',
     imageURL: 'images/projects/Project1.jpg',
     imageAlt: 'Temporary project image.',
     title: 'Project name goes here',
@@ -13,7 +13,7 @@ const data = [
   },
   {
     gridArea: 'p2',
-    tabIndex: '10',
+    tabIndex: '9',
     imageURL: 'images/projects/Project2.jpg',
     imageAlt: 'Temporary project image.',
     title: 'Project name goes here',
@@ -24,7 +24,7 @@ const data = [
   },
   {
     gridArea: 'p3',
-    tabIndex: '11',
+    tabIndex: '10',
     imageURL: 'images/projects/Project3.jpg',
     imageAlt: 'Temporary project image.',
     title: 'Project name goes here',
@@ -35,7 +35,7 @@ const data = [
   },
   {
     gridArea: 'p4',
-    tabIndex: '12',
+    tabIndex: '11',
     imageURL: 'images/projects/Project4.jpg',
     imageAlt: 'Temporary project image.',
     title: 'Project name goes here',
@@ -46,7 +46,7 @@ const data = [
   },
   {
     gridArea: 'p5',
-    tabIndex: '13',
+    tabIndex: '12',
     imageURL: 'images/projects/Project5.jpg',
     imageAlt: 'Temporary project image.',
     title: 'Project name goes here',
@@ -57,7 +57,7 @@ const data = [
   },
   {
     gridArea: 'p6',
-    tabIndex: '14',
+    tabIndex: '13',
     imageURL: 'images/projects/Project6.jpg',
     imageAlt: 'Temporary project image.',
     title: 'Project name goes here',
