@@ -47,18 +47,14 @@ function popUp(data, index) {
   const next = document.getElementById('next');
 
   if (index < 1) {
-    prev.style.color = 'var(--white)';
-    prev.style.cursor = 'default';
-    prev.style.background = '#fff';
+    prev.style.display = 'none';
   }
   prev.addEventListener('click', () => {
     popUp(projectData, index - 1);
   });
 
   if (index > projectData.length - 2) {
-    next.style.color = 'var(--white)';
-    next.style.cursor = 'default';
-    next.style.background = '#fff';
+    next.style.display = 'none';
   }
   next.addEventListener('click', () => {
     popUp(projectData, index + 1);
