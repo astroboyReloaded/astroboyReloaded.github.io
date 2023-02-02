@@ -889,6 +889,12 @@ footer {
 
   .closeWindow {
     font-size: 2.4rem;
+    border: 2px solid var(--white);
+  }
+
+  .closeWindow:focus {
+    outline: none;
+    border: 2px solid var(--border);
   }
 
   .pWTitle {
@@ -926,6 +932,7 @@ footer {
     color: var(--white);
     background: url('images/icons/open-in-new-window-icon-LightBlue.svg') 93% 50% no-repeat var(--blue);
     border-color: var(--blue);
+    transition: all 300ms ease-in-out;
   }
 
   .live:active {
@@ -937,6 +944,7 @@ footer {
     color: var(--white);
     background: url('images/icons/github-icon.svg') 93% 50% no-repeat var(--blue);
     border-color: var(--blue);
+    transition: all 300ms ease-in-out;
   }
 
   .source:active {
@@ -966,12 +974,24 @@ footer {
     padding-left: 30px;
     background: url('images/icons/arrow-prev.svg') 0 50% no-repeat;
     background-size: 18px;
+    border: 2px solid var(--white);
+    transition: border 300ms ease-in-out;
+  }
+
+  .prevProj:focus {
+    border: 2px solid var(--border);
   }
 
   .nextProj {
     padding-right: 30px;
     background: url('images/icons/arrow-black.svg') 100% 50% no-repeat;
     background-size: 18px;
+    border: 2px solid var(--white);
+    transition: border 300ms ease-in-out;
+  }
+
+  .nextProj:focus {
+    border: 2px solid var(--border);
   }
 
   /********* About *************/
