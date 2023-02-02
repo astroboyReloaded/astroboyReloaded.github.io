@@ -9,7 +9,7 @@ function createProjectWindow(data) {
   return `
   <main class="pWMain">
     <div class="pW-header">
-      <button class="closeWindow">X</button>
+      <button id="closeW" class="closeWindow" tabindex="28">X</button>
       <h1 class="poppins pWTitle">${data.title}</h1>
     </div>
     <ul class="tech-container">
@@ -20,17 +20,17 @@ function createProjectWindow(data) {
     <img class="windowImg" src="${data.imageURL}" alt="${data.imageAlt}">
     <p class="pWDescription poppins">${data.description}</p>
     <div class="pW-btnsContainer">
-      <a type="button" href="${data.liveLink}
+      <a type="button" href="${data.liveLink} tabindex="29"
       " target="_blank" class="pWBtn live poppins">See live</a>
-      <a type="button" href="${data.sourceLink}
+      <a type="button" href="${data.sourceLink} tabindex="3"
       " target="_blank" class="pWBtn source poppins">See source</a>
     </div>
     <nav class="prev-next-cont">
       <ul class="project-window-nav-ul">
-        <li><a id="prev" class="project-nav prevProj poppins">
+        <li><a id="prev" class="project-nav prevProj poppins" tabindex="30">
         Previous project
         </a></li>
-        <li><a id="next" class="project-nav nextProj poppins">
+        <li><a id="next" class="project-nav nextProj poppins" tabindex="31">
         Next project
         </a></li>
       </ul>
@@ -43,6 +43,7 @@ function popUp(data, index) {
   closePopUp.addEventListener('click', () => {
     document.body.removeChild(projectWindow);
   });
+
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
 
