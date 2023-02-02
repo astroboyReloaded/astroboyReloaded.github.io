@@ -24,6 +24,7 @@
     <script src="scripts/works.js" type="module"></script>
     <script src="scripts/popUp.js" type="module"></script>
     <script src="scripts/form-validation.js" defer></script>
+    <script src="scripts/localStorage.js" defer></script>
     <title>AstroboyReloaded | Portfolio</title>
   </head>
   <body>
@@ -165,6 +166,7 @@
               <input
                 type="text"
                 id="name"
+                class="formInput"
                 name="user_name"
                 maxlength="30"
                 required
@@ -179,6 +181,7 @@
               <input
                 name="user_email"
                 id="email"
+                class="formInput"
                 type="email"
                 required
                 aria-label="email."
@@ -192,7 +195,7 @@
           <textarea
             name="msg"
             id="msg"
-            class="poppins"
+            class="formInput poppins"
             placeholder="Enter your message here..."
             maxlength="500"
             required
@@ -276,7 +279,8 @@
               class="social-link"
               href="#"
               target="_blank"
-              tabindex="27">
+              tabindex="27"
+            >
               <i class="social-icon">
                 <img src="./images/icons/pnl-icon.svg" alt="PNL" />
               </i>
