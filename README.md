@@ -149,6 +149,7 @@ npx eslint .
 ```
 to get a JavaScript review.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHORS -->
 
 ## Author <a name="authors"></a>
@@ -158,7 +159,6 @@ to get a JavaScript review.
 - GitHub: [astroboyReloaded](https://github.com/astroboyReloaded)
 - Twitter: [@astroboyReload](https://twitter.com/astroboyReload)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/astroboyreloaded/)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
