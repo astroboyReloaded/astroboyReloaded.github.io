@@ -38,23 +38,23 @@
       <nav class="display">
         <ul class="poppins">
           <li class="nav-item">
-            <a class="nav-link" href="#headline" tabindex="2">Hello</a>
+            <a class="nav-link" href="#headline" tabindex="1">Hello</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#works" tabindex="3">Portfolio</a>
+            <a class="nav-link" href="#works" tabindex="2">Portfolio</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#about" tabindex="4">About</a>
+            <a class="nav-link" href="#about" tabindex="3">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact" tabindex="5">Contact</a>
+            <a class="nav-link" href="#contact" tabindex="4">Contact</a>
           </li>
         </ul>
       </nav>
       <label
         class="menu-btn-container show-hide"
         for="menu-toggle"
-        tabindex="1"
+        tabindex="0"
         aria-label="Show Navigation Menu"
       >
         <input id="menu-toggle" type="checkbox" />
@@ -62,7 +62,7 @@
       </label>
     </header>
     <!---------------------- headline ------------------------>
-    <section id="headline" tabindex="6">
+    <section id="headline" tabindex="5">
       <article class="headline-container">
         <h1 class="headline-title playfair" aria-label="Alex Muñoz.">
           Alex Muñoz
@@ -79,7 +79,7 @@
           you see and have a project you would like coded, don’t hesitate to
           contact me.
         </p>
-        <a href="#contact" class="btnBlue poppins" tabindex="7"
+        <a href="#contact" class="btnBlue poppins" tabindex="6"
           >Start collaboration
         </a>
       </article>
@@ -89,7 +89,7 @@
     <main>
       <section id="works"></section>
       <!------------------- About ----------------->
-      <section id="about" tabindex="15">
+      <section id="about" tabindex="14">
         <div>
           <h1 class="playfair about-title" aria-label="About me.">About</h1>
           <p class="poppins">
@@ -102,7 +102,7 @@
             href="#"
             class="btnBlue getCV poppins"
             download
-            tabindex="16"
+            tabindex="15"
             aria-label="Enter here to get my CV."
             >Get my CV<i class="download"></i
           ></a>
@@ -150,7 +150,7 @@
         </ul>
       </section>
       <!----------------- Contact ---------------->
-      <section id="contact" tabindex="17">
+      <section id="contact" tabindex="16">
         <h1 class="playfair" aria-label="Lets get started.">Get Started</h1>
         <p class="poppins">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -172,7 +172,7 @@
                 maxlength="30"
                 required
                 aria-label="name."
-                tabindex="18"
+                tabindex="17"
               />
             </li>
             <li class="input-container">
@@ -186,7 +186,7 @@
                 type="email"
                 required
                 aria-label="email."
-                tabindex="19"
+                tabindex="18"
               />
             </li>
           </ul>
@@ -201,9 +201,9 @@
             maxlength="500"
             required
             aria-label="your project in less than 500 characters."
-            tabindex="20"
+            tabindex="19"
           ></textarea>
-          <button type="submit" class="btnBlue" aria-label="Send message">
+          <button type="submit" class="btnBlue" aria-label="Send message" tabindex="20">
             Start collaboration
           </button>
           <small id="errorMsg"></small>

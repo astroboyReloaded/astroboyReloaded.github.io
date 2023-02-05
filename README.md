@@ -70,8 +70,9 @@ This project aims to create a fully implemented professional portfolio to host m
 - **Accessibility and Screen Reader adapted**
 - **Mobile menu display implementation with JavaScript**
 - **Render `.works`'s content dinamically with JavaScript**
-- **PopUp window created dinamically with Javascript for each project**
-- - **Form validation with JavaScript**
+- **PopUp window created dinamically with JavaScript for each project**
+- **Form validation with JavaScript**
+- **Local storage for form imputs content when not submited**
 
 <!-- LIVE DEMO -->
 
@@ -148,6 +149,7 @@ npx eslint .
 ```
 to get a JavaScript review.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 <!-- AUTHORS -->
 
 ## Author <a name="authors"></a>
@@ -157,13 +159,11 @@ to get a JavaScript review.
 - GitHub: [astroboyReloaded](https://github.com/astroboyReloaded)
 - Twitter: [@astroboyReload](https://twitter.com/astroboyReload)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/astroboyreloaded/)
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **Local storage for form imputs content when not submited**
 - **Real Projects**.
 - **My CV**.
 
