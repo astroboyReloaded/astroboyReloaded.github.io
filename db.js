@@ -2,7 +2,7 @@
 const data = [
   {
     gridArea: 'p1',
-    tabIndex: '',
+    tabIndex: '8',
     imageURL: 'images/projects/Project1.jpg',
     imageAlt: 'Temporary project image.',
     title: 'Project name goes here',
