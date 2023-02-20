@@ -138,7 +138,7 @@ to get a CSS review.
 - Run
 
 ```sh
-lighthouse <URL>
+npx lighthouse <URL>
 ```
 to get a performance review.
 
