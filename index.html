@@ -1,294 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Poppins:wght@200;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Playfair+Display&family=Poppins:wght@200;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="images/icons/Astro-Boy-Transparent-Images.png"
-    />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="/scripts/menu.js" defer></script>
-    <script src="scripts/works.js" type="module"></script>
-    <script src="scripts/popUp.js" type="module"></script>
-    <script src="scripts/form-validation.js" defer></script>
-    <script src="scripts/localStorage.js" defer></script>
-    <title>AstroboyReloaded | Portfolio</title>
-    <meta name="description" content="Shows the best works by Alex Muñoz, aka Astroboy(Reloaded), as a web developer professional, showing you by first hand what he's skills are and what he cand do for you and your company or product."/>
-  </head>
-  <body>
-    <header>
-      <div
-        class="logo show-hide"
-        role="img"
-        aria-label="Logo: Right Triangle and rhombus"
-      ></div>
-      <nav class="display">
-        <ul class="poppins">
-          <li class="nav-item">
-            <a class="nav-link" href="#headline" tabindex="1">Hello</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#works" tabindex="2">Portfolio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#about" tabindex="3">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact" tabindex="4">Contact</a>
-          </li>
-        </ul>
-      </nav>
-      <label
-        class="menu-btn-container show-hide"
-        for="menu-toggle"
-        tabindex="0"
-        aria-label="Show Navigation Menu"
-      >
-        <input id="menu-toggle" type="checkbox" />
-        <div class="menu-btn"></div>
-      </label>
-    </header>
-    <!---------------------- headline ------------------------>
-    <section id="headline" tabindex="5">
-      <article class="headline-container">
-        <h1 class="headline-title playfair" aria-label="Alex Muñoz.">
-          Alex Muñoz
-        </h1>
-        <p
-          class="poppins"
-          aria-label="Hey there! I am a software developer! I can help you build a
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Poppins:wght@200;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Playfair+Display&family=Poppins:wght@200;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="images/icons/Astro-Boy-Transparent-Images.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="/scripts/menu.js" defer></script>
+  <script src="scripts/works.js" type="module"></script>
+  <script src="scripts/popUp.js" type="module"></script>
+  <script src="scripts/form-validation.js" defer></script>
+  <script src="scripts/localStorage.js" defer></script>
+  <title>AstroboyReloaded | Portfolio</title>
+  <meta name="description"
+    content="Shows the best works by Alex Muñoz, aka Astroboy(Reloaded), as a web developer professional, showing you by first hand what he's skills are and what he cand do for you and your company or product." />
+</head>
+
+<body>
+  <header>
+    <div class="logo show-hide" role="img" aria-label="Logo: Right Triangle and rhombus"></div>
+    <nav class="display">
+      <ul class="poppins">
+        <li class="nav-item">
+          <a class="nav-link" href="#headline" tabindex="1">Hello</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#works" tabindex="2">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about" tabindex="3">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contact" tabindex="4">Contact</a>
+        </li>
+      </ul>
+    </nav>
+    <label class="menu-btn-container show-hide" for="menu-toggle" tabindex="0" aria-label="Show Navigation Menu">
+      <input id="menu-toggle" type="checkbox" />
+      <div class="menu-btn"></div>
+    </label>
+  </header>
+  <!---------------------- headline ------------------------>
+  <section id="headline" tabindex="5">
+    <article class="headline-container">
+      <h1 class="headline-title playfair" aria-label="Alex Muñoz.">
+        Alex Muñoz
+      </h1>
+      <p class="poppins" aria-label="Hey there! I am a software developer! I can help you build a
           product feature or website. Take a look at my work. If you like what
           you see and have a project you would like coded don’t hesitate to
-          contact me. Press tab and enter to"
-        >
-          &nbspHey, there! I am a software developer! I can help you build a
-          product, feature or website. Take a look at my work. If you like what
-          you see and have a project you would like coded, don’t hesitate to
-          contact me.
-        </p>
-        <a href="#contact" class="btnBlue poppins" tabindex="6"
-          >Start collaboration
-        </a>
-      </article>
-      <div class="headline-deco" role="img"></div>
-    </section>
-    <!---------- Projects ---------------->
-    <main>
-      <section id="works"></section>
-      <!------------------- About ----------------->
-      <section id="about" tabindex="14">
-        <div>
-          <h1 class="playfair about-title" aria-label="About me.">About</h1>
-          <p class="poppins">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ea eiusmod.
-          </p>
-          <a
-            href="#"
-            class="btnBlue getCV poppins"
-            download
-            tabindex="15"
-            aria-label="Enter here to get my CV."
-            >Get my CV<i class="download"></i
-          ></a>
-        </div>
-        <ul class="tech-cards-container poppins">
-          <li
-            class="tech-card langs"
-            aria-label="Languages: JavaScript (ES5/ES6), Ruby, HTML, CSS."
-          >
-            <h2>Languages</h2>
-            <ul class="tech">
-              <li>• JavaScript (ES5/ES6)</li>
-              <li>• Ruby</li>
-              <li>• HTML</li>
-              <li>• CSS</li>
-            </ul>
-          </li>
-          <li
-            class="tech-card frames"
-            aria-label="Frameworks: Bootstrap, Ruby on rails, RSpec, Capibara, Selenium."
-          >
-            <h2>Frameworks</h2>
-            <ul class="tech">
-              <li>• Bootstrap</li>
-              <li>• Ruby on rails</li>
-              <li>• RSpec</li>
-              <li>• Capibara</li>
-              <li>• Selenium</li>
-            </ul>
-          </li>
-          <li
-            class="tech-card skills"
-            aria-label="Skills: Codekit, Codepen, GitHub, GitLAb, Terminal."
-          >
-            <h2>Skills</h2>
-            <ul class="tech">
-              <li>• Codekit</li>
-              <li>• Codepen</li>
-              <li>• GitHub</li>
-              <li>• GitLAb</li>
-              <li>• Terminal</li>
-            </ul>
-          </li>
-          <div class="about-deco"></div>
-        </ul>
-      </section>
-      <!----------------- Contact ---------------->
-      <section id="contact" tabindex="16">
-        <h1 class="playfair" aria-label="Lets get started.">Get Started</h1>
+          contact me. Press tab and enter to">
+        &nbspHey, there! I am a software developer! I can help you build a
+        product, feature or website. Take a look at my work. If you like what
+        you see and have a project you would like coded, don’t hesitate to
+        contact me.
+      </p>
+      <a href="#contact" class="btnBlue poppins" tabindex="6">Start collaboration
+      </a>
+    </article>
+    <div class="headline-deco" role="img"></div>
+  </section>
+  <!---------- Projects ---------------->
+  <main>
+    <section id="works"></section>
+    <!------------------- About ----------------->
+    <section id="about" tabindex="14">
+      <div>
+        <h1 class="playfair about-title" aria-label="About me.">About</h1>
         <p class="poppins">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ea eiusmod.
         </p>
-        <form action="https://formspree.io/f/myyazjoo" method="post">
-          <ul class="poppins">
-            <li class="input-container">
-              <label for="name" aria-label="Please enter your">
-                <abbr title="Required"> Your name<strong>*</strong> </abbr>
-              </label>
-              <input
-                type="text"
-                id="name"
-                class="formInput"
-                name="user_name"
-                maxlength="30"
-                required
-                aria-label="name."
-                tabindex="17"
-              />
-            </li>
-            <li class="input-container">
-              <label for="email" aria-label="Please enter your"
-                ><abbr title="Required">Your email<strong>*</strong></abbr>
-              </label>
-              <input
-                name="user_email"
-                id="email"
-                class="formInput"
-                type="email"
-                required
-                aria-label="email."
-                tabindex="18"
-              />
-            </li>
+        <a href="#" class="btnBlue getCV poppins" download tabindex="15" aria-label="Enter here to get my CV.">Get my
+          CV<i class="download"></i></a>
+      </div>
+      <ul class="tech-cards-container poppins">
+        <li class="tech-card langs" aria-label="Languages: JavaScript (ES5/ES6), Ruby, HTML, CSS.">
+          <h2>Languages</h2>
+          <ul class="tech">
+            <li>• JavaScript (ES6/ES7)</li>
+            <li>• HTML</li>
+            <li>• CSS</li>
+            <li>• PostgreSQL</li>
           </ul>
-          <label for="msg" class="msgLbl poppins" aria-label="Please describe">
-            <abbr title="Required">Message<strong>*</strong></abbr>
-          </label>
-          <textarea
-            name="msg"
-            id="msg"
-            class="formInput poppins"
-            placeholder="Enter your message here..."
-            maxlength="500"
-            required
-            aria-label="your project in less than 500 characters."
-            tabindex="19"
-          ></textarea>
-          <button type="submit" class="btnBlue" aria-label="Send message" tabindex="20">
-            Start collaboration
-          </button>
-          <small id="errorMsg"></small>
-        </form>
-      </section>
-      <footer>
-        <a href="#" class="open poppins" target="_blank" tabindex="21">Get my Resume</a>
-        <ul class="social-container">
-          <li>
-            <a
-              class="social-link"
-              href="https://stackoverflow.com/users/18165300/alex-munoz"
-              target="_blank"
-              tabindex="22"
-            >
-              <i class="social-icon">
-                <img
-                  src="./images/icons/stackoverflow.svg"
-                  alt="Stack Overflow"
-                />
-              </i>
-            </a>
+        </li>
+        <li class="tech-card frames" aria-label="Frameworks: Bootstrap, Ruby on rails, RSpec, Capibara, Selenium.">
+          <h2>Frameworks</h2>
+          <ul class="tech">
+            <li>• SCSS</li>
+            <li>• Express</li>
+            <li>• Pug</li>
+            <li>• React/Redux</li>
+            <li>• MOngoDB</li>
+          </ul>
+        </li>
+        <li class="tech-card skills" aria-label="Skills: Codekit, Codepen, GitHub, GitLAb, Terminal.">
+          <h2>Skills</h2>
+          <ul class="tech">
+            <li>• Git/GitHub</li>
+            <li>• DevTools</li>
+            <li>• OOP</li>
+            <li>• TDD</li>
+            <li>• Responsive</li>
+          </ul>
+        </li>
+        <div class="about-deco"></div>
+      </ul>
+    </section>
+    <!----------------- Contact ---------------->
+    <section id="contact" tabindex="16">
+      <h1 class="playfair" aria-label="Lets get started.">Get Started</h1>
+      <p class="poppins">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat.
+      </p>
+      <form action="https://formspree.io/f/myyazjoo" method="post">
+        <ul class="poppins">
+          <li class="input-container">
+            <label for="name" aria-label="Please enter your">
+              <abbr title="Required"> Your name<strong>*</strong> </abbr>
+            </label>
+            <input type="text" id="name" class="formInput" name="user_name" maxlength="30" required aria-label="name."
+              tabindex="17" />
           </li>
-          <li>
-            <a
-              class="social-link"
-              href="https://github.com/astroboyReloaded"
-              target="_blank"
-              tabindex="23"
-            >
-              <i class="social-icon">
-                <img src="./images/icons/github-icon.svg" alt="GitHub" />
-              </i>
-            </a>
-          </li>
-          <li>
-            <a
-              class="social-link"
-              href="https://twitter.com/astroboyReload"
-              target="_blank"
-              tabindex="24"
-            >
-              <i class="social-icon">
-                <img src="./images/icons/twitter.svg" alt="Twitter" />
-              </i>
-            </a>
-          </li>
-          <li>
-            <a
-              class="social-link"
-              href="https://www.linkedin.com/in/astroboyreloaded/"
-              target="_blank"
-              tabindex="25"
-            >
-              <i class="social-icon">
-                <img src="./images/icons/linkedin.svg" alt="Linkedin" />
-              </i>
-            </a>
-          </li>
-          <li>
-            <a
-              class="social-link"
-              href="#"
-              target="_blank"
-              tabindex="26"
-            >
-              <i class="social-icon m">
-                <img src="./images/icons/M-icon.svg" alt="M" />
-              </i>
-            </a>
-          </li>
-          <li>
-            <a
-              class="social-link"
-              href="#"
-              target="_blank"
-              tabindex="27"
-            >
-              <i class="social-icon">
-                <img src="./images/icons/pnl-icon.svg" alt="PNL" />
-              </i>
-            </a>
+          <li class="input-container">
+            <label for="email" aria-label="Please enter your"><abbr title="Required">Your email<strong>*</strong></abbr>
+            </label>
+            <input name="user_email" id="email" class="formInput" type="email" required aria-label="email."
+              tabindex="18" />
           </li>
         </ul>
-      </footer>
-    </main>
-  </body>
+        <label for="msg" class="msgLbl poppins" aria-label="Please describe">
+          <abbr title="Required">Message<strong>*</strong></abbr>
+        </label>
+        <textarea name="msg" id="msg" class="formInput poppins" placeholder="Enter your message here..." maxlength="500"
+          required aria-label="your project in less than 500 characters." tabindex="19"></textarea>
+        <button type="submit" class="btnBlue" aria-label="Send message" tabindex="20">
+          Start collaboration
+        </button>
+        <small id="errorMsg"></small>
+      </form>
+    </section>
+    <footer>
+      <a href="#" class="open poppins" target="_blank" tabindex="21">Get my Resume</a>
+      <ul class="social-container">
+        <li>
+          <a class="social-link" href="https://stackoverflow.com/users/18165300/alex-munoz" target="_blank"
+            tabindex="22">
+            <i class="social-icon">
+              <img src="./images/icons/stackoverflow.svg" alt="Stack Overflow" />
+            </i>
+          </a>
+        </li>
+        <li>
+          <a class="social-link" href="https://github.com/astroboyReloaded" target="_blank" tabindex="23">
+            <i class="social-icon">
+              <img src="./images/icons/github-icon.svg" alt="GitHub" />
+            </i>
+          </a>
+        </li>
+        <li>
+          <a class="social-link" href="https://twitter.com/astroboyReload" target="_blank" tabindex="24">
+            <i class="social-icon">
+              <img src="./images/icons/twitter.svg" alt="Twitter" />
+            </i>
+          </a>
+        </li>
+        <li>
+          <a class="social-link" href="https://www.linkedin.com/in/astroboyreloaded/" target="_blank" tabindex="25">
+            <i class="social-icon">
+              <img src="./images/icons/linkedin.svg" alt="Linkedin" />
+            </i>
+          </a>
+        </li>
+        <li>
+          <a class="social-link" href="#" target="_blank" tabindex="26">
+            <i class="social-icon m">
+              <img src="./images/icons/M-icon.svg" alt="M" />
+            </i>
+          </a>
+        </li>
+        <li>
+          <a class="social-link" href="#" target="_blank" tabindex="27">
+            <i class="social-icon">
+              <img src="./images/icons/pnl-icon.svg" alt="PNL" />
+            </i>
+          </a>
+        </li>
+      </ul>
+    </footer>
+  </main>
+</body>
+
 </html>

@@ -23,9 +23,7 @@ ${projectData.map((project) => `
     class="tech-container"
     aria-label="Technologies:${project.tech.map((t, i, a) => (t[i] === a.length - 1 ? t : ` ${t}`))}."
   >
-    <li class="tech-item">${project.tech[0]}</li>
-    <li class="tech-item">${project.tech[1]}</li>
-    <li class="tech-item js">${project.tech[2]}</li>
+    ${project.tech.map(tech => `<li class="tech-item">${tech}</li>`).join('')}
   </ul>
   <button
     class="btnBlue seeProjBtn"
