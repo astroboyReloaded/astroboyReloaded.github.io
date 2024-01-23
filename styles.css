@@ -768,7 +768,7 @@ footer {
 
   .p2 {
     grid-area: p2;
-    top: 4.65vw;
+    top: 4.689vw;
     width: 32.4vw;
     height: 18.99vw;
     z-index: 1;
@@ -776,20 +776,22 @@ footer {
 
   .p3 {
     grid-area: p3;
-    width: 54.86vw;
+    top: 0.2vw;
+    width: 54.85vw;
+    height: 32.35vw;
   }
 
   .p4 {
     grid-area: p4;
-    top: -0.15vw;
-    left: -0.12vw;
+    top: 0.09vw;
+    left: -0.03vw;
     width: 32.292vw;
   }
 
   .p5,
   .p6 {
     grid-area: p5p6;
-    width: 32.13vw;
+    width: 32.5vw;
     height: 18.99vw;
   }
 
@@ -803,6 +805,7 @@ footer {
   }
 
   .deco {
+    position: relative;
     display: inline-block;
   }
 
@@ -818,7 +821,9 @@ footer {
   .right {
     grid-area: rght;
     position: relative;
-    width: 43.9vw;
+    top: 0.18vw;
+    left: -0.05vw;
+    width: 44.27vw;
     background:
       url("images/deco/desktop/work-right-deco.svg") bottom left no-repeat;
     background-size: contain;
@@ -826,8 +831,8 @@ footer {
 
   .left {
     grid-area: lft;
-    top: -0.12vw;
-    width: 54.86vw;
+    top: 0.18vw;
+    width: 54.87vw;
     z-index: 1;
     background:
       url("images/deco/desktop/work-left-deco.svg") top left no-repeat,

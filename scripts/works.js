@@ -34,6 +34,6 @@ ${projectData.map((project) => `
 </div>
 </article>
 `).join('')}
-<div class="project center deco"></div>
-<div class="project left deco"></div>
-<div class="project right deco"></div>`;
+<div class="center deco"></div>
+<div class="left deco"></div>
+<div class="right deco"></div>`;

@@ -15,10 +15,10 @@ inputs.forEach((input) => input.addEventListener('input', () => {
   );
 }));
 
-const parsedLS = JSON.parse(localStorage.formData);
+const parsedLS = JSON.parse(localStorage.formData || '{}');
 
 window.onload = () => {
-  nameLS.value = parsedLS.name;
-  emailLS.value = parsedLS.email;
-  msgLS.value = parsedLS.message;
+  nameLS.value = parsedLS.name || '';
+  emailLS.value = parsedLS.email || '';
+  msgLS.value = parsedLS.message || '';
 };
