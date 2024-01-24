@@ -16,7 +16,7 @@ const data = [
   {
     gridArea: 'p2',
     tabIndex: '9',
-    imageURL: 'images/projects/trade-assist-app/trade-assisi-screenshoot2.png',
+    imageURL: 'images/projects/trade-assist-app/trade-assist-screenshoot2.png',
     imageAlt: 'TradeAssist, manage your risk with surgeon-like precision.',
     title: 'TradeAssist',
     tech: ['HTML/CSS', 'JavaScript'],
