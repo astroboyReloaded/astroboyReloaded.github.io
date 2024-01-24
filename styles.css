@@ -199,21 +199,21 @@ nav ul {
   margin-top: 9px;
 }
 
-#menu-toggle:checked+.menu-btn::before {
+#menu-toggle:checked + .menu-btn::before {
   margin-top: 0;
   transform: rotate(45deg);
 }
 
-#menu-toggle:checked+.menu-btn {
+#menu-toggle:checked + .menu-btn {
   background: rgba(255, 255, 255, 0);
 }
 
-#menu-toggle:checked+.menu-btn::after {
+#menu-toggle:checked + .menu-btn::after {
   margin-top: 0;
   transform: rotate(-45deg);
 }
 
-.menu-btn-container #menu-toggle:checked+.logo {
+.menu-btn-container #menu-toggle:checked + .logo {
   background: url('images/deco/mobile/menu-top.svg') no-repeat;
 }
 
@@ -246,8 +246,7 @@ nav ul {
   margin: 27px 0 0 -18px;
   width: 100vw;
   height: 53.333vw;
-  background:
-    url("images/deco/mobile/image_geometry-headline-mobile.svg") no-repeat;
+  background: url("images/deco/mobile/image_geometry-headline-mobile.svg") no-repeat;
   background-size: contain;
 }
 
@@ -265,14 +264,11 @@ nav ul {
 .project {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .project:focus {
   border: 2px solid var(--border);
-}
-
-.project {
-  width: 100%;
 }
 
 .project-image {
@@ -483,8 +479,7 @@ nav ul {
 }
 
 .frames {
-  background:
-    #e2505c url("images/deco/about/Frameworks.svg") 100% 100% no-repeat;
+  background: #e2505c url("images/deco/about/Frameworks.svg") 100% 100% no-repeat;
 }
 
 .skills {
@@ -585,8 +580,7 @@ footer {
   margin: 2rem 1rem;
   width: fit-content;
   padding-right: 45px;
-  background:
-    url("images/icons/open-in-new-window-icon-LightBlue.svg") 100% 50% no-repeat;
+  background: url("images/icons/open-in-new-window-icon-LightBlue.svg") 100% 50% no-repeat;
   transition: transform 300ms ease-in-out;
 }
 
@@ -737,7 +731,7 @@ footer {
     margin-top: 9vw;
   }
 
-  #works>h1 {
+  #works > h1 {
     grid-area: title;
     position: absolute;
     display: flex;
@@ -824,8 +818,7 @@ footer {
     top: 0.18vw;
     left: -0.05vw;
     width: 44.27vw;
-    background:
-      url("images/deco/desktop/work-right-deco.svg") bottom left no-repeat;
+    background: url("images/deco/desktop/work-right-deco.svg") bottom left no-repeat;
     background-size: contain;
   }
 
@@ -1024,7 +1017,7 @@ footer {
     justify-content: space-between;
   }
 
-  #about>div {
+  #about > div {
     display: flex;
     flex-direction: column;
     flex: 1;
