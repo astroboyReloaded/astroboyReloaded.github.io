@@ -256,7 +256,7 @@ nav ul {
 
 #works {
   width: 100%;
-  /* min-height: calc(1273px + (58.75vw * 6)); */
+  min-height: calc(1273px + (58.75vw * 6));
 }
 
 #works h1:focus {
@@ -731,7 +731,8 @@ footer {
       "p3 p3  rght rght"
       "lft lft p4 p4";
     width: 100%;
-    height: 104.1876vw;
+    min-height: auto;
+    height: 103.5vw;
     margin-top: 9vw;
   }
 
