@@ -5,11 +5,11 @@ import projects from '../db.js';
 const projectData = projects.data;
 
 document.getElementById('works').innerHTML = `
-<h1 class="playfair" tabindex="7" aria-label="My projects:">
-  Projects
+<h1 class="playfair" tabindex="0">
+  Projects:
 </h1>
 ${projectData.map((project) => `
-<article class="project ${project.gridArea}" tabindex="${project.tabIndex}">
+<article class="project ${project.gridArea}" tabindex="0">
 <img
   class="project-image"
   src="${project.imageURL}"
@@ -25,12 +25,12 @@ ${projectData.map((project) => `
   >
     ${project.tech.map((tech) => `<li class="tech-item">${tech}</li>`).join('')}
   </ul>
-  <button
+  <span
     class="btnBlue seeProjBtn"
     aria-label="Press enter now to see this project."
   >
     See this project
-  </button>
+  </span>
 </div>
 </article>
 `).join('')}

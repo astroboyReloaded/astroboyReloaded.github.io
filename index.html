@@ -21,44 +21,41 @@
 
 <body>
   <header>
-    <div class="logo show-hide" role="img" aria-label="Logo: Right Triangle and rhombus"></div>
+    <div class="logo show-hide"></div>
     <nav class="display">
       <ul class="poppins">
         <li class="nav-item">
-          <a class="nav-link" href="#headline" tabindex="1">Hello</a>
+          <a class="nav-link" href="#headline">Hello</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#works" tabindex="2">Portfolio</a>
+          <a class="nav-link" href="#works">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about" tabindex="3">About</a>
+          <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#contact" tabindex="4">Contact</a>
+          <a class="nav-link" href="#form">Contact</a>
         </li>
       </ul>
     </nav>
-    <label class="menu-btn-container show-hide" for="menu-toggle" tabindex="0" aria-label="Show Navigation Menu">
+    <label class="menu-btn-container show-hide" for="menu-toggle" aria-label="Show Navigation Menu">
       <input id="menu-toggle" type="checkbox" />
       <div class="menu-btn"></div>
     </label>
   </header>
   <!---------------------- headline ------------------------>
-  <section id="headline" tabindex="5">
+  <section id="headline">
     <article class="headline-container">
-      <h1 class="headline-title playfair" aria-label="Alex Muñoz.">
+      <h1 class="headline-title playfair" tabindex="0">
         Alex Muñoz
       </h1>
-      <p class="poppins" aria-label="Hey there! I am a software developer! I can help you build a
-          product feature or website. Take a look at my work. If you like what
-          you see and have a project you would like coded don’t hesitate to
-          contact me. Press tab and enter to">
+      <p class="poppins" tabindex="0">
         &nbspHey, there! I am a software developer! I can help you build a
         product, feature or website. Take a look at my work. If you like what
         you see and have a project you would like coded, don’t hesitate to
         contact me.
       </p>
-      <a href="#contact" class="btnBlue poppins" tabindex="6">Start collaboration
+      <a href="#contact" class="btnBlue poppins">Start collaboration
       </a>
     </article>
     <div class="headline-deco" role="img" width="320" height="160"></div>
@@ -67,82 +64,88 @@
   <main>
     <section id="works"></section>
     <!------------------- About ----------------->
-    <section id="about" tabindex="14">
+    <section id="about" tabindex="0">
       <div>
-        <h1 class="playfair about-title" aria-label="About me.">About</h1>
+        <h1 class="playfair about-title">About Me:</h1>
         <p class="poppins">
           Focused in the MERN stack, I have been learning the most important technologies
           since January 1st 2022, with a special emphasis in the font-End and UI/UX, which I truly find to be the most
           interesting aspect of any didgital tech. Download my CV or visit my social media to see more about my
           certifications and other publications I've made and find out more about my coding experience.
         </p>
-        <a href="./assets/astroboyReloaded_CV.pdf" class="btnBlue getCV poppins" download tabindex="15"
-          aria-label="Enter here to get my CV.">Get my
-          CV<i class="download"></i></a>
+        <a href="./assets/astroboyReloaded_CV.pdf" class="btnBlue getCV poppins" download>Get my
+          CV.<i class="download"></i></a>
       </div>
-      <ul class="tech-cards-container poppins">
-        <li class="tech-card langs" aria-label="Languages: JavaScript (ES5/ES6), Ruby, HTML, CSS.">
-          <h2>Languages</h2>
+      <div class="tech-cards-container poppins">
+        <div class="tech-card langs">
+          <h2>Languages:</h2>
           <ul class="tech">
-            <li>• JavaScript (ES6/ES7)</li>
             <li>• HTML</li>
             <li>• CSS</li>
-            <li>• PostgreSQL</li>
+            <li>• JavaScript (ES6/ES7)</li>
+            <li>• SQL</li>
+            <li aria-label="Python.">• Python</li>
           </ul>
-        </li>
-        <li class="tech-card frames" aria-label="Frameworks: Bootstrap, Ruby on rails, RSpec, Capibara, Selenium.">
-          <h2>Frameworks</h2>
+        </div>
+        <div class="tech-card frames">
+          <h2>Frameworks:</h2>
           <ul class="tech">
-            <li>• SCSS</li>
-            <li>• React/Redux</li>
+            <li>• Sass/SCSS</li>
             <li>• Node</li>
             <li>• Express</li>
             <li>• Pug</li>
+            <li>• React/Redux</li>
+            <li>• Next</li>
             <li>• MongoDB</li>
+            <li aria-label="PostgreSQL.">• PostgreSQL</li>
           </ul>
-        </li>
-        <li class="tech-card skills" aria-label="Skills: Codekit, Codepen, GitHub, GitLAb, Terminal.">
-          <h2>Skills</h2>
+        </div>
+        <div class="tech-card skills">
+          <h2>Skills:</h2>
           <ul class="tech">
-            <li>• Git/GitHub</li>
-            <li>• DevTools</li>
+            <li>• UI/UX</li>
             <li>• OOP</li>
             <li>• TDD</li>
-            <li>• Responsive</li>
+            <li>• DevTools</li>
+            <li aria-label="TDD.">• Git/GitHub</li>
           </ul>
-        </li>
+        </div>
         <div class="about-deco"></div>
-      </ul>
+      </div>
     </section>
     <!----------------- Contact ---------------->
-    <section id="contact" tabindex="16">
-      <h1 class="playfair" aria-label="Lets get started.">Get Started</h1>
-      <p class="poppins">
-        Send me a message to talk about business. If you'd like to learn more about how we can collaborate, I'd be happy
-        to read from you.
-      </p>
+    <section id="contact">
+      <div id="form" tabindex="0">
+        <h1 class="playfair"
+          aria-label="Lets Get Started! Send me a message to talk about business. If you'd like to learn more about how we can collaborate I'd be happy to read from you.">
+          Lets Get Started!</h1>
+        <p class="poppins" aria-hidden="true">
+          Send me a message to talk about business. If you'd like to learn more about how we can collaborate, I'd be
+          happy
+          to read from you.
+        </p>
+      </div>
       <form action="https://formspree.io/f/myyazjoo" method="post">
         <ul class="poppins">
           <li class="input-container">
-            <label for="name" aria-label="Please enter your">
-              <abbr title="Required"> Your name<strong>*</strong> </abbr>
+            <label for="name">
+              <abbr title="Required">Name:<strong aria-hidden="true">*</strong></abbr>
             </label>
-            <input type="text" id="name" class="formInput" name="user_name" maxlength="30" required aria-label="name."
-              tabindex="17" />
+            <input type="text" id="name" class="formInput" name="user_name" maxlength="30" required />
           </li>
           <li class="input-container">
-            <label for="email" aria-label="Please enter your"><abbr title="Required">Your email<strong>*</strong></abbr>
+            <label for="email">
+              <abbr title="Required">Email:<strong aria-hidden="true">*</strong></abbr>
             </label>
-            <input name="user_email" id="email" class="formInput" type="email" required aria-label="email."
-              tabindex="18" />
+            <input name="user_email" id="email" class="formInput" type="email" required />
           </li>
         </ul>
-        <label for="msg" class="msgLbl poppins" aria-label="Please describe">
-          <abbr title="Required">Message<strong>*</strong></abbr>
+        <label for="msg" class="msgLbl poppins">
+          <abbr title="Required">Message:<strong aria-hidden="true">*</strong></abbr>
         </label>
-        <textarea name="msg" id="msg" class="formInput poppins" placeholder="Enter your message here..." maxlength="500"
-          required aria-label="your project in less than 500 characters." tabindex="19"></textarea>
-        <button type="submit" class="btnBlue" aria-label="Send message" tabindex="20">
+        <textarea name="msg" id="msg" class="formInput poppins"
+          placeholder="Please describe your project in less than 500 characters..." maxlength="500" required></textarea>
+        <button type="submit" class="btnBlue">
           Start collaboration
         </button>
         <small id="errorMsg"></small>
@@ -150,42 +153,39 @@
     </section>
     <footer>
       <a href="https://docs.google.com/document/d/1sGZ6yxcJa1jLS59dCbatuG7NZ1vUlPIAJKK0h03SrC0/edit?usp=sharing"
-        rel="noopener" class="open poppins" target="_blank" tabindex="21">Get my Resume</a>
+        rel="noopener" class="open poppins" target="_blank">Get my Resume</a>
       <ul class="social-container">
         <li>
           <a class="social-link" rel="noopener" href="https://stackoverflow.com/users/18165300/alex-munoz"
-            target="_blank" tabindex="22">
+            target="_blank">
             <i class="social-icon">
               <img src="./images/icons/stackoverflow.svg" alt="Stack Overflow" />
             </i>
           </a>
         </li>
         <li>
-          <a class="social-link" rel="noopener" href="https://github.com/astroboyReloaded" target="_blank"
-            tabindex="23">
+          <a class="social-link" rel="noopener" href="https://github.com/astroboyReloaded" target="_blank">
             <i class="social-icon">
               <img src="./images/icons/github-icon.svg" alt="GitHub" />
             </i>
           </a>
         </li>
         <li>
-          <a class="social-link" rel="noopener" href="https://twitter.com/astroboyReload" target="_blank" tabindex="24">
+          <a class="social-link" rel="noopener" href="https://twitter.com/astroboyReload" target="_blank">
             <i class="social-icon">
               <img src="./images/icons/twitter.svg" alt="Twitter" />
             </i>
           </a>
         </li>
         <li>
-          <a class="social-link" rel="noopener" href="https://www.linkedin.com/in/astroboyreloaded/" target="_blank"
-            tabindex="25">
+          <a class="social-link" rel="noopener" href="https://www.linkedin.com/in/astroboyreloaded/" target="_blank">
             <i class="social-icon">
               <img src="./images/icons/linkedin.svg" alt="Linkedin" />
             </i>
           </a>
         </li>
         <li>
-          <a class="social-link" rel="noopener" href="https://medium.com/@astroboy.reloaded" target="_blank"
-            tabindex="26">
+          <a class="social-link" rel="noopener" href="https://medium.com/@astroboy.reloaded" target="_blank">
             <i class="social-icon m">
               <img src="./images/icons/M-icon.svg" alt="M" />
             </i>

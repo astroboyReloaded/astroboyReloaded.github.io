@@ -7,9 +7,9 @@ const project = Array.from(document.getElementsByClassName('project'));
 
 function createProjectWindow(data) {
   return `
-  <main id="main" class="pWMain" tabindex="28">
+  <main id="main" class="pWMain" tabindex="0">
     <div class="pW-header">
-      <button id="closeW" class="closeWindow" tabindex="29" aria-label="close window.">X</button>
+      <button id="closeW" class="closeWindow" aria-label="close window.">X</button>
       <h1 class="poppins pWTitle" aria-label="${data.title}.">${data.title}</h1>
     </div>
     <ul class="tech-container"
@@ -22,17 +22,17 @@ function createProjectWindow(data) {
     <img class="windowImg" src="${data.imageURL}" alt="${data.imageAlt}">
     <p class="pWDescription poppins">${data.description}</p>
     <div class="pW-btnsContainer">
-      <a type="button" href="${data.liveLink}" tabindex="30"
+      <a type="button" href="${data.liveLink}"
       " target="_blank" class="pWBtn live poppins">See live</a>
-      <a type="button" href="${data.sourceLink}" tabindex="31"
+      <a type="button" href="${data.sourceLink}"
       " target="_blank" class="pWBtn source poppins">See source</a>
     </div>
     <nav class="prev-next-cont">
       <ul class="project-window-nav-ul">
-        <li><a id="prev" class="project-nav prevProj poppins" tabindex="32">
+        <li><a id="prev" class="project-nav prevProj poppins" tabindex="0">
         Previous project
         </a></li>
-        <li><a id="next" class="project-nav nextProj poppins" tabindex="33">
+        <li><a id="next" class="project-nav nextProj poppins" tabindex="0">
         Next project
         </a></li>
       </ul>
