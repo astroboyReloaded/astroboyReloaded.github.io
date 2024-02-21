@@ -4,7 +4,7 @@ const data = [
     gridArea: 'p1',
     imageURL:
       'images/projects/tecate-supremo-website/tecate-supremo-website-screenshot2.png',
-    imageAlt: 'Screenshoot of the performers section rendered with JavaScript.',
+    imageAlt: 'Performers section rendered with JavaScript.',
     title: 'Music Festival Website',
     tech: ['HTML/CSS', 'JavaScript'],
     description:
@@ -15,7 +15,7 @@ const data = [
   {
     gridArea: 'p2',
     imageURL: 'images/projects/trade-assist-app/trade-assist-screenshoot2.png',
-    imageAlt: 'Screenshot of position size calculator, manage your risk with surgeon-like precision.',
+    imageAlt: 'Position size calculator, manage your risk with surgeon-like precision.',
     title: 'TradeAssist',
     tech: ['HTML/CSS', 'JavaScript'],
     description:
@@ -26,7 +26,7 @@ const data = [
   {
     gridArea: 'p3',
     imageURL: 'images/projects/coin-stats/coin-stats1.png',
-    imageAlt: 'Screenshot of Crypto assests stats app.',
+    imageAlt: 'Cryptocurrency statistics app.',
     title: 'CoinStats',
     tech: ['React/Redux', 'Linters', 'Jest-Dom'],
     description:

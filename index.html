@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#dddddd">
   <link rel="preload" href="assets/fonts/PlayfairDisplay-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="preload" href="assets/fonts/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin />
   <link rel="icon" type="image/x-icon" href="images/icons/Astro-Boy-Transparent-Images.png" />
@@ -12,8 +13,8 @@
   <script src="/scripts/menu.js" defer></script>
   <script src="scripts/works.js" type="module"></script>
   <script src="scripts/popUp.js" type="module"></script>
-  <script src="scripts/form-validation.js" defer></script>
-  <script src="scripts/localStorage.js" defer></script>
+  <script src="scripts/localStorage.js" type="module"></script>
+  <script src="scripts/form-validation.js" type="module"></script>
   <title>AstroboyReloaded | Portfolio</title>
   <meta name="description"
     content="A Professional Web Developer Portfolio by Alex Muñoz aka AstroboyReloaded. Look at some of my best projects, analize my code and see how my experience can benefit your organization or product." />
@@ -21,7 +22,7 @@
 
 <body>
   <header>
-    <div class="logo show-hide"></div>
+    <div class="logo hide"></div>
     <nav class="display">
       <ul class="poppins">
         <li class="nav-item">
@@ -34,22 +35,22 @@
           <a class="nav-link" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#form">Contact</a>
+          <a class="nav-link" href="#contact">Contact</a>
         </li>
       </ul>
     </nav>
-    <label class="menu-btn-container show-hide" for="menu-toggle" aria-label="Show Navigation Menu">
-      <input id="menu-toggle" type="checkbox" />
+    <label class="menu-btn-container hide" for="menu-toggle" tabindex="0" aria-label="Show Navigation Menu">
+      <input id="menu-toggle" type="checkbox" class="btnBlue" />
       <div class="menu-btn"></div>
     </label>
   </header>
   <!---------------------- headline ------------------------>
-  <section id="headline">
+  <section id="headline" tabindex="0">
     <article class="headline-container">
-      <h1 class="headline-title playfair" tabindex="0">
+      <h1 class="headline-title playfair">
         Alex Muñoz
       </h1>
-      <p class="poppins" tabindex="0">
+      <p class="poppins">
         &nbspHey, there! I am a software developer! I can help you build a
         product, feature or website. Take a look at my work. If you like what
         you see and have a project you would like coded, don’t hesitate to
@@ -114,41 +115,47 @@
       </div>
     </section>
     <!----------------- Contact ---------------->
-    <section id="contact">
-      <div id="form" tabindex="0">
-        <h1 class="playfair"
-          aria-label="Lets Get Started! Send me a message to talk about business. If you'd like to learn more about how we can collaborate I'd be happy to read from you.">
-          Lets Get Started!</h1>
-        <p class="poppins" aria-hidden="true">
-          Send me a message to talk about business. If you'd like to learn more about how we can collaborate, I'd be
-          happy
-          to read from you.
-        </p>
-      </div>
+    <section id="contact" tabindex="0">
+      <h1 class="playfair"
+        aria-label="Lets Get Started! Send me a message to talk about business. If you'd like to learn more about how we can collaborate I'd be happy to read from you."
+        role="presentation">
+        Lets Get Started!</h1>
+      <p class="poppins" aria-hidden="true">
+        Send me a message to talk about business. If you'd like to learn more about how we can collaborate, I'd be
+        happy
+        to read from you.
+      </p>
       <form action="https://formspree.io/f/myyazjoo" method="post">
         <ul class="poppins">
           <li class="input-container">
             <label for="name">
-              <abbr title="Required">Name:<strong aria-hidden="true">*</strong></abbr>
+              Name:<abbr title="Required"><strong aria-hidden="true">*</strong></abbr>
             </label>
-            <input type="text" id="name" class="formInput" name="user_name" maxlength="30" required />
+            <input type="text" id="name" class="formInput" name="user_name" maxlength="30" required autocomplete="name"
+              aria-required="true" aria-describedby="nameErr" />
+            <small id="nameErr" class="errMsgContainer" aria-live="polite"></small>
           </li>
-          <li class="input-container">
+          <li class="input-container email-container">
             <label for="email">
-              <abbr title="Required">Email:<strong aria-hidden="true">*</strong></abbr>
+              Email:<abbr title="Required"><strong aria-hidden="true">*</strong></abbr>
             </label>
-            <input name="user_email" id="email" class="formInput" type="email" required />
+            <input name="user_email" id="email" class="formInput" type="email" required autocomplete="email"
+              aria-required="true" aria-describedby="emailErr" />
+            <small id="emailErr" class="errMsgContainer" aria-live="polite"></small>
           </li>
         </ul>
-        <label for="msg" class="msgLbl poppins">
-          <abbr title="Required">Message:<strong aria-hidden="true">*</strong></abbr>
+        <label for="msg" class="msgLbl poppins" tabindex="-1">
+          Message:<abbr title="Required"><strong aria-hidden="true">*</strong></abbr>
         </label>
-        <textarea name="msg" id="msg" class="formInput poppins"
-          placeholder="Please describe your project in less than 500 characters..." maxlength="500" required></textarea>
-        <button type="submit" class="btnBlue">
+        <div class="input-container msg-container">
+          <textarea name="msg" id="msg" class="formInput poppins"
+            placeholder="Please describe your project in less than 500 characters..." maxlength="500" required
+            aria-required="true" aria-describedby="msgErr"></textarea>
+          <small id="msgErr" class="errMsgContainer" aria-live="polite"></small>
+        </div>
+        <button id="submit" type="submit" class="btnBlue" disabled="true">
           Start collaboration
         </button>
-        <small id="errorMsg"></small>
       </form>
     </section>
     <footer>

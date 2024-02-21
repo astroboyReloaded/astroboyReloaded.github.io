@@ -88,7 +88,8 @@ ul {
 }
 
 *:focus {
-  outline: none;
+  outline: 2px solid var(--border);
+  outline-offset: -2px;
 }
 
 body {
@@ -98,8 +99,9 @@ body {
   overflow-x: hidden;
 }
 
-section:focus {
-  border: 2px solid var(--border);
+input:focus,
+textarea:focus {
+  outline: none;
 }
 
 /********************** Header ***********************/
@@ -259,18 +261,10 @@ nav ul {
   min-height: calc(1273px + (58.75vw * 6));
 }
 
-#works h1:focus {
-  border: 2px solid var(--border);
-}
-
 .project {
   display: flex;
   flex-direction: column;
   width: 100%;
-}
-
-.project:focus {
-  border: 2px solid var(--border);
 }
 
 .project-image {
@@ -532,7 +526,8 @@ abbr {
   text-decoration: none;
 }
 
-.input-container input {
+.input-container input,
+textarea {
   background: var(--white);
   width: 100%;
   border: 1px solid var(--input);
@@ -546,26 +541,67 @@ abbr {
   display: none;
 }
 
-textarea {
-  width: 100%;
+#msg {
   min-height: 111px;
-  border-radius: 4px;
-  border: 1px solid var(--input);
   padding: 18px;
-  margin-bottom: 18px;
 }
+
 
 .input-container input:focus,
 textarea:focus {
-  border: 1px solid var(--blue);
+  outline: 2px solid var(--border);
 }
 
-#errorMsg {
+/* Input Validation */
+.input-container .green:focus,
+.input-container .green {
+  border: none;
+  outline: 2px solid #50e263;
+  outline-offset: -2px;
+}
+
+.input-container .red:focus,
+.input-container .red {
+  border: none;
+  outline: 2px solid #e2505c;
+  outline-offset: -2px;
+}
+
+.showErr {
   position: absolute;
-  bottom: -30px;
+  left: 0;
+  bottom: -31px;
+  background-color: #f9f9fa;
+  padding: .3rem;
+  border: 1px solid var(--gray);
+  border-radius: 3px;
   color: #e2505c;
-  font-size: 1.2rem;
+  font-size: .9rem;
   align-self: center;
+  z-index: 1;
+}
+
+.hideError {
+  display: none;
+}
+
+button[type='submit']:disabled,
+button[type='submit']:disabled:hover {
+  border-color: var(--input);
+  background-color: var(--input);
+  color: var(--white);
+  cursor: not-allowed;
+}
+
+button[type='submit']:disabled:hover::after {
+  content: 'Please fill in all fields';
+  position: absolute;
+  display: block;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  color: var(--darkGray);
+  padding: 9px;
+  border-radius: 4px;
 }
 
 /*********************** Footer *******************************/
@@ -587,6 +623,7 @@ footer {
 }
 
 .open:focus {
+  outline: none;
   transform: scale(1.2);
 }
 
@@ -605,8 +642,11 @@ footer {
 }
 
 .social-icon:hover,
+.social-link:focus,
 .social-link:focus .social-icon {
   transform: scale(1.5);
+  border: none;
+  outline: none;
 }
 
 .m {
@@ -627,7 +667,7 @@ footer {
   }
 
   /****** Nav Bar ******/
-  .show-hide {
+  .hide {
     display: none;
   }
 
@@ -1122,6 +1162,11 @@ footer {
     padding: 15px 9px;
   }
 
+  .showErr {
+    bottom: auto;
+    top: 100%;
+  }
+
   .msgLbl {
     display: flex;
     align-self: flex-start;
@@ -1131,9 +1176,13 @@ footer {
     margin-block: 6px;
   }
 
+  .msg-container {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
   textarea {
     height: 12vw;
-    margin-bottom: 18px;
   }
 
   /*********** Footer *****************/
