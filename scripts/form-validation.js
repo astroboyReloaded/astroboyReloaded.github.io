@@ -3,7 +3,7 @@ const [Name, Email, Message] = document.querySelectorAll('.formInput'),
   SubmitBtn = document.getElementById('submit');
 const AllInputs = [Name, Email, Message],
   Errors = [nameErr, emailErr, messageErr],
-  showErr = 'showErr';
+  show = 'showErr';
 Name.addEventListener('input', function() {isNameValid(this.value)});
 Email.addEventListener('input', function() {isEmailValid(this.value)});
 Message.addEventListener('input', function() {isMessageValid(this.value)});
@@ -100,36 +100,38 @@ function showAllErrors(input) {
       })
     })
     Errors.forEach(error => {
-      error.classList.add(hide)
+      error.classList.remove(show)
       error.textContent = '';
     })
   } else {
     Errors.forEach(error => {
-    error.classList.remove(hide);
+    error.classList.Add(show);
   })
   }
 };
 
 function hideOtherErrors(input) {
   Errors.forEach(error => {
-    !error.classList.contains(hide) && error.classList.add(hide);
-    if (!error.value && error.id === `${input.id}Err`) {
-      error.classList.add(hide)
+    error.classList.contains(show) && error.classList.remove(show);
+    if (error.id === `${input.id}Err`) {
+      error.value
+      ? error.classList.add(show)
+      : error.classList.remove(show)
     }
   });
 
   const verified = () => input.classList.add('green');
   switch (input.id) {
     case 'name':
-      nameErr.classList.remove(hide);
+      nameErr.classList.add(show);
       ValidName && verified()
       break;
     case 'email':
-      emailErr.classList.remove(hide);
+      emailErr.classList.add(show);
       ValidEmail && verified();
       break;
     case 'msg':
-      messageErr.classList.remove(hide);
+      messageErr.classList.add(show);
       ValidMsg && verified();
       break;
     default:

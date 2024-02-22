@@ -23,7 +23,12 @@
 <body>
   <header>
     <div class="logo hide"></div>
-    <nav class="display">
+    <label class="menu-btn hide" for="menu-toggle" tabindex="0" aria-label="Navigation Menu" role="button"
+      aria-live="polite" aria-expanded="false">
+      <input id="menu-toggle" type="checkbox" class="btnBlue" />
+      <div class="menu-label"></div>
+    </label>
+    <nav class="display" aria-label="Menu" role="navigation">
       <ul class="poppins">
         <li class="nav-item">
           <a class="nav-link" href="#headline">Hello</a>
@@ -39,10 +44,6 @@
         </li>
       </ul>
     </nav>
-    <label class="menu-btn-container hide" for="menu-toggle" tabindex="0" aria-label="Show Navigation Menu">
-      <input id="menu-toggle" type="checkbox" class="btnBlue" />
-      <div class="menu-btn"></div>
-    </label>
   </header>
   <!---------------------- headline ------------------------>
   <section id="headline" tabindex="0">
