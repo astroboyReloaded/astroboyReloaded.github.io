@@ -82,14 +82,39 @@ function validateForm() {
 
 // Allow interaction
 AllInputs.forEach(input => {
-  input.addEventListener('blur', () => showAllErrors(input));
   input.addEventListener('focus', () => hideOtherErrors(input));
+  input.addEventListener('blur', () => showAllErrors(input));
 });
+
+function hideOtherErrors(input) {
+  Errors.forEach(error => {
+    error.classList.remove(show);
+    if (error.id === `${input.id}Err` && error.textContent) {
+      error.classList.add(show)
+    }
+  });
+
+  const verified = () => input.classList.add('green');
+  switch (input.id) {
+    case 'name':
+      ValidName && verified()
+      break;
+    case 'email':
+      ValidEmail && verified();
+      break;
+    case 'msg':
+      ValidMsg && verified();
+      break;
+    default:
+      break;
+  }
+};
 
 function showAllErrors(input) {
   input.classList.remove('green');
-  Errors.forEach(err => {
-    err.id === `${input.id}Err` && err.classList.remove(show);
+  Errors.forEach(error => {
+    error.classList.remove(show);
+    error.textContent && error.classList.add(show);
   })
   const allEmpty = AllInputs.map(input => input.value === '');
   if (allEmpty.every(value => value === true)) {
@@ -103,38 +128,6 @@ function showAllErrors(input) {
       error.classList.remove(show)
       error.textContent = '';
     })
-  } else {
-    Errors.forEach(error => {
-    error.classList.Add(show);
-  })
   }
 };
 
-function hideOtherErrors(input) {
-  Errors.forEach(error => {
-    error.classList.contains(show) && error.classList.remove(show);
-    if (error.id === `${input.id}Err`) {
-      error.value
-      ? error.classList.add(show)
-      : error.classList.remove(show)
-    }
-  });
-
-  const verified = () => input.classList.add('green');
-  switch (input.id) {
-    case 'name':
-      nameErr.classList.add(show);
-      ValidName && verified()
-      break;
-    case 'email':
-      emailErr.classList.add(show);
-      ValidEmail && verified();
-      break;
-    case 'msg':
-      messageErr.classList.add(show);
-      ValidMsg && verified();
-      break;
-    default:
-      break;
-  }
-};
