@@ -7,7 +7,7 @@ const project = Array.from(document.getElementsByClassName('project'));
 
 function createProjectWindow(data) {
   return `
-  <main id="main" class="pWMain" tabindex="0">
+  <article id="main" class="pWMain" tabindex="0">
     <div class="pW-header">
       <button id="closeW" class="closeWindow" aria-label="close window.">X</button>
       <h1 class="poppins pWTitle" aria-label="${data.title}.">${data.title}</h1>
@@ -37,19 +37,25 @@ function createProjectWindow(data) {
         </a></li>
       </ul>
     </nav>
-  </main>`;
-}
+  </article>`;
+};
+
 function popUp(data, index) {
   document.body.appendChild(projectWindow).innerHTML = createProjectWindow(data[index]);
 
   const closePopUp = document.querySelector('.closeWindow');
 
-  closePopUp.addEventListener('click', () => {
+  closePopUp.addEventListener('click', closeWindow);
+
+  function closeWindow() {
     document.body.removeChild(projectWindow);
     project[index].focus();
+  };
+  const main = document.getElementById('main');
+  main.focus();
+  main.addEventListener('keydown', (e) => {
+    e.key === 'Escape' && closeWindow()
   });
-
-  document.getElementById('main').focus();
 
   const prev = document.getElementById('prev');
   const next = document.getElementById('next');
@@ -73,7 +79,7 @@ function popUp(data, index) {
   next.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') popUp(projectData, index + 1);
   });
-}
+};
 
 project.forEach((p, i) => p.addEventListener('click', () => {
   popUp(projectData, i);
