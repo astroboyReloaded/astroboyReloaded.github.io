@@ -182,7 +182,7 @@ header {
 
 /********* Nav Bar **********/
 
-nav {
+.mainNav {
   justify-content: space-between;
   display: block;
   position: absolute;
@@ -197,11 +197,11 @@ nav {
   background-size: auto, auto, 100vw;
 }
 
-.display {
+.mainNav.display {
   display: none;
 }
 
-nav ul {
+.mainNav ul {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -424,8 +424,15 @@ nav ul {
   border: 1px solid var(--gray);
 }
 
-.prev-next-cont {
-  display: none;
+.project-window-nav-ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.project-window-nav-ul li {
+  width: fit-content;
 }
 
 /*********************** About ***********************/
@@ -1019,13 +1026,6 @@ footer {
     margin: 0;
     width: 70%;
     align-self: center;
-  }
-
-  .project-window-nav-ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 18px;
   }
 
   .project-nav {
