@@ -1134,6 +1134,7 @@ footer {
       #f9f9fa;
     background-size: 18.26vw, 24.3vw;
     padding: 9vw 24.3vw;
+    max-height: 100vh;
   }
 
   #contact h1 {
