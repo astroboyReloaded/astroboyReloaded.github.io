@@ -339,28 +339,25 @@ header {
 
 /**************** PopUp Window ****************/
 
-.popUp {
+.project-window {
   position: fixed;
-  display: block;
-  height: 100vh;
-  width: 100vw;
-  z-index: 9;
-  overflow-y: scroll;
-}
-
-.pWMain {
-  padding: 18px;
-  background: var(--white);
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: var(--white);
+  padding: 18px;
+  z-index: 9;
+  overflow-y: scroll;
 }
 
 .pW-header {
   display: flex;
   flex-direction: column;
+  height: fit-content;
 }
 
-.closeWindow {
+.close-pW {
   border: none;
   background: var(--white);
   font-size: 150%;
@@ -369,7 +366,7 @@ header {
   align-self: flex-end;
 }
 
-.pWTitle {
+.pW-title {
   width: fit-content;
   font-size: 6vw;
   font-weight: 600;
@@ -377,12 +374,17 @@ header {
   line-height: 100%;
 }
 
-.pWTech {
+.pW-tech-item {
   background-color: var(--white);
   border: 1px solid var(--blue);
 }
 
-.pWDescription {
+.pW-img {
+  width: 100%;
+  height: 53.325641vw;
+}
+
+.pW-description {
   color: var(--blue);
   font-size: 1.2rem;
   margin-block: 18px;
@@ -393,7 +395,7 @@ header {
   flex-direction: column;
 }
 
-.pWBtn {
+.pW-project-link {
   position: relative;
   display: flex;
   width: 90%;
@@ -424,15 +426,20 @@ header {
   border: 1px solid var(--gray);
 }
 
-.project-window-nav-ul {
+.pW-nav-ul {
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-top: 18px;
 }
 
-.project-window-nav-ul li {
+.pW-nav-ul li {
   width: fit-content;
+}
+
+.project-nav {
+  border: none;
+  background-color: var(--white);
 }
 
 /*********************** About ***********************/
@@ -699,7 +706,7 @@ footer {
     display: none;
   }
 
-  nav {
+  .mainNav {
     position: static;
     display: block;
     margin-right: 99px;
@@ -708,11 +715,11 @@ footer {
     background: #fff;
   }
 
-  .display {
+  .mainNav.display {
     display: block;
   }
 
-  nav ul {
+  .mainNav ul {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -938,42 +945,34 @@ footer {
 
   /************* PpoUp Window *****************/
 
-  .popUp {
-    background: #1a2236;
-    padding: 4.5%;
-  }
-
-  .pWMain {
-    padding: 4.5%;
-  }
-
-  .pW-header {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  .closeWindow {
+  .close-pW {
     font-size: 2.4rem;
     border: 2px solid var(--white);
   }
 
-  .closeWindow:focus {
+  .close-pW:focus {
     outline: none;
     border: 2px solid var(--border);
   }
 
-  .pWTitle {
+  .pW-title {
     width: fit-content;
     font-size: 3rem;
     margin-block: 0 3px;
   }
 
-  .pWTech {
+  .pW-img {
+    width: 75%;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .pW-tech-container {
     font-size: 1.2rem;
     margin-block: 12px;
   }
 
-  .pWDescription {
+  .pW-description {
     align-self: center;
     width: 70%;
     color: #1a2236;
@@ -981,15 +980,16 @@ footer {
 
   .pW-btnsContainer {
     flex-direction: row;
-    flex-wrap: wrap;
     align-self: center;
-    width: 70%;
+    justify-content: space-around;
+    width: 60%;
   }
 
-  .pWBtn {
+  .pW-project-link {
     width: 21vw;
     margin: 9px;
     justify-content: left;
+    cursor: pointer;
   }
 
   .live,
@@ -1023,8 +1023,8 @@ footer {
 
   .prev-next-cont {
     display: block;
-    margin: 0;
-    width: 70%;
+    margin: 1rem 0;
+    width: 90%;
     align-self: center;
   }
 
@@ -1033,7 +1033,7 @@ footer {
     cursor: pointer;
   }
 
-  .prevProj {
+  .pW-prev-btn {
     padding-left: 30px;
     background: url('images/icons/arrow-prev.svg') 0 50% no-repeat;
     background-size: 18px;
@@ -1041,11 +1041,11 @@ footer {
     transition: border 300ms ease-in-out;
   }
 
-  .prevProj:focus {
+  .pW-prev-btn:focus {
     border: 2px solid var(--border);
   }
 
-  .nextProj {
+  .pW-next-btn {
     padding-right: 30px;
     background: url('images/icons/arrow-black.svg') 100% 50% no-repeat;
     background-size: 18px;
@@ -1053,7 +1053,7 @@ footer {
     transition: border 300ms ease-in-out;
   }
 
-  .nextProj:focus {
+  .pW-next-btn:focus {
     border: 2px solid var(--border);
   }
 

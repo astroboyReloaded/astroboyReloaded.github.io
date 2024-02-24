@@ -1,89 +1,120 @@
-import projects from '../db.js';
+import Projects from '../db.js';
+import closePopupGesture from './gestures/closePopUp.js';
 
-const projectData = projects.data;
-const projectWindow = document.createElement('article');
-projectWindow.className = 'popUp';
-const project = Array.from(document.getElementsByClassName('project'));
+const projectThumbnails = document.querySelectorAll('.project'),
+  _data = Projects.data,
+  projectWindow = document.createElement('article');
+    projectWindow.setAttribute('tabindex', '0')
+    projectWindow.className = 'project-window';
+let  Project_Data_Index;
 
-function createProjectWindow(data) {
-  return `
-  <article id="main" class="pWMain" tabindex="0">
-    <div class="pW-header">
-      <button id="closeW" class="closeWindow" aria-label="close window.">X</button>
-      <h1 class="poppins pWTitle" aria-label="${data.title}.">${data.title}</h1>
-    </div>
-    <ul class="tech-container"
-        aria-label="Technologies:${data.tech.map((t, i, a) => (t[i] === a.length - 1 ? t : ` ${t}`))}."
-    >
-      ${data.tech
-    .map((tech) => `<li class="tech-item pWTech poppins">${tech}</li>`)
-    .join('')}
-    </ul>
-    <img class="windowImg" src="${data.imageURL}" alt="${data.imageAlt}">
-    <p class="pWDescription poppins">${data.description}</p>
+function createPopUp() {
+  projectWindow.innerHTML = `
+    <header class="pW-header">
+      <button class="close-pW pWDynamic"  aria-label="close window.">X</button>
+      <h1 class="pW-title poppins pWDynamic"></h1>
+    </header>
+    <ul class="pW-tech-container tech-container pWDynamic"></ul>
+    <img class="pW-img pWDynamic" />
+    <main class="pW-description poppins pWDynamic"></main>
     <div class="pW-btnsContainer">
-      <a type="button" href="${data.liveLink}"
-      " target="_blank" class="pWBtn live poppins">See live</a>
-      <a type="button" href="${data.sourceLink}"
-      " target="_blank" class="pWBtn source poppins">See source</a>
+      <a target="_blank" class="pW-project-link live poppins pWDynamic">
+        See live
+      </a>
+      <a target="_blank" class="pW-project-link source poppins pWDynamic">
+        See source
+      </a>
     </div>
     <nav class="prev-next-cont">
-      <ul class="project-window-nav-ul">
-        <li><a id="prev" class="project-nav prevProj poppins" tabindex="0">
+      <ul class="pW-nav-ul">
+        <li><button class="pW-prev-btn project-nav poppins pWDynamic" tabindex="0">
         Previous project
-        </a></li>
-        <li><a id="next" class="project-nav nextProj poppins" tabindex="0">
+        </button></li>
+        <li><button class="pW-next-btn project-nav poppins pWDynamic" tabindex="0">
         Next project
-        </a></li>
+        </button></li>
       </ul>
-    </nav>
-  </article>`;
-};
+    </nav>`;
 
-function popUp(data, index) {
-  document.body.appendChild(projectWindow).innerHTML = createProjectWindow(data[index]);
+  const [
+    closePopup,
+    projectTitle,
+    techContainer,
+    projectImage,
+    projectDescription,
+    seeLive,
+    seeSource,
+    prevLink,
+    nextLink,
+  ] = projectWindow.querySelectorAll('.pWDynamic');
 
-  const closePopUp = document.querySelector('.closeWindow');
-
-  closePopUp.addEventListener('click', closeWindow);
+  function populateProjectWindow(Data) {
+    projectTitle.textContent = Data.title;
+    techContainer.innerHTML = Data.tech
+    .map((tech) => `<li class="pW-tech-item tech-item poppins">${tech}</li>`)
+    .join('');
+    projectImage.setAttribute('src', Data.imageURL)
+    projectImage.setAttribute('alt', Data.imageAlt);
+    projectDescription.textContent = Data.description;
+    seeLive.setAttribute('src', Data.liveLink);
+    seeSource.setAttribute('src', Data.seeSource);
+    if (Project_Data_Index < 1) {
+      prevLink.style.display = 'none';
+    } else {
+      prevLink.style.display = 'inline';
+    }
+    if (Project_Data_Index >= _data.length - 1) {
+      nextLink.style.display = 'none';
+    } else {
+      nextLink.style.display = 'inline';
+    }
+  };
+  populateProjectWindow(_data[Project_Data_Index])
 
   function closeWindow() {
     document.body.removeChild(projectWindow);
-    project[index].focus();
+    projectThumbnails[Project_Data_Index].focus();
   };
-  const main = document.getElementById('main');
-  main.focus();
-  main.addEventListener('keydown', (e) => {
+
+  closePopup.addEventListener('click', closeWindow);
+
+  projectWindow.focus();
+  projectWindow.addEventListener('keydown', (e) => {
     e.key === 'Escape' && closeWindow()
   });
 
-  const prev = document.getElementById('prev');
-  const next = document.getElementById('next');
-
-  if (index < 1) {
-    prev.style.display = 'none';
-  }
-  prev.addEventListener('click', () => {
-    popUp(projectData, index - 1);
+  prevLink.addEventListener('click', () => {
+    Project_Data_Index -= 1;
+    populateProjectWindow(_data[Project_Data_Index]);
   });
-  prev.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') popUp(projectData, index - 1);
+  prevLink.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      Project_Data_Index -= 1;
+      populateProjectWindow(_data[Project_Data_Index]);
+    }
   });
 
-  if (index > projectData.length - 2) {
-    next.style.display = 'none';
-  }
-  next.addEventListener('click', () => {
-    popUp(projectData, index + 1);
+  nextLink.addEventListener('click', () => {
+    Project_Data_Index += 1
+    populateProjectWindow(_data[Project_Data_Index]);
   });
-  next.addEventListener('keypress', (event) => {
-    if (event.key === 'Enter') popUp(projectData, index + 1);
+  nextLink.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
+      Project_Data_Index += 1
+      populateProjectWindow(_data[Project_Data_Index]);
+    } 
   });
+  closePopupGesture(closePopup);
 };
 
-project.forEach((p, i) => p.addEventListener('click', () => {
-  popUp(projectData, i);
-}));
-project.forEach((p, i) => p.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') popUp(projectData, i);
+function openPopup(index) {
+  document.body.appendChild(projectWindow);
+  Project_Data_Index = index;
+  createPopUp();
+}
+projectThumbnails.forEach((p, i) => p.addEventListener('click', () => openPopup(i)));
+projectThumbnails.forEach((p, i) => p.addEventListener('keypress', (event) => {
+  if (event.key === 'Enter') {
+    openPopup(i);
+  }
 }));

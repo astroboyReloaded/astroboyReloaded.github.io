@@ -9,7 +9,7 @@ document.getElementById('works').innerHTML = `
   Projects:
 </h1>
 ${projectData.map((project) => `
-<article class="project ${project.gridArea}" tabindex="0">
+<a class="project ${project.gridArea}" tabindex="0">
 <img
   class="project-image"
   src="${project.imageURL}"
@@ -32,7 +32,7 @@ ${projectData.map((project) => `
     See this project
   </span>
 </div>
-</article>
+</a>
 `).join('')}
 <div class="center deco"></div>
 <div class="left deco"></div>

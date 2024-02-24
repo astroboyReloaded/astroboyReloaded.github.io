@@ -30,7 +30,7 @@ const data = [
     title: 'CoinStats',
     tech: ['React/Redux', 'Linters', 'Jest-Dom'],
     description:
-      ' CoinStats is a psudo-replica of the CoinGecko website/app and uses CoinGecko\'s Api to feed data. The purpose of this project is to show my React/Redux skills up untill the moment of creation. The project aims to integrate "D3.js" and "Websockets". The truth is I just want to show some skills with this, but I also want to show my interest in the crypto-tech field.',
+      ' CoinStats is a psudo-replica of the CoinGecko website/app and uses CoinGecko\'s Api to feed data. In each coin\'s page, we have access to a Currency Converter which will let us know the value of that coin in a wide selection of fiat and some othe major coins. The purpose of this project is to show my React/Redux skills up untill the moment of creation. The project aims to integrate "D3.js". The truth is I just want to show some skills with this, but I also want to show my interest in the crypto-tech field.',
     liveLink: 'https://coinstats-nd4q.onrender.com/',
     sourceLink: 'https://github.com/astroboyReloaded/CoinStats',
   },
