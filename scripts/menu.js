@@ -1,8 +1,11 @@
-const menuBtn = document.querySelector('.menu-btn');
-const menuToggle = document.getElementById('menu-toggle');
-const nav = document.querySelector('nav');
-const logo = document.querySelector('.logo');
-const navLink = document.querySelectorAll('.nav-link');
+const menuBtn = document.querySelector('.menu-btn'),
+  menuToggle = document.getElementById('menu-toggle'),
+  nav = document.querySelector('nav'),
+  logo = document.querySelector('.logo'),
+  navLink = document.querySelectorAll('.nav-link'),
+  _menuHeight = document.querySelector('#headline').offsetHeight;
+  console.log(_menuHeight)
+nav.style.height = `${_menuHeight - 18}px`;
 
 function toggle() {
   const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
