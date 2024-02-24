@@ -304,6 +304,7 @@ header {
 .project-description {
   display: flex;
   flex-direction: column;
+  width: 100%;
   background: var(--blue);
   padding: 18px;
   color: var(--white);
@@ -313,6 +314,7 @@ header {
 .project-title {
   font-weight: 300;
   font-size: 1.5rem;
+  width: fit-content;
 }
 
 .tech-container {

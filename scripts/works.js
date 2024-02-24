@@ -5,7 +5,7 @@ import projects from '../db.js';
 const projectData = projects.data;
 
 document.getElementById('works').innerHTML = `
-<h1 class="playfair" tabindex="0">
+<h1 class="playfair">
   Projects:
 </h1>
 ${projectData.map((project) => `

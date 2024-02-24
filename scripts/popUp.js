@@ -71,7 +71,7 @@ function createPopUp() {
     } else {
       nextLink.style.display = 'inline';
     }
-    projectWindow.focus();
+    projectWindow.focus()
   };
   populateProjectWindow(_data[Project_Data_Index])
 
@@ -84,8 +84,11 @@ function createPopUp() {
 
   projectWindow.focus();
   projectWindow.addEventListener('keydown', (e) => {
-    e.key === 'Escape' && closeWindow()
+    e.key === 'Escape' && closeWindow();
   });
+  projectWindow.onkeydown = (e) => {
+    if (document.activeElement === projectWindow && e.shiftKey && e.key === 'Tab') closeWindow();
+  };
 
   prevLink.addEventListener('click', () => {
     Project_Data_Index -= 1;
@@ -108,7 +111,7 @@ function createPopUp() {
       populateProjectWindow(_data[Project_Data_Index]);
     } 
   });
-  closePopupGesture(closePopup);
+  closePopupGesture(projectWindow, closePopup);
 };
 
 function openPopup(index) {

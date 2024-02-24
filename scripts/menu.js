@@ -4,7 +4,6 @@ const menuBtn = document.querySelector('.menu-btn'),
   logo = document.querySelector('.logo'),
   navLink = document.querySelectorAll('.nav-link'),
   _menuHeight = document.querySelector('#headline').offsetHeight;
-  console.log(_menuHeight)
 nav.style.height = `${_menuHeight - 18}px`;
 
 function toggle() {
