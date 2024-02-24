@@ -5,6 +5,9 @@ const projectThumbnails = document.querySelectorAll('.project'),
   _data = Projects.data,
   projectWindow = document.createElement('article');
     projectWindow.setAttribute('tabindex', '0')
+    projectWindow.setAttribute('role', 'dialog')
+    projectWindow.setAttribute('aria-label', 'Project Details')
+    // projectWindow.setAttribute('aria-live', 'polite')
     projectWindow.className = 'project-window';
 let  Project_Data_Index;
 
@@ -12,16 +15,16 @@ function createPopUp() {
   projectWindow.innerHTML = `
     <header class="pW-header">
       <button class="close-pW pWDynamic"  aria-label="close window.">X</button>
-      <h1 class="pW-title poppins pWDynamic"></h1>
+      <h1 class="pW-title poppins pWDynamic" aria-live="polite"></h1>
     </header>
-    <ul class="pW-tech-container tech-container pWDynamic"></ul>
+    <ul class="pW-tech-container tech-container pWDynamic" aria-live="polite"></ul>
     <img class="pW-img pWDynamic" />
-    <main class="pW-description poppins pWDynamic"></main>
+    <main class="pW-description poppins pWDynamic" aria-live="polite"></main>
     <div class="pW-btnsContainer">
-      <a target="_blank" class="pW-project-link live poppins pWDynamic">
+      <a target="_blank" class="pW-project-link live poppins pWDynamic" aria-label="View live project" tabindex="0">
         See live
       </a>
-      <a target="_blank" class="pW-project-link source poppins pWDynamic">
+      <a target="_blank" class="pW-project-link source poppins pWDynamic" aria-label="View source code" tabindex="0">
         See source
       </a>
     </div>
@@ -56,8 +59,8 @@ function createPopUp() {
     projectImage.setAttribute('src', Data.imageURL)
     projectImage.setAttribute('alt', Data.imageAlt);
     projectDescription.textContent = Data.description;
-    seeLive.setAttribute('src', Data.liveLink);
-    seeSource.setAttribute('src', Data.seeSource);
+    seeLive.setAttribute('href', Data.liveLink);
+    seeSource.setAttribute('href', Data.sourceLink);
     if (Project_Data_Index < 1) {
       prevLink.style.display = 'none';
     } else {
@@ -68,6 +71,7 @@ function createPopUp() {
     } else {
       nextLink.style.display = 'inline';
     }
+    projectWindow.focus();
   };
   populateProjectWindow(_data[Project_Data_Index])
 

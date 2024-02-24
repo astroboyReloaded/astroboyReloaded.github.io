@@ -105,6 +105,10 @@ textarea:focus {
   outline: none;
 }
 
+button {
+  border: none;
+}
+
 /********************** Header ***********************/
 
 header {

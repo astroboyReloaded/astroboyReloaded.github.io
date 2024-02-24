@@ -9,19 +9,18 @@ document.getElementById('works').innerHTML = `
   Projects:
 </h1>
 ${projectData.map((project) => `
-<a class="project ${project.gridArea}" tabindex="0">
+<button class="project ${project.gridArea}" aria-describedby="Description" tabindex="0">
 <img
   class="project-image"
   src="${project.imageURL}"
   alt="${project.imageAlt}"
 />
-<div class="project-description poppins">
-  <h1 class="project-title" aria-label="${project.title}.">
+<div id="Description" class="project-description poppins">
+  <h2 class="project-title">
     ${project.title}
-  </h1>
+  </h2>
   <ul
     class="tech-container"
-    aria-label="Technologies:${project.tech.map((t, i, a) => (t[i] === a.length - 1 ? t : ` ${t}`))}."
   >
     ${project.tech.map((tech) => `<li class="tech-item">${tech}</li>`).join('')}
   </ul>
@@ -32,7 +31,7 @@ ${projectData.map((project) => `
     See this project
   </span>
 </div>
-</a>
+</button>
 `).join('')}
 <div class="center deco"></div>
 <div class="left deco"></div>
