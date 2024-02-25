@@ -10,6 +10,7 @@ const projectThumbnails = document.querySelectorAll('.project'),
     // projectWindow.setAttribute('aria-live', 'polite')
     projectWindow.className = 'project-window';
 let  Project_Data_Index;
+let removePopupGesture;
 
 function createPopUp() {
   projectWindow.innerHTML = `
@@ -73,16 +74,10 @@ function createPopUp() {
     }
     projectWindow.focus()
   };
-  populateProjectWindow(_data[Project_Data_Index])
-
-  function closeWindow() {
-    document.body.removeChild(projectWindow);
-    projectThumbnails[Project_Data_Index].focus();
-  };
+  populateProjectWindow(_data[Project_Data_Index]);
 
   closePopup.addEventListener('click', closeWindow);
 
-  projectWindow.focus();
   projectWindow.addEventListener('keydown', (e) => {
     e.key === 'Escape' && closeWindow();
   });
@@ -111,17 +106,25 @@ function createPopUp() {
       populateProjectWindow(_data[Project_Data_Index]);
     } 
   });
-  closePopupGesture(projectWindow, closePopup);
+  removePopupGesture = closePopupGesture(projectWindow, closeWindow);
 };
+
+function closeWindow() {
+    removePopupGesture();
+    document.body.removeChild(projectWindow);
+    projectThumbnails[Project_Data_Index].focus();
+  };
 
 function openPopup(index) {
   document.body.appendChild(projectWindow);
   Project_Data_Index = index;
   createPopUp();
 }
-projectThumbnails.forEach((p, i) => p.addEventListener('click', () => openPopup(i)));
-projectThumbnails.forEach((p, i) => p.addEventListener('keypress', (event) => {
-  if (event.key === 'Enter') {
+projectThumbnails.forEach((p, i) => {
+  p.addEventListener('click', () => openPopup(i));
+  p.addEventListener('keypress', (event) => {
+    if (event.key === 'Enter') {
     openPopup(i);
-  }
-}));
+    }
+  });
+});

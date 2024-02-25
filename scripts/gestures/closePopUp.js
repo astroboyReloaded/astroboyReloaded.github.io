@@ -1,14 +1,13 @@
 export default function closePopupGesture(projectWindow, closePopup) {
-    var startX, startY;
+    let startX, startY;
 
-    // Add event listener for touchstart
-    projectWindow.addEventListener('touchstart', function (e) {
+    // Define the event handler functions
+    function touchStart(e) {
         startX = e.touches[0].clientX;
         startY = e.touches[0].clientY;
-    });
+    }
 
-    // Add event listener for touchend
-    projectWindow.addEventListener('touchend', function (e) {
+    function touchEnd(e) {
         var endX, endY;
         endX = e.changedTouches[0].clientX;
         endY = e.changedTouches[0].clientY;
@@ -22,12 +21,27 @@ export default function closePopupGesture(projectWindow, closePopup) {
             // Swipe left
             if (deltaX < 0) {
                 // Call your function to close the pop-up window
-                closePopup.click();
+                closePopup();
             }
             // Swipe right
             else {
                 // Do nothing or handle swipe right if needed
             }
         }
-    });
-};
+    }
+
+    // Add event listener for touchstart
+    projectWindow.addEventListener('touchstart', touchStart, { passive: true });
+
+    // Add event listener for touchend
+    projectWindow.addEventListener('touchend', touchEnd);
+
+    // Function to remove event listeners
+    function removeEventListeners() {
+        projectWindow.removeEventListener('touchstart', touchStart);
+        projectWindow.removeEventListener('touchend', touchEnd);
+    }
+
+    // Return the function reference to remove event listeners
+    return removeEventListeners;
+}
