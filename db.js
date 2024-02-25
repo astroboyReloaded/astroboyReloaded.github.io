@@ -8,7 +8,7 @@ const data = [
     title: 'Music Festival Website',
     tech: ['HTML/CSS', 'JavaScript'],
     description:
-      'Demo website inspired on the famous music festival "Tecate Supremo 2023". The design of the site is a Cindy Shin GUI & Graphic Designer creation (riginal template available in the repository\'s README.md). This project aims to show my skills on building a simple but light, fast, and easy to maintain website with basic technologies. With a fully responsive design and key features like dynamic rendering and transitions, this is a little taste of what your website could look like if made by me. You can also find my "Portfolio (this website)" repo in my Github.',
+      'Demo website inspired on the famous music festival "Tecate Supremo 2023". This project aims to show my skills on building a simple but light, fast, and easy to maintain website with basic technologies. With a fully responsive design and key features like dynamic rendering and transitions, this is a little taste of what your website could look like if made by me. The design of the site is a Cindy Shin GUI & Graphic Designer creation (riginal template available in the repository\'s README.md).',
     liveLink: 'https://astroboyreloaded.github.io/Music-Festival-Website/',
     sourceLink: 'https://github.com/astroboyReloaded/Music-Festival-Website',
   },
@@ -30,7 +30,7 @@ const data = [
     title: 'CoinStats',
     tech: ['React/Redux', 'Linters', 'Jest-Dom'],
     description:
-      ' CoinStats is a psudo-replica of the CoinGecko website/app and uses CoinGecko\'s Api to feed data. In each coin\'s page, we have access to a Currency Converter which will let us know the value of that coin in a wide selection of fiat and some othe major coins. The purpose of this project is to show my React/Redux skills up untill the moment of creation. The project aims to integrate "D3.js". The truth is I just want to show some skills with this, but I also want to show my interest in the crypto-tech field.',
+      ' CoinStats is a psudo-replica of the CoinGecko website/app and uses CoinGecko\'s Api to feed data. In each coin\'s page, we have access to a Currency Converter which will let us know the convertion value of any ammount of that coin in a wide selection of fiat and some othe major coins. The purpose of this project is to show my React/Redux skills up untill the moment of creation. The project aims to integrate "D3.js".',
     liveLink: 'https://coinstats-nd4q.onrender.com/',
     sourceLink: 'https://github.com/astroboyReloaded/CoinStats',
   },

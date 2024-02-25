@@ -26,7 +26,6 @@ ${projectData.map((project) => `
   </ul>
   <span
     class="btnBlue seeProjBtn"
-    aria-label="Press enter now to see this project."
   >
     See this project
   </span>

@@ -14,10 +14,13 @@ function toggle() {
 };
 
 menuBtn.addEventListener('keydown', (e) => {
-  if (e.key === 'Enter' || e.key === 'Space') {
+  const space = e.key == ' ';
+  if (e.key === 'Enter' || space) {
+    space && e.preventDefault();
     toggle();
     menuToggle.checked = !menuToggle.checked;
   }
+  
 });
 
 menuToggle.onclick = () => {

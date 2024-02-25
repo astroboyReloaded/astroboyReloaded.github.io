@@ -3,11 +3,11 @@ import closePopupGesture from './gestures/closePopUp.js';
 
 const projectThumbnails = document.querySelectorAll('.project'),
   _data = Projects.data,
-  projectWindow = document.createElement('article');
+  projectWindow = document.createElement('article')
     projectWindow.setAttribute('tabindex', '0')
     projectWindow.setAttribute('role', 'dialog')
     projectWindow.setAttribute('aria-label', 'Project Details')
-    // projectWindow.setAttribute('aria-live', 'polite')
+    projectWindow.setAttribute('aria-live', 'polite')
     projectWindow.className = 'project-window';
 let  Project_Data_Index;
 let removePopupGesture;
@@ -72,7 +72,7 @@ function createPopUp() {
     } else {
       nextLink.style.display = 'inline';
     }
-    projectWindow.focus()
+    projectWindow.focus();
   };
   populateProjectWindow(_data[Project_Data_Index]);
 
