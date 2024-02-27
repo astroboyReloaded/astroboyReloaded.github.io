@@ -20,7 +20,6 @@ menuBtn.addEventListener('keydown', (e) => {
     toggle();
     menuToggle.checked = !menuToggle.checked;
   }
-  
 });
 
 menuToggle.onclick = () => {
