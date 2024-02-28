@@ -3,11 +3,12 @@ import closePopupGesture from './gestures/closePopUp.js';
 
 const projectThumbnails = document.querySelectorAll('.project'),
   _data = Projects.data,
-  projectWindow = document.createElement('article')
+  projectWindow = document.createElement('article');
     projectWindow.setAttribute('tabindex', '0')
     projectWindow.setAttribute('role', 'dialog')
     projectWindow.setAttribute('aria-label', 'Project Details')
     projectWindow.setAttribute('aria-live', 'polite')
+    projectWindow.setAttribute('aria-atomic', true)
     projectWindow.className = 'project-window';
 let  Project_Data_Index;
 let removePopupGesture;
@@ -16,11 +17,11 @@ function createPopUp() {
   projectWindow.innerHTML = `
     <header class="pW-header">
       <button class="close-pW pWDynamic"  aria-label="close window.">X</button>
-      <h1 class="pW-title poppins pWDynamic" aria-live="polite"></h1>
+      <h1 class="pW-title poppins pWDynamic" aria-relevant="true"></h1>
     </header>
-    <ul class="pW-tech-container tech-container pWDynamic" aria-live="polite"></ul>
-    <img class="pW-img pWDynamic" />
-    <main class="pW-description poppins pWDynamic" aria-live="polite"></main>
+    <ul class="pW-tech-container tech-container pWDynamic" aria-relevant="true"></ul>
+    <img class="pW-img pWDynamic" aria-relevant="true" />
+    <main class="pW-description poppins pWDynamic" aria-relevant="true"></main>
     <div class="pW-btnsContainer">
       <a target="_blank" class="pW-project-link live poppins pWDynamic" aria-label="View live project" tabindex="0">
         See live
