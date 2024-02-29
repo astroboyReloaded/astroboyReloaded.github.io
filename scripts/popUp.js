@@ -5,10 +5,10 @@ const projectThumbnails = document.querySelectorAll('.project'),
   _data = Projects.data,
   projectWindow = document.createElement('article');
     projectWindow.setAttribute('tabindex', '0')
-    projectWindow.setAttribute('role', 'dialog')
     projectWindow.setAttribute('aria-label', 'Project Details')
     projectWindow.setAttribute('aria-live', 'polite')
     projectWindow.setAttribute('aria-atomic', true)
+    projectWindow.id = 'pWindow'
     projectWindow.className = 'project-window';
 let  Project_Data_Index;
 let removePopupGesture;
@@ -32,12 +32,12 @@ function createPopUp() {
     </div>
     <nav class="prev-next-cont">
       <ul class="pW-nav-ul">
-        <li><button class="pW-prev-btn project-nav poppins pWDynamic" tabindex="0">
+        <li><a href="#" class="pW-prev-btn project-nav poppins pWDynamic" tabindex="0">
         Previous project
-        </button></li>
-        <li><button class="pW-next-btn project-nav poppins pWDynamic" tabindex="0">
+        </a></li>
+        <li><a href="#" class="pW-next-btn project-nav poppins pWDynamic" tabindex="0">
         Next project
-        </button></li>
+        </a></li>
       </ul>
     </nav>`;
 

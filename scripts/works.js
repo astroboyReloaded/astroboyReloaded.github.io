@@ -5,18 +5,18 @@ import projects from '../db.js';
 const projectData = projects.data;
 
 document.getElementById('works').innerHTML = `
-<h1 class="playfair">
+<h2 id="works-title" class="playfair">
   Projects:
-</h1>
+</h2>
 ${projectData.map((project) => `
-<button class="project ${project.gridArea}" aria-describedby="Description" tabindex="0">
+<button class="project ${project.gridArea}">
 <img
   class="project-image"
   src="${project.imageURL}"
   alt="${project.imageAlt}"
 />
 <div id="Description" class="project-description poppins">
-  <h2 class="project-title">
+  <h2 id="${project.title}" class="project-title">
     ${project.title}
   </h2>
   <ul

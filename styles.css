@@ -807,7 +807,7 @@ footer {
     height: 100%;
   }
 
-  #works>h1 {
+  #works-title {
     grid-area: title;
     position: absolute;
     display: flex;

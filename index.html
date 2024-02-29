@@ -68,9 +68,9 @@
     </nav>
   </header>
   <!---------------------- headline ------------------------>
-  <section id="headline" tabindex="0">
+  <section id="headline" aria-labelledby="headline-title">
     <article class="headline-container">
-      <h1 class="headline-title playfair">
+      <h1 id="headline-title" class="headline-title playfair">
         Alex Muñoz
       </h1>
       <p class="poppins">
@@ -86,11 +86,11 @@
   </section>
   <!---------- Projects ---------------->
   <main>
-    <section id="works" tabindex="0"></section>
+    <section id="works" aria-labelledby="works-title"></section>
     <!------------------- About ----------------->
-    <section id="about" tabindex="0">
+    <section id="about" aria-labelledby="about-title">
       <div>
-        <h1 class="playfair about-title">About Me:</h1>
+        <h2 id="about-title" class="playfair about-title">About Me:</h2>
         <p class="poppins">
           Focused in the MERN stack, I have been learning the most important Front-End technologies
           since January 1st 2022, with a special emphasis in the font-End and UI/UX, which I truly find to be the most
@@ -102,47 +102,48 @@
       </div>
       <div class="tech-cards-container poppins">
         <div class="tech-card langs">
-          <h2>Languages:</h2>
+          <h3>Languages:</h3>
           <ul class="tech">
-            <li>• HTML</li>
-            <li>• CSS</li>
-            <li>• JavaScript (ES6/ES7)</li>
-            <li>• SQL</li>
+            <li><span aria-hidden="true">•</span> HTML</li>
+            <li><span aria-hidden="true">•</span> CSS</li>
+            <li><span aria-hidden="true">•</span> JavaScript (ES6/ES7)</li>
+            <li><span aria-hidden="true">•</span> TypeScript</li>
+            <li><span aria-hidden="true">•</span> SQL</li>
             <li aria-label="Python.">• Python</li>
           </ul>
         </div>
         <div class="tech-card frames">
-          <h2>Frameworks:</h2>
+          <h3>Frameworks:</h3>
           <ul class="tech">
-            <li>• Sass/SCSS</li>
-            <li>• Node</li>
-            <li>• Express</li>
-            <li>• Pug</li>
-            <li>• React/Redux</li>
-            <li>• Next</li>
-            <li>• MongoDB</li>
+            <li><span aria-hidden="true">•</span> Sass/SCSS</li>
+            <li><span aria-hidden="true">•</span> Node</li>
+            <li><span aria-hidden="true">•</span> Express</li>
+            <li><span aria-hidden="true">•</span> Pug</li>
+            <li><span aria-hidden="true">•</span> React/Redux</li>
+            <li><span aria-hidden="true">•</span> Next</li>
+            <li><span aria-hidden="true">•</span> MongoDB</li>
             <li aria-label="PostgreSQL.">• PostgreSQL</li>
           </ul>
         </div>
         <div class="tech-card skills">
-          <h2>Skills:</h2>
+          <h3>Skills:</h3>
           <ul class="tech">
-            <li>• UI/UX</li>
-            <li>• OOP</li>
-            <li>• TDD</li>
-            <li>• DevTools</li>
-            <li aria-label="TDD.">• Git/GitHub</li>
+            <li><span aria-hidden="true">•</span> UI/UX</li>
+            <li><span aria-hidden="true">•</span> OOP</li>
+            <li><span aria-hidden="true">•</span> TDD</li>
+            <li><span aria-hidden="true">•</span> DevTools</li>
+            <li aria-label="Git/GitHub.">• Git/GitHub</li>
           </ul>
         </div>
         <div class="about-deco"></div>
       </div>
     </section>
     <!----------------- Contact ---------------->
-    <section id="contact" tabindex="0">
-      <h1 class="playfair"
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="playfair"
         aria-label="Lets Get Started! Send me a message to talk about business. If you'd like to learn more about how we can collaborate I'd be happy to read from you."
         role="presentation">
-        Lets Get Started!</h1>
+        Lets Get Started!</h2>
       <p class="poppins" aria-hidden="true">
         Send me a message to talk about business. If you'd like to learn more about how we can collaborate, I'd be
         happy
