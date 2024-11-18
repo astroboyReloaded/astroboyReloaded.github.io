@@ -5,34 +5,32 @@ import projects from '../db.js';
 const projectData = projects.data;
 
 document.getElementById('works').innerHTML = `
-<h1 class="playfair" tabindex="7" aria-label="My projects:">
-  Projects
-</h1>
+<h2 id="works-title" class="playfair">
+  Projects:
+</h2>
 ${projectData.map((project) => `
-<article class="project ${project.gridArea}" tabindex="${project.tabIndex}">
+<button class="project ${project.gridArea}">
 <img
   class="project-image"
   src="${project.imageURL}"
   alt="${project.imageAlt}"
 />
-<div class="project-description poppins">
-  <h1 class="project-title" aria-label="${project.title}.">
+<div id="Description" class="project-description poppins">
+  <h2 id="${project.title}" class="project-title">
     ${project.title}
-  </h1>
+  </h2>
   <ul
     class="tech-container"
-    aria-label="Technologies:${project.tech.map((t, i, a) => (t[i] === a.length - 1 ? t : ` ${t}`))}."
   >
     ${project.tech.map((tech) => `<li class="tech-item">${tech}</li>`).join('')}
   </ul>
-  <button
+  <span
     class="btnBlue seeProjBtn"
-    aria-label="Press enter now to see this project."
   >
     See this project
-  </button>
+  </span>
 </div>
-</article>
+</button>
 `).join('')}
 <div class="center deco"></div>
 <div class="left deco"></div>

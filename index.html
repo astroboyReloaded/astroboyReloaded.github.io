@@ -1,206 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="theme-color"
+      content="#1a2236"
+      media="(prefers-color-scheme: dark)"
+    />
+    <style>
+      @font-face {
+        font-family: 'Playfair';
+        src: url('assets/fonts/PlayfairDisplay-VariableFont_wght.ttf')
+          format('truetype');
+        font-weight: 400;
+        font-style: normal;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Poppins:wght@200;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
-    rel="stylesheet" />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Libre+Barcode+39+Text&family=Playfair+Display&family=Poppins:wght@200;400;600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
-    rel="stylesheet" />
-  <link rel="icon" type="image/x-icon" href="images/icons/Astro-Boy-Transparent-Images.png" />
-  <link rel="stylesheet" href="styles.css" />
-  <script src="/scripts/menu.js" defer></script>
-  <script src="scripts/works.js" type="module"></script>
-  <script src="scripts/popUp.js" type="module"></script>
-  <script src="scripts/form-validation.js" defer></script>
-  <script src="scripts/localStorage.js" defer></script>
-  <title>AstroboyReloaded | Portfolio</title>
-  <meta name="description"
-    content="Shows the best works by Alex Muñoz, aka Astroboy(Reloaded), as a web developer professional, showing you by first hand what he's skills are and what he cand do for you and your company or product." />
-</head>
+      @font-face {
+        font-family: 'Poppins';
+        src: url('assets/fonts/Poppins-Regular.ttf') format('truetype');
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+    <link
+      rel="preload"
+      href="assets/fonts/PlayfairDisplay-VariableFont_wght.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Poppins-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="images/icons/Astro-Boy-Transparent-Images.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="images/icons/Astro-Boy-Transparent-Images.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="/scripts/menu.js" defer></script>
+    <script src="scripts/works.js" type="module"></script>
+    <script src="scripts/popUp.js" type="module"></script>
+    <script src="scripts/localStorage.js" type="module"></script>
+    <script src="scripts/form-validation.js" type="module"></script>
+    <meta
+      property="og:title"
+      content="AstroboyReloaded | Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      constent="Your Website Developed by a Professional"
+    />
+    <meta
+      property="og:image"
+      content="https://www.astroboyreloaded.github.io/images/desktop/image-geometry_1.svg"
+    />
+    <meta
+      property="og:image:alt"
+      content="AstroboyReloaded Developer Portfolio"
+    />
+    <meta property="og:url" content="https://www.astroboyreloaded.github.io" />
+    <meta name="author" content="Alex Muñoz" />
+    <title>AstroboyReloaded | Portfolio</title>
+    <meta
+      name="description"
+      content="A Professional Web Developer Portfolio by Alex Muñoz aka AstroboyReloaded. Look at some of my best projects, analize my code and see how my experience can benefit your organization or product."
+    />
+  </head>
 
-<body>
-  <header>
-    <div class="logo show-hide" role="img" aria-label="Logo: Right Triangle and rhombus"></div>
-    <nav class="display">
-      <ul class="poppins">
-        <li class="nav-item">
-          <a class="nav-link" href="#headline" tabindex="1">Hello</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#works" tabindex="2">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#about" tabindex="3">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact" tabindex="4">Contact</a>
-        </li>
-      </ul>
-    </nav>
-    <label class="menu-btn-container show-hide" for="menu-toggle" tabindex="0" aria-label="Show Navigation Menu">
-      <input id="menu-toggle" type="checkbox" />
-      <div class="menu-btn"></div>
-    </label>
-  </header>
-  <!---------------------- headline ------------------------>
-  <section id="headline" tabindex="5">
-    <article class="headline-container">
-      <h1 class="headline-title playfair" aria-label="Alex Muñoz.">
-        Alex Muñoz
-      </h1>
-      <p class="poppins" aria-label="Hey there! I am a software developer! I can help you build a
-          product feature or website. Take a look at my work. If you like what
-          you see and have a project you would like coded don’t hesitate to
-          contact me. Press tab and enter to">
-        &nbspHey, there! I am a software developer! I can help you build a
-        product, feature or website. Take a look at my work. If you like what
-        you see and have a project you would like coded, don’t hesitate to
-        contact me.
-      </p>
-      <a href="#contact" class="btnBlue poppins" tabindex="6">Start collaboration
-      </a>
-    </article>
-    <div class="headline-deco" role="img"></div>
-  </section>
-  <!---------- Projects ---------------->
-  <main>
-    <section id="works"></section>
-    <!------------------- About ----------------->
-    <section id="about" tabindex="14">
-      <div>
-        <h1 class="playfair about-title" aria-label="About me.">About</h1>
-        <p class="poppins">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ea eiusmod.
-        </p>
-        <a href="./assets/astroboyReloaded_CV.pdf" class="btnBlue getCV poppins" download tabindex="15"
-          aria-label="Enter here to get my CV.">Get my
-          CV<i class="download"></i></a>
-      </div>
-      <ul class="tech-cards-container poppins">
-        <li class="tech-card langs" aria-label="Languages: JavaScript (ES5/ES6), Ruby, HTML, CSS.">
-          <h2>Languages</h2>
-          <ul class="tech">
-            <li>• JavaScript (ES6/ES7)</li>
-            <li>• HTML</li>
-            <li>• CSS</li>
-            <li>• PostgreSQL</li>
-          </ul>
-        </li>
-        <li class="tech-card frames" aria-label="Frameworks: Bootstrap, Ruby on rails, RSpec, Capibara, Selenium.">
-          <h2>Frameworks</h2>
-          <ul class="tech">
-            <li>• SCSS</li>
-            <li>• Express</li>
-            <li>• Pug</li>
-            <li>• React/Redux</li>
-            <li>• MOngoDB</li>
-          </ul>
-        </li>
-        <li class="tech-card skills" aria-label="Skills: Codekit, Codepen, GitHub, GitLAb, Terminal.">
-          <h2>Skills</h2>
-          <ul class="tech">
-            <li>• Git/GitHub</li>
-            <li>• DevTools</li>
-            <li>• OOP</li>
-            <li>• TDD</li>
-            <li>• Responsive</li>
-          </ul>
-        </li>
-        <div class="about-deco"></div>
-      </ul>
-    </section>
-    <!----------------- Contact ---------------->
-    <section id="contact" tabindex="16">
-      <h1 class="playfair" aria-label="Lets get started.">Get Started</h1>
-      <p class="poppins">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-        aliquip ex ea commodo consequat.
-      </p>
-      <form action="https://formspree.io/f/myyazjoo" method="post">
+  <body>
+    <header>
+      <div class="logo hide"></div>
+      <label
+        class="menu-btn hide"
+        for="menu-toggle"
+        tabindex="0"
+        aria-label="Navigation Menu"
+        role="button"
+        aria-live="polite"
+        aria-expanded="false"
+      >
+        <input id="menu-toggle" type="checkbox" class="btnBlue" />
+        <div class="menu-label"></div>
+      </label>
+      <nav class="display mainNav" aria-label="Menu" role="navigation">
         <ul class="poppins">
-          <li class="input-container">
-            <label for="name" aria-label="Please enter your">
-              <abbr title="Required"> Your name<strong>*</strong> </abbr>
-            </label>
-            <input type="text" id="name" class="formInput" name="user_name" maxlength="30" required aria-label="name."
-              tabindex="17" />
+          <li class="nav-item">
+            <a class="nav-link" href="#headline">Hello</a>
           </li>
-          <li class="input-container">
-            <label for="email" aria-label="Please enter your"><abbr title="Required">Your email<strong>*</strong></abbr>
-            </label>
-            <input name="user_email" id="email" class="formInput" type="email" required aria-label="email."
-              tabindex="18" />
+          <li class="nav-item">
+            <a class="nav-link" href="#works">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
           </li>
         </ul>
-        <label for="msg" class="msgLbl poppins" aria-label="Please describe">
-          <abbr title="Required">Message<strong>*</strong></abbr>
-        </label>
-        <textarea name="msg" id="msg" class="formInput poppins" placeholder="Enter your message here..." maxlength="500"
-          required aria-label="your project in less than 500 characters." tabindex="19"></textarea>
-        <button type="submit" class="btnBlue" aria-label="Send message" tabindex="20">
-          Start collaboration
-        </button>
-        <small id="errorMsg"></small>
-      </form>
+      </nav>
+    </header>
+    <!---------------------- headline ------------------------>
+    <section id="headline" aria-labelledby="headline-title">
+      <article class="headline-container">
+        <h1 id="headline-title" class="headline-title playfair">Alex Muñoz</h1>
+        <p class="poppins">
+          &nbspHey, there! I am a software developer! I can help you build a
+          product, feature or website. Take a look at my work. If you like what
+          you see and have a project you would like coded, don’t hesitate to
+          contact me.
+        </p>
+        <a href="#contact" class="btnBlue start poppins"
+          >Start collaboration
+        </a>
+      </article>
+      <div class="headline-deco" role="img" width="320" height="160"></div>
     </section>
-    <footer>
-      <a href="https://docs.google.com/document/d/1sGZ6yxcJa1jLS59dCbatuG7NZ1vUlPIAJKK0h03SrC0/edit?usp=sharing"
-        rel="noopener" class="open poppins" target="_blank" tabindex="21">Get my Resume</a>
-      <ul class="social-container">
-        <li>
-          <a class="social-link" rel="noopener" href="https://stackoverflow.com/users/18165300/alex-munoz"
-            target="_blank" tabindex="22">
-            <i class="social-icon">
-              <img src="./images/icons/stackoverflow.svg" alt="Stack Overflow" />
-            </i>
-          </a>
-        </li>
-        <li>
-          <a class="social-link" rel="noopener" href="https://github.com/astroboyReloaded" target="_blank"
-            tabindex="23">
-            <i class="social-icon">
-              <img src="./images/icons/github-icon.svg" alt="GitHub" />
-            </i>
-          </a>
-        </li>
-        <li>
-          <a class="social-link" rel="noopener" href="https://twitter.com/astroboyReload" target="_blank" tabindex="24">
-            <i class="social-icon">
-              <img src="./images/icons/twitter.svg" alt="Twitter" />
-            </i>
-          </a>
-        </li>
-        <li>
-          <a class="social-link" rel="noopener" href="https://www.linkedin.com/in/astroboyreloaded/" target="_blank"
-            tabindex="25">
-            <i class="social-icon">
-              <img src="./images/icons/linkedin.svg" alt="Linkedin" />
-            </i>
-          </a>
-        </li>
-        <li>
-          <a class="social-link" rel="noopener" href="https://medium.com/@astroboy.reloaded" target="_blank"
-            tabindex="26">
-            <i class="social-icon m">
-              <img src="./images/icons/M-icon.svg" alt="M" />
-            </i>
-          </a>
-        </li>
-      </ul>
-    </footer>
-  </main>
-</body>
-
+    <!---------- Projects ---------------->
+    <main>
+      <section id="works" aria-labelledby="works-title"></section>
+      <!------------------- About ----------------->
+      <section id="about" aria-labelledby="about-title">
+        <div>
+          <h2 id="about-title" class="playfair about-title">About Me:</h2>
+          <p class="poppins">
+            Focused in the MERN stack, I have been learning the most important
+            Front-End technologies since January 1st 2022, with a special
+            emphasis in the font-End and UI/UX, which I truly find to be the
+            most interesting aspect of any didgital tech. Download my CV or
+            visit my social media to see more about my certifications and other
+            publications I've made and find out more about my coding experience.
+          </p>
+          <a
+            href="./assets/astroboyReloaded_CV.pdf"
+            class="btnBlue getCV poppins"
+            download
+            >Get my CV.<i class="download"></i
+          ></a>
+        </div>
+        <div class="tech-cards-container poppins">
+          <div class="tech-card langs">
+            <h3>Languages:</h3>
+            <ul class="tech">
+              <li><span aria-hidden="true">•</span> HTML</li>
+              <li><span aria-hidden="true">•</span> CSS</li>
+              <li><span aria-hidden="true">•</span> JavaScript (ES6/ES7)</li>
+              <li><span aria-hidden="true">•</span> TypeScript</li>
+              <li><span aria-hidden="true">•</span> SQL</li>
+              <li aria-label="Python.">• Python</li>
+            </ul>
+          </div>
+          <div class="tech-card frames">
+            <h3>Frameworks:</h3>
+            <ul class="tech">
+              <li><span aria-hidden="true">•</span> Sass/SCSS</li>
+              <li><span aria-hidden="true">•</span> Node</li>
+              <li><span aria-hidden="true">•</span> Express</li>
+              <li><span aria-hidden="true">•</span> Pug</li>
+              <li><span aria-hidden="true">•</span> React/Redux</li>
+              <li><span aria-hidden="true">•</span> Next</li>
+              <li><span aria-hidden="true">•</span> MongoDB</li>
+              <li aria-label="PostgreSQL.">• PostgreSQL</li>
+            </ul>
+          </div>
+          <div class="tech-card skills">
+            <h3>Skills:</h3>
+            <ul class="tech">
+              <li><span aria-hidden="true">•</span> UI/UX</li>
+              <li><span aria-hidden="true">•</span> OOP</li>
+              <li><span aria-hidden="true">•</span> TDD</li>
+              <li><span aria-hidden="true">•</span> DevTools</li>
+              <li aria-label="Git/GitHub.">• Git/GitHub</li>
+            </ul>
+          </div>
+          <div class="about-deco"></div>
+        </div>
+      </section>
+      <!----------------- Contact ---------------->
+      <section id="contact" aria-labelledby="contact-title">
+        <h2
+          id="contact-title"
+          class="playfair"
+          aria-label="Lets Get Started! Send me a message to talk about business. If you'd like to learn more about how we can collaborate I'd be happy to read from you."
+          role="presentation"
+        >
+          Lets Get Started!
+        </h2>
+        <p class="poppins" aria-hidden="true">
+          Send me a message to talk about business. If you'd like to learn more
+          about how we can collaborate, I'd be happy to read from you.
+        </p>
+        <form action="https://formspree.io/f/myyazjoo" method="post">
+          <ul id="form_Ul" class="poppins">
+            <li class="input-container">
+              <label for="name">
+                Name:<abbr title="Required"
+                  ><strong aria-hidden="true">*</strong></abbr
+                >
+              </label>
+              <input
+                type="text"
+                id="name"
+                class="formInput"
+                name="user_name"
+                maxlength="30"
+                required
+                autocomplete="name"
+                aria-required="true"
+                aria-describedby="nameErr"
+              />
+              <small
+                id="nameErr"
+                class="errMsgContainer"
+                aria-live="polite"
+              ></small>
+            </li>
+            <li class="input-container email-container">
+              <label for="email">
+                Email:<abbr title="Required"
+                  ><strong aria-hidden="true">*</strong></abbr
+                >
+              </label>
+              <input
+                name="user_email"
+                id="email"
+                class="formInput"
+                type="email"
+                required
+                autocomplete="email"
+                aria-required="true"
+                aria-describedby="emailErr"
+              />
+              <small
+                id="emailErr"
+                class="errMsgContainer"
+                aria-live="polite"
+              ></small>
+            </li>
+          </ul>
+          <label for="msg" class="msgLbl poppins" tabindex="-1">
+            Message:<abbr title="Required"
+              ><strong aria-hidden="true">*</strong></abbr
+            >
+          </label>
+          <div class="input-container msg-container">
+            <textarea
+              name="msg"
+              id="msg"
+              class="formInput poppins"
+              placeholder="Please describe your project in less than 500 characters..."
+              maxlength="500"
+              required
+              aria-required="true"
+              aria-describedby="msgErr"
+            ></textarea>
+            <small
+              id="msgErr"
+              class="errMsgContainer"
+              aria-live="polite"
+            ></small>
+          </div>
+          <button id="submit" type="submit" class="btnBlue" disabled="true">
+            Start collaboration
+          </button>
+        </form>
+      </section>
+      <footer>
+        <a
+          href="https://docs.google.com/document/d/1sGZ6yxcJa1jLS59dCbatuG7NZ1vUlPIAJKK0h03SrC0/edit?usp=sharing"
+          rel="noopener"
+          class="open poppins"
+          target="_blank"
+          >Get my Resume</a
+        >
+        <ul class="social-container">
+          <li>
+            <a
+              class="social-link"
+              rel="noopener"
+              href="https://stackoverflow.com/users/18165300/alex-munoz"
+              target="_blank"
+            >
+              <i class="social-icon">
+                <img
+                  src="./images/icons/stackoverflow.svg"
+                  alt="Stack Overflow"
+                />
+              </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-link"
+              rel="noopener"
+              href="https://github.com/astroboyReloaded"
+              target="_blank"
+            >
+              <i class="social-icon">
+                <img src="./images/icons/github-icon.svg" alt="GitHub" />
+              </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-link"
+              rel="noopener"
+              href="https://twitter.com/astroboyReload"
+              target="_blank"
+            >
+              <i class="social-icon">
+                <img src="./images/icons/twitter.svg" alt="Twitter" />
+              </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-link"
+              rel="noopener"
+              href="https://www.linkedin.com/in/astroboyreloaded/"
+              target="_blank"
+            >
+              <i class="social-icon">
+                <img src="./images/icons/linkedin.svg" alt="Linkedin" />
+              </i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="social-link"
+              rel="noopener"
+              href="https://medium.com/@astroboy.reloaded"
+              target="_blank"
+            >
+              <i class="social-icon m">
+                <img src="./images/icons/M-icon.svg" alt="Medium" />
+              </i>
+            </a>
+          </li>
+        </ul>
+      </footer>
+    </main>
+  </body>
 </html>

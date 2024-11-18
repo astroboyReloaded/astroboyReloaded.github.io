@@ -74,6 +74,18 @@ This project aims to create a fully implemented professional portfolio to host m
 - **Form validation with JavaScript**
 - **Local storage for form imputs content when not submited**
 
+- **Accessibility:**
+  - Mobile first.
+    - Gestures.
+      -Go Back to Close current Popup <------(menu)
+  - Fully Responsive.
+  - Form Validation.
+  - ARIA implementation when necesary.
+  - Keyboard navigation and interaction.
+    - Tab to access any interactive element.
+    - Enter or Space to activate any focused button <---(menu)
+  - AT optimization
+
 <!-- LIVE DEMO -->
 
 ## 🚀 Live Demo <a name="live-demo"></a>

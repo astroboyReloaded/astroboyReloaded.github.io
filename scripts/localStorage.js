@@ -1,4 +1,10 @@
 // localStorage
+import {
+  isNameValid,
+  isEmailValid,
+  isMessageValid,
+} from './form-validation.js';
+
 const nameLS = document.getElementById('name');
 const emailLS = document.getElementById('email');
 const msgLS = document.getElementById('msg');
@@ -21,4 +27,9 @@ window.onload = () => {
   nameLS.value = parsedLS.name || '';
   emailLS.value = parsedLS.email || '';
   msgLS.value = parsedLS.message || '';
+  if (nameLS.value || emailLS.value || msgLS.value) {
+    isNameValid(nameLS.value);
+    isEmailValid(emailLS.value);
+    isMessageValid(msgLS.value);
+  }
 };

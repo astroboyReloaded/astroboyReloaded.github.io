@@ -5,6 +5,7 @@
 :root {
   --white: #fff;
   --gray: #7d7c84;
+  --darkGray: #4d4d4d;
   --blue: #1a2236;
   --border: #98dede;
   --input: #dfdfe0;
@@ -13,7 +14,7 @@
 /************ fonts **********/
 
 html {
-  font-size: 14px;
+  font-size: 18px;
 }
 
 /* section title: */
@@ -87,7 +88,8 @@ ul {
 }
 
 *:focus {
-  outline: none;
+  outline: 2px solid var(--border);
+  outline-offset: -2px;
 }
 
 body {
@@ -97,8 +99,13 @@ body {
   overflow-x: hidden;
 }
 
-section:focus {
-  border: 2px solid var(--border);
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+button {
+  border: none;
 }
 
 /********************** Header ***********************/
@@ -106,7 +113,7 @@ section:focus {
 header {
   display: flex;
   width: 100%;
-  height: fit-content;
+  height: 74px;
   justify-content: space-between;
   background: var(--white);
 }
@@ -121,49 +128,9 @@ header {
   background: url('images/deco/mobile/menu-top.svg');
 }
 
-/********* Nav Bar **********/
-
-nav {
-  justify-content: space-between;
-  display: block;
-  position: absolute;
-  top: 74px;
-  width: 100vw;
-  height: calc(100vh - 74px);
-  background:
-    url('images/deco/mobile/four-dots.svg') 80% 0 no-repeat,
-    url('images/deco/mobile/four-dots.svg') 20% calc(93% - 25vw) no-repeat,
-    url('images/deco/mobile/menu-btm.svg') 100% 100% no-repeat,
-    #fff;
-  background-size: auto, auto, 100vw;
-}
-
-.display {
-  display: none;
-}
-
-nav ul {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  top: 74px;
-  width: 100%;
-  align-items: center;
-}
-
-.nav-item {
-  padding-block: 9px;
-}
-
-.nav-link {
-  text-decoration: none;
-  font-size: 1.2rem;
-  color: var(--blue);
-}
-
 /**** Display Menu Button ****/
 
-.menu-btn-container {
+.menu-btn {
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -177,9 +144,9 @@ nav ul {
   display: none;
 }
 
-.menu-btn,
-.menu-btn::before,
-.menu-btn::after {
+.menu-label,
+.menu-label::before,
+.menu-label::after {
   display: block;
   background: var(--blue);
   position: absolute;
@@ -189,38 +156,98 @@ nav ul {
   transition: all 300ms ease-in-out;
 }
 
-.menu-btn::before {
+.menu-label::before {
   content: "";
   margin-top: -9px;
 }
 
-.menu-btn::after {
+.menu-label::after {
   content: "";
   margin-top: 9px;
 }
 
-#menu-toggle:checked + .menu-btn::before {
+#menu-toggle:checked + .menu-label::before {
   margin-top: 0;
   transform: rotate(45deg);
 }
 
-#menu-toggle:checked + .menu-btn {
+#menu-toggle:checked + .menu-label {
   background: rgba(255, 255, 255, 0);
 }
 
-#menu-toggle:checked + .menu-btn::after {
+#menu-toggle:checked + .menu-label::after {
   margin-top: 0;
   transform: rotate(-45deg);
 }
 
-.menu-btn-container #menu-toggle:checked + .logo {
+.menu-btn #menu-toggle:checked + .logo {
   background: url('images/deco/mobile/menu-top.svg') no-repeat;
+}
+
+/********* Nav Bar **********/
+
+.mainNav {
+  justify-content: space-between;
+  display: block;
+  position: absolute;
+  top: 74px;
+  width: 100vw;
+  background:
+    url('images/deco/mobile/four-dots.svg') 80% 0 no-repeat,
+    url('images/deco/mobile/four-dots.svg') 20% calc(93% - 25vw) no-repeat,
+    url('images/deco/mobile/menu-btm.svg') 100% 100% no-repeat,
+    #fff;
+  background-size: auto, auto, 100vw;
+}
+
+.mainNav.display {
+  display: none;
+}
+
+.mainNav ul {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  top: 74px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nav-item {
+  padding-block: 9px;
+  position: relative;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: var(--blue);
+  outline: none;
+}
+
+.nav-link::after {
+  position: absolute;
+  top: 36px;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 2px;
+  background-color: var(--border);
+  transition: width 300ms ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link:focus::after {
+  width: 100%;
 }
 
 /****************** Headline *****************/
 
 #headline {
   width: 100%;
+  height: calc(100vh - 56px);
   display: flex;
   flex-direction: column;
   padding: 18px;
@@ -229,23 +256,28 @@ nav ul {
 .headline-container {
   display: flex;
   flex-direction: column;
+  height: calc(100% - 165px);
 }
 
 .headline-title {
   font-size: 3.6rem;
   font-weight: 400;
   line-height: 100%;
-  margin: 18px 0 0 0;
+  margin: auto 0 27px 0;
 }
 
 #headline p {
   margin: 27px 0;
 }
 
+.start {
+  margin-block: 27px auto;
+}
+
 .headline-deco {
-  margin: 27px 0 0 -18px;
   width: 100vw;
-  height: 53.333vw;
+  height: calc(53.28vw - 2px);
+  margin-inline-start: -18px;
   background: url("images/deco/mobile/image_geometry-headline-mobile.svg") no-repeat;
   background-size: contain;
 }
@@ -253,12 +285,8 @@ nav ul {
 /*************** Projects *********************/
 
 #works {
-  display: grid;
   width: 100%;
-}
-
-#works h1:focus {
-  border: 2px solid var(--border);
+  min-height: calc(1273px + (58.75vw * 6));
 }
 
 .project {
@@ -267,18 +295,15 @@ nav ul {
   width: 100%;
 }
 
-.project:focus {
-  border: 2px solid var(--border);
-}
-
 .project-image {
   width: 100%;
-  height: 100%;
+  height: 58.75vw;
 }
 
 .project-description {
   display: flex;
   flex-direction: column;
+  width: 100%;
   background: var(--blue);
   padding: 18px;
   color: var(--white);
@@ -288,6 +313,7 @@ nav ul {
 .project-title {
   font-weight: 300;
   font-size: 1.5rem;
+  width: fit-content;
 }
 
 .tech-container {
@@ -324,28 +350,25 @@ nav ul {
 
 /**************** PopUp Window ****************/
 
-.popUp {
+.project-window {
   position: fixed;
-  display: block;
-  height: 100vh;
-  width: 100vw;
-  z-index: 9;
-  overflow-y: scroll;
-}
-
-.pWMain {
-  padding: 18px;
-  background: var(--white);
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background: var(--white);
+  padding: 18px;
+  z-index: 9;
+  overflow-y: scroll;
 }
 
 .pW-header {
   display: flex;
   flex-direction: column;
+  height: fit-content;
 }
 
-.closeWindow {
+.close-pW {
   border: none;
   background: var(--white);
   font-size: 150%;
@@ -354,7 +377,7 @@ nav ul {
   align-self: flex-end;
 }
 
-.pWTitle {
+.pW-title {
   width: fit-content;
   font-size: 6vw;
   font-weight: 600;
@@ -362,12 +385,17 @@ nav ul {
   line-height: 100%;
 }
 
-.pWTech {
+.pW-tech-item {
   background-color: var(--white);
   border: 1px solid var(--blue);
 }
 
-.pWDescription {
+.pW-img {
+  width: 100%;
+  height: 53.325641vw;
+}
+
+.pW-description {
   color: var(--blue);
   font-size: 1.2rem;
   margin-block: 18px;
@@ -378,7 +406,7 @@ nav ul {
   flex-direction: column;
 }
 
-.pWBtn {
+.pW-project-link {
   position: relative;
   display: flex;
   width: 90%;
@@ -409,8 +437,20 @@ nav ul {
   border: 1px solid var(--gray);
 }
 
-.prev-next-cont {
-  display: none;
+.pW-nav-ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.pW-nav-ul li {
+  width: fit-content;
+}
+
+.project-nav {
+  border: none;
+  background-color: var(--white);
 }
 
 /*********************** About ***********************/
@@ -520,7 +560,7 @@ form {
   position: absolute;
   top: 9px;
   left: 18px;
-  color: var(--gray);
+  color: var(--darkGray);
   display: flex;
   font-size: 0.7rem;
   font-weight: 400;
@@ -530,7 +570,8 @@ abbr {
   text-decoration: none;
 }
 
-.input-container input {
+.input-container input,
+#msg {
   background: var(--white);
   width: 100%;
   border: 1px solid var(--input);
@@ -544,26 +585,68 @@ abbr {
   display: none;
 }
 
-textarea {
-  width: 100%;
+#msg {
   min-height: 111px;
-  border-radius: 4px;
-  border: 1px solid var(--input);
   padding: 18px;
-  margin-bottom: 18px;
 }
 
 .input-container input:focus,
-textarea:focus {
-  border: 1px solid var(--blue);
+#msg:focus {
+  outline: 2px solid var(--border);
 }
 
-#errorMsg {
+/* Input Validation */
+.input-container .green,
+.input-container .green:focus {
+  border: none;
+  outline: 2px solid #50e263;
+  outline-offset: -2px;
+}
+
+.input-container .red,
+.input-container .red:focus {
+  border: none;
+  outline: 2px solid #e2505c;
+  outline-offset: -2px;
+}
+
+.errMsgContainer {
+  visibility: hidden;
+  display: block;
   position: absolute;
-  bottom: -30px;
+  left: 0;
+  bottom: -31px;
+  background-color: #f9f9fa;
+  padding: 0.3rem;
+  border: 1px solid var(--gray);
+  border-radius: 3px;
   color: #e2505c;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   align-self: center;
+  z-index: 1;
+}
+
+.showErr {
+  visibility: visible;
+}
+
+button[type='submit']:disabled,
+button[type='submit']:disabled:hover {
+  border-color: var(--input);
+  background-color: var(--input);
+  color: var(--white);
+  cursor: not-allowed;
+}
+
+button[type='submit']:disabled:hover::after {
+  content: 'Please fill in all fields';
+  position: absolute;
+  display: block;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  color: var(--darkGray);
+  padding: 9px;
+  border-radius: 4px;
 }
 
 /*********************** Footer *******************************/
@@ -585,6 +668,7 @@ footer {
 }
 
 .open:focus {
+  outline: none;
   transform: scale(1.2);
 }
 
@@ -603,8 +687,11 @@ footer {
 }
 
 .social-icon:hover,
+.social-link:focus,
 .social-link:focus .social-icon {
   transform: scale(1.5);
+  border: none;
+  outline: none;
 }
 
 .m {
@@ -625,11 +712,11 @@ footer {
   }
 
   /****** Nav Bar ******/
-  .show-hide {
+  .hide {
     display: none;
   }
 
-  nav {
+  .mainNav {
     position: static;
     display: block;
     margin-right: 99px;
@@ -638,11 +725,11 @@ footer {
     background: #fff;
   }
 
-  .display {
+  .mainNav.display {
     display: block;
   }
 
-  nav ul {
+  .mainNav ul {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -653,29 +740,7 @@ footer {
   }
 
   .nav-item {
-    position: relative;
     margin-inline: 18px;
-  }
-
-  .nav-link {
-    border: 2px solid var(--white);
-  }
-
-  .nav-link::after {
-    position: absolute;
-    top: 30px;
-    left: 0;
-    content: "";
-    display: inline-block;
-    width: 0;
-    height: 2px;
-    background-color: var(--blue);
-    transition: width 300ms ease-in-out;
-  }
-
-  .nav-link:hover::after,
-  .nav-link:focus::after {
-    width: 100%;
   }
 
   /****** Headline *****/
@@ -684,6 +749,7 @@ footer {
     position: relative;
     display: flex;
     flex-direction: row;
+    height: fit-content;
     padding: 0;
     justify-content: flex-end;
   }
@@ -691,6 +757,7 @@ footer {
   .headline-container {
     flex-direction: column;
     width: 45.6vw;
+    height: 64.946341vw;
     padding-inline: 3vw 6vw;
     align-items: flex-start;
     justify-content: center;
@@ -721,6 +788,7 @@ footer {
   /***************** Projects *****************/
 
   #works {
+    display: grid;
     position: relative;
     grid-template-areas:
       "title p1 p1 p1"
@@ -728,10 +796,16 @@ footer {
       "p3 p3  rght rght"
       "lft lft p4 p4";
     width: 100%;
+    min-height: auto;
+    height: 103.5vw;
     margin-top: 9vw;
   }
 
-  #works > h1 {
+  .project-image {
+    height: 100%;
+  }
+
+  #works-title {
     grid-area: title;
     position: absolute;
     display: flex;
@@ -876,49 +950,41 @@ footer {
   }
 
   .seeProjBtn {
-    width: 171px;
+    width: 198px;
     font-size: 1rem;
     padding: 9px 6px 9px 15px;
   }
 
   /************* PpoUp Window *****************/
 
-  .popUp {
-    background: #1a2236;
-    padding: 4.5%;
-  }
-
-  .pWMain {
-    padding: 4.5%;
-  }
-
-  .pW-header {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-  }
-
-  .closeWindow {
+  .close-pW {
     font-size: 2.4rem;
     border: 2px solid var(--white);
   }
 
-  .closeWindow:focus {
+  .close-pW:focus {
     outline: none;
     border: 2px solid var(--border);
   }
 
-  .pWTitle {
+  .pW-title {
     width: fit-content;
     font-size: 3rem;
     margin-block: 0 3px;
   }
 
-  .pWTech {
+  .pW-img {
+    width: 75%;
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .pW-tech-container {
     font-size: 1.2rem;
     margin-block: 12px;
   }
 
-  .pWDescription {
+  .pW-description {
     align-self: center;
     width: 70%;
     color: #1a2236;
@@ -926,15 +992,16 @@ footer {
 
   .pW-btnsContainer {
     flex-direction: row;
-    flex-wrap: wrap;
     align-self: center;
-    width: 70%;
+    justify-content: space-around;
+    width: 60%;
   }
 
-  .pWBtn {
+  .pW-project-link {
     width: 21vw;
     margin: 9px;
     justify-content: left;
+    cursor: pointer;
   }
 
   .live,
@@ -968,16 +1035,9 @@ footer {
 
   .prev-next-cont {
     display: block;
-    margin: 0;
-    width: 70%;
+    margin: 1rem 0;
+    width: 90%;
     align-self: center;
-  }
-
-  .project-window-nav-ul {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin-top: 18px;
   }
 
   .project-nav {
@@ -985,7 +1045,7 @@ footer {
     cursor: pointer;
   }
 
-  .prevProj {
+  .pW-prev-btn {
     padding-left: 30px;
     background: url('images/icons/arrow-prev.svg') 0 50% no-repeat;
     background-size: 18px;
@@ -993,11 +1053,11 @@ footer {
     transition: border 300ms ease-in-out;
   }
 
-  .prevProj:focus {
+  .pW-prev-btn:focus {
     border: 2px solid var(--border);
   }
 
-  .nextProj {
+  .pW-next-btn {
     padding-right: 30px;
     background: url('images/icons/arrow-black.svg') 100% 50% no-repeat;
     background-size: 18px;
@@ -1005,7 +1065,7 @@ footer {
     transition: border 300ms ease-in-out;
   }
 
-  .nextProj:focus {
+  .pW-next-btn:focus {
     border: 2px solid var(--border);
   }
 
@@ -1018,8 +1078,6 @@ footer {
   }
 
   #about > div {
-    display: flex;
-    flex-direction: column;
     flex: 1;
     padding-left: 3vw;
   }
@@ -1079,7 +1137,7 @@ footer {
       url("images/deco/desktop/form-deco-2.svg") bottom right no-repeat,
       #f9f9fa;
     background-size: 18.26vw, 24.3vw;
-    padding: 9vw 30vw;
+    padding: 9vw 24.3vw;
   }
 
   #contact h1 {
@@ -1092,7 +1150,7 @@ footer {
     align-items: center;
   }
 
-  form ul {
+  #form_Ul {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -1115,18 +1173,27 @@ footer {
     padding: 15px 9px;
   }
 
+  .showErr {
+    bottom: auto;
+    top: 100%;
+  }
+
   .msgLbl {
     display: flex;
     align-self: flex-start;
-    color: var(--gray);
+    color: var(--darkGray);
     font-size: 0.7rem;
     font-weight: 400;
     margin-block: 6px;
   }
 
+  .msg-container {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+
   textarea {
     height: 12vw;
-    margin-bottom: 18px;
   }
 
   /*********** Footer *****************/
