@@ -3,7 +3,8 @@ import {
   isNameValid,
   isEmailValid,
   isMessageValid,
-} from "./form-validation.js";
+} from './form-validation.js';
+
 const nameLS = document.getElementById('name');
 const emailLS = document.getElementById('email');
 const msgLS = document.getElementById('msg');

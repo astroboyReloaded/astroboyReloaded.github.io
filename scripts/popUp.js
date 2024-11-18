@@ -1,17 +1,22 @@
 import Projects from '../db.js';
 import closePopupGesture from './gestures/closePopUp.js';
 
-const projectThumbnails = document.querySelectorAll('.project'),
-  _data = Projects.data,
-  projectWindow = document.createElement('article');
-    projectWindow.setAttribute('tabindex', '0')
-    projectWindow.setAttribute('aria-label', 'Project Details')
-    projectWindow.setAttribute('aria-live', 'polite')
-    projectWindow.setAttribute('aria-atomic', true)
-    projectWindow.id = 'pWindow'
-    projectWindow.className = 'project-window';
-let  Project_Data_Index;
+const projectThumbnails = document.querySelectorAll('.project');
+const { data } = Projects;
+const projectWindow = document.createElement('article');
+projectWindow.setAttribute('tabindex', '0');
+projectWindow.setAttribute('aria-label', 'Project Details');
+projectWindow.setAttribute('aria-live', 'polite');
+projectWindow.setAttribute('aria-atomic', true);
+projectWindow.id = 'pWindow';
+projectWindow.className = 'project-window';
+let ProjectDataIndex;
 let removePopupGesture;
+function closeWindow() {
+  removePopupGesture();
+  document.body.removeChild(projectWindow);
+  projectThumbnails[ProjectDataIndex].focus();
+}
 
 function createPopUp() {
   projectWindow.innerHTML = `
@@ -56,76 +61,74 @@ function createPopUp() {
   function populateProjectWindow(Data) {
     projectTitle.textContent = Data.title;
     techContainer.innerHTML = Data.tech
-    .map((tech) => `<li class="pW-tech-item tech-item poppins">${tech}</li>`)
-    .join('');
-    projectImage.setAttribute('src', Data.imageURL)
+      .map((tech) => `<li class="pW-tech-item tech-item poppins">${tech}</li>`)
+      .join('');
+    projectImage.setAttribute('src', Data.imageURL);
     projectImage.setAttribute('alt', Data.imageAlt);
     projectDescription.textContent = Data.description;
     seeLive.setAttribute('href', Data.liveLink);
     seeSource.setAttribute('href', Data.sourceLink);
-    if (Project_Data_Index < 1) {
+    if (ProjectDataIndex < 1) {
       prevLink.style.display = 'none';
     } else {
       prevLink.style.display = 'inline';
     }
-    if (Project_Data_Index >= _data.length - 1) {
+    if (ProjectDataIndex >= data.length - 1) {
       nextLink.style.display = 'none';
     } else {
       nextLink.style.display = 'inline';
     }
     projectWindow.focus();
-  };
-  populateProjectWindow(_data[Project_Data_Index]);
+  }
+  populateProjectWindow(data[ProjectDataIndex]);
 
   closePopup.addEventListener('click', closeWindow);
 
   projectWindow.addEventListener('keydown', (e) => {
-    e.key === 'Escape' && closeWindow();
+    if (e.key === 'Escape') closeWindow();
   });
   projectWindow.onkeydown = (e) => {
-    if (document.activeElement === projectWindow && e.shiftKey && e.key === 'Tab') closeWindow();
+    if (
+      document.activeElement === projectWindow
+      && e.shiftKey
+      && e.key === 'Tab'
+    ) closeWindow();
   };
 
   prevLink.addEventListener('click', () => {
-    Project_Data_Index -= 1;
-    populateProjectWindow(_data[Project_Data_Index]);
+    ProjectDataIndex -= 1;
+    populateProjectWindow(data[ProjectDataIndex]);
   });
   prevLink.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-      Project_Data_Index -= 1;
-      populateProjectWindow(_data[Project_Data_Index]);
+      ProjectDataIndex -= 1;
+      populateProjectWindow(data[ProjectDataIndex]);
     }
   });
 
   nextLink.addEventListener('click', () => {
-    Project_Data_Index += 1
-    populateProjectWindow(_data[Project_Data_Index]);
+    ProjectDataIndex += 1;
+    populateProjectWindow(data[ProjectDataIndex]);
   });
   nextLink.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-      Project_Data_Index += 1
-      populateProjectWindow(_data[Project_Data_Index]);
-    } 
+      ProjectDataIndex += 1;
+      populateProjectWindow(data[ProjectDataIndex]);
+    }
   });
   removePopupGesture = closePopupGesture(projectWindow, closeWindow);
-};
-
-function closeWindow() {
-    removePopupGesture();
-    document.body.removeChild(projectWindow);
-    projectThumbnails[Project_Data_Index].focus();
-  };
+}
 
 function openPopup(index) {
   document.body.appendChild(projectWindow);
-  Project_Data_Index = index;
+  ProjectDataIndex = index;
   createPopUp();
 }
 projectThumbnails.forEach((p, i) => {
   p.addEventListener('click', () => openPopup(i));
   p.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
-    openPopup(i);
+      openPopup(i);
     }
   });
 });

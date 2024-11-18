@@ -96,7 +96,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 100%;
-  /* max-width: 1440px; */
   overflow-x: hidden;
 }
 
@@ -167,21 +166,21 @@ header {
   margin-top: 9px;
 }
 
-#menu-toggle:checked+.menu-label::before {
+#menu-toggle:checked + .menu-label::before {
   margin-top: 0;
   transform: rotate(45deg);
 }
 
-#menu-toggle:checked+.menu-label {
+#menu-toggle:checked + .menu-label {
   background: rgba(255, 255, 255, 0);
 }
 
-#menu-toggle:checked+.menu-label::after {
+#menu-toggle:checked + .menu-label::after {
   margin-top: 0;
   transform: rotate(-45deg);
 }
 
-.menu-btn #menu-toggle:checked+.logo {
+.menu-btn #menu-toggle:checked + .logo {
   background: url('images/deco/mobile/menu-top.svg') no-repeat;
 }
 
@@ -572,7 +571,7 @@ abbr {
 }
 
 .input-container input,
-textarea {
+#msg {
   background: var(--white);
   width: 100%;
   border: 1px solid var(--input);
@@ -591,22 +590,21 @@ textarea {
   padding: 18px;
 }
 
-
 .input-container input:focus,
-textarea:focus {
+#msg:focus {
   outline: 2px solid var(--border);
 }
 
 /* Input Validation */
-.input-container .green:focus,
-.input-container .green {
+.input-container .green,
+.input-container .green:focus {
   border: none;
   outline: 2px solid #50e263;
   outline-offset: -2px;
 }
 
-.input-container .red:focus,
-.input-container .red {
+.input-container .red,
+.input-container .red:focus {
   border: none;
   outline: 2px solid #e2505c;
   outline-offset: -2px;
@@ -619,11 +617,11 @@ textarea:focus {
   left: 0;
   bottom: -31px;
   background-color: #f9f9fa;
-  padding: .3rem;
+  padding: 0.3rem;
   border: 1px solid var(--gray);
   border-radius: 3px;
   color: #e2505c;
-  font-size: .9rem;
+  font-size: 0.9rem;
   align-self: center;
   z-index: 1;
 }
@@ -1079,7 +1077,7 @@ footer {
     justify-content: space-between;
   }
 
-  #about>div {
+  #about > div {
     flex: 1;
     padding-left: 3vw;
   }
@@ -1152,7 +1150,7 @@ footer {
     align-items: center;
   }
 
-  form ul {
+  #form_Ul {
     display: flex;
     width: 100%;
     justify-content: space-between;
